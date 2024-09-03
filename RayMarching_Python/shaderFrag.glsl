@@ -114,6 +114,9 @@ uniform float objectSmoothings[objectCount];
 uniform float jointEdgeSmoothing;
 uniform float skelObjectSmoothing;
 
+// scene settings
+uniform mat4 sceneTransform;
+
 /*
 Affine Transformations
 */
@@ -1183,8 +1186,8 @@ float julia(vec3 pos, vec3 scale)
  */
 float sceneSDF(vec3 samplePoint) 
 {    
-    vec4 samplePoint4D = vec4(samplePoint, 1.0);
-
+    vec4 samplePoint4D = sceneTransform * vec4(samplePoint, 1.0);
+    
     float distJoints = 1000.0;
     
     for(int jI=0; jI<jointCount; ++jI)
@@ -1363,13 +1366,13 @@ float sceneSDF(vec3 samplePoint)
     {
         dist = distJointEdges;
     }
-    
+ 
     return dist;
 }
 
 Surface sceneSDF_surface(vec3 samplePoint) 
 {    
-    vec4 samplePoint4D = vec4(samplePoint, 1.0);
+    vec4 samplePoint4D = sceneTransform * vec4(samplePoint, 1.0);
 
     // skeleton joints
     float distJoints = 1000.0;

@@ -56,7 +56,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 0,
 					"patching_rect" : [ 187.0, 194.0, 138.0, 22.0 ],
-					"text" : "udpsend 127.0.0.1 9005"
+					"text" : "udpsend 127.0.0.1 9004"
 				}
 
 			}
@@ -101,7 +101,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 0,
 					"patching_rect" : [ 187.0, 119.0, 138.0, 22.0 ],
-					"text" : "udpsend 127.0.0.1 9005"
+					"text" : "udpsend 127.0.0.1 9004"
 				}
 
 			}
@@ -112,7 +112,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 0,
 					"patching_rect" : [ 187.0, 159.0, 138.0, 22.0 ],
-					"text" : "udpsend 127.0.0.1 9005"
+					"text" : "udpsend 127.0.0.1 9004"
 				}
 
 			}

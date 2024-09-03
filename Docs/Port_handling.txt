@@ -1,0 +1,19 @@
+Port handling for coordinate conversions for Raymarching
+
+Mocap Player : mvn2bvh_osc_live
+Receive on port 9006, send on port 10000
+
+EA Arm1 : alien2mocap_osc.py
+Receive on port 9005, send on port 10000
+
+EA Arm2 : alien2mocap_osc.py
+Receive on port 9005, send on port 10000
+
+Swarm : swarm2mocap_osc.py
+Receive on port 9004
+
+Swarm Sim control: 
+Receive on port 7400
+
+EA Arm Sim control:
+Receive on port 9003

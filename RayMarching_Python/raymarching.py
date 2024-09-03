@@ -31,7 +31,7 @@ from osc_control import OscControl
 Setup Skeleton
 """
 
-"""
+
 # Avatar Mode
 joint_settings_file = "avatar_joint_settings.json"
 
@@ -42,11 +42,13 @@ jointFilter = joint_settings["jointFilter"]
 jointConnectivity = joint_settings["jointConnectivity"]
 skeleton = Skeleton(jointFilter, jointConnectivity)
 skeleton.setSkeletonMode(SkeletonMode.Avatar)
-"""
+
+
 
 """
-# Arms Mode
-joint_settings_file = "arms_joint_settings.json"
+# Arms1 Mode
+
+joint_settings_file = "arms1_joint_settings.json"
 
 with open(joint_settings_file) as f:
     joint_settings = json.load(f)
@@ -57,6 +59,20 @@ skeleton = Skeleton(jointFilter, jointConnectivity)
 skeleton.setSkeletonMode(SkeletonMode.Arms)
 """
 
+"""
+# Arms4 Mode
+joint_settings_file = "arms4_joint_settings.json"
+
+with open(joint_settings_file) as f:
+    joint_settings = json.load(f)
+    
+jointFilter = joint_settings["jointFilter"]
+jointConnectivity = joint_settings["jointConnectivity"]
+skeleton = Skeleton(jointFilter, jointConnectivity)
+skeleton.setSkeletonMode(SkeletonMode.Arms)
+"""
+
+"""
 # Swarm Mode
 joint_settings_file = "swarm_joint_settings.json"
 
@@ -67,6 +83,7 @@ jointFilter = joint_settings["jointFilter"]
 jointConnectivity = joint_settings["jointConnectivity"]
 skeleton = Skeleton(jointFilter, jointConnectivity)
 skeleton.setSkeletonMode(SkeletonMode.Swarm)
+"""
 
 
 jointCount = skeleton.getJointCount()
@@ -101,7 +118,7 @@ visualization = Visualization(skeleton, vertex_code, fragment_code)
 Osc Control
 """
 
-oscControl = OscControl(skeleton, visualization, "127.0.0.1", 9007)
+oscControl = OscControl(skeleton, visualization, "127.0.0.1", 10000)
 oscControl.start()
 
 oscControl.fix_root = True
@@ -152,7 +169,7 @@ class MinimalGLWidget(QOpenGLWindow):
         frame_intervals = np.roll(frame_intervals, 1)
         frame_intervals[0] = elapsed_time
         
-        print("fr ", 1.0 / np.mean(frame_intervals))
+        #print("fr ", 1.0 / np.mean(frame_intervals))
 
     def keyPressEvent(self, event):
         super(MinimalGLWidget, self).keyPressEvent(event)

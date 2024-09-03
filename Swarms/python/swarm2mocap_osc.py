@@ -12,10 +12,10 @@ from pythonosc import osc_server
 from pythonosc.udp_client import SimpleUDPClient
 
 osc_receive_ip = "127.0.0.1"
-osc_receive_port = 9005
+osc_receive_port = 9004
 
 osc_send_ip = "127.0.0.1"
-osc_send_port = 9007
+osc_send_port = 10000
 
 osc_running = False
 
@@ -89,7 +89,7 @@ def calc_agent_orientations():
         agent_rotations[vI, 0] = _dot
     
 def swarm_osc_receive(addr, *args):
-    
+
     global agent_positions
     global agent_velocities
     global agent_rotations

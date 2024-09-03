@@ -28,6 +28,12 @@ class Visualization():
         self.camPosition = np.array([1.0, 0.0, 0.0])
         self.camAngle = 45.0
         
+        # scene settings
+        self.scenePosition = np.zeros((3))
+        self.sceneRotation = np.array((1.0, 0.0, 0.0, 0.0))
+        self.sceneTransform = np.eye(4)
+        self.updateSceneTransform()
+        
         # light settings
         self.lightPosition = np.array([1.0, 0.0, 0.0])
         self.shadowSmooth = 16.0;
@@ -41,6 +47,8 @@ class Visualization():
         self.fogMinDist = 99.0
         self.fogMaxDist = 100
         
+        self.identity_transform = np.eye(4)
+ 
         # skeleton joint settings
         self.jointColor = np.array([1.0, 1.0, 1.0])
         self.jointAmbientScale = 1.0
@@ -97,7 +105,7 @@ class Visualization():
         self.objectSmoothings = np.ones((self.objectCount)) * 0.01
         self.objectPositions  = np.zeros((self.objectCount, 3))
         self.objectRotations  = np.zeros((self.objectCount, 4))
-        self.objectRotations[:, 1] = 1.0
+        self.objectRotations[:, 0] = 1.0
         self.objectTransforms = np.zeros((self.objectCount, 4, 4))
         
         for oI in range(self.objectCount):
@@ -106,6 +114,37 @@ class Visualization():
         # combined smoothing factors
         self.jointEdgeSmoothing = 0.01
         self.skelObjectSmoothing = 0.01
+        
+        self.vis_running = True
+        
+    def resetSkeleton(self, skeleton):
+                    
+        # create new skeleton
+        self.skeleton = skeleton
+        
+        self.jointCount = skeleton.getJointCount()
+        self.edgeCount = skeleton.getEdgeCount()   
+        
+        # skeleton joint settings
+        self.jointPrimitives = np.zeros((self.jointCount), dtype=np.int32) - 1
+        self.jointSizes = np.ones((self.jointCount, 3)) * 0.1
+        self.jointRoundings = np.ones((self.jointCount)) * 0.01
+        self.jointSmoothings = np.ones((self.jointCount)) * 0.01
+        
+        # skeleton edge settings
+        self.edgePrimitives = np.zeros((self.edgeCount), dtype=np.int32) - 1
+        self.edgeSizes = np.ones((self.edgeCount, 3))
+        self.edgeSizes[:, 0] *= 0.01
+        self.edgeSizes[:, 1] *= 0.01
+        self.edgeSizes[:, 2] *= 1.0
+        self.edgeRoundings = np.ones((self.jointCount)) * 0.01
+        self.edgeSmoothings = np.ones((self.edgeCount)) * 0.01
+        
+    def startVis(self):
+        self.vis_running = True
+ 
+    def stopVis(self):
+        self.vis_running = False
         
     def setupShader(self, gl):
         
@@ -146,6 +185,9 @@ class Visualization():
         # camera settings
         self.shader_camPosition = gl.glGetUniformLocation(self.program, "camPosition")
         self.shader_camAngle = gl.glGetUniformLocation(self.program, "camAngle")
+        
+        # scene settings
+        self.shader_sceneTransform = gl.glGetUniformLocation(self.program, "sceneTransform")
         
         # light settings
         self.shader_lightPosition = gl.glGetUniformLocation(self.program, "lightPosition")
@@ -224,6 +266,8 @@ class Visualization():
                                    [0.0, 0.0, 1.0, 0.0],
                                    [0.0, 0.0, 0.0, 1.0]])
         
+        init_primitive = -1
+        
         #print("init_transform ", init_transform)
         
         for jI in range(self.shader_jointCount):
@@ -231,6 +275,10 @@ class Visualization():
             uniformName = "jointTransforms[" + str(jI) + "]";
             uniformLoc = gl.glGetUniformLocation(self.program, uniformName)
             gl.glUniformMatrix4fv(uniformLoc, 1, gl.GL_FALSE, init_transform.tolist ())
+
+            uniformName = "jointPrimitives[" + str(jI) + "]";
+            uniformLoc = gl.glGetUniformLocation(self.program, uniformName)
+            gl.glUniform1i(uniformLoc, init_primitive)
             
             #print("set joint ", jI, " transform ", init_transform)
         
@@ -239,13 +287,20 @@ class Visualization():
             uniformName = "edgeTransforms[" + str(eI) + "]";
             uniformLoc = gl.glGetUniformLocation(self.program, uniformName)
             gl.glUniformMatrix4fv(uniformLoc, 1, gl.GL_FALSE, init_transform.tolist ())
+
+            uniformName = "edgePrimitives[" + str(eI) + "]";
+            uniformLoc = gl.glGetUniformLocation(self.program, uniformName)
+            gl.glUniform1i(uniformLoc, init_primitive)
             
-            #print("set edge ", eI, " transform ", init_transform)
-        
+            #print("set edge ", eI, " transform ", init_transform)  
         
         self.start_time = time.time() 
     
     def render(self, gl):
+        
+        if self.vis_running == False:
+            return
+        
         gl.glUseProgram(self.program)
         
         elapsed_time = time.time() - self.start_time
@@ -258,6 +313,9 @@ class Visualization():
         # camera settings
         gl.glUniform3f(self.shader_camPosition, *self.camPosition.tolist())
         gl.glUniform1f(self.shader_camAngle, self.camAngle);
+        
+        # scene settings
+        gl.glUniformMatrix4fv(self.shader_sceneTransform, 1, gl.GL_FALSE, self.sceneTransform.tolist())
         
         # light settings
         gl.glUniform3f(self.shader_lightPosition, *self.lightPosition.tolist())
@@ -294,6 +352,14 @@ class Visualization():
             uniformName = "jointTransforms[" + str(jI) + "]";
             uniformLoc = gl.glGetUniformLocation(self.program, uniformName)
             gl.glUniformMatrix4fv(uniformLoc, 1, gl.GL_FALSE, jointTransform.tolist ())
+            
+
+        for jI in range(jointCount, self.shader_jointCount):
+            
+            uniformName = "jointTransforms[" + str(jI) + "]";
+            uniformLoc = gl.glGetUniformLocation(self.program, uniformName)
+            gl.glUniformMatrix4fv(uniformLoc, 1, gl.GL_FALSE, self.identity_transform.tolist ())
+
         
         # joint primitives
         for jI in range(jointCount):
@@ -302,6 +368,14 @@ class Visualization():
             uniformName = "jointPrimitives[" + str(jI) + "]";
             uniformLoc = gl.glGetUniformLocation(self.program, uniformName)
             gl.glUniform1i(uniformLoc, jointPrimitive)
+        
+        for jI in range(jointCount, self.shader_jointCount):
+            
+            jointPrimitive = -1
+            uniformName = "jointPrimitives[" + str(jI) + "]";
+            uniformLoc = gl.glGetUniformLocation(self.program, uniformName)
+            gl.glUniform1i(uniformLoc, jointPrimitive)
+
 
         # joint sizes
         for jI in range(jointCount):
@@ -357,6 +431,13 @@ class Visualization():
             uniformLoc = gl.glGetUniformLocation(self.program, uniformName)
             gl.glUniform1i(uniformLoc, edgePrimitive)
             
+        for eI in range(edgeCount, self.shader_edgeCount):
+            
+            edgePrimitive = -1
+            uniformName = "edgePrimitives[" + str(eI) + "]";
+            uniformLoc = gl.glGetUniformLocation(self.program, uniformName)
+            gl.glUniform1i(uniformLoc, edgePrimitive)
+        
         # edge lengths
         edgeLengths = np.copy(self.skeleton.getEdgeLengths())
         for eI in range(edgeCount):
@@ -538,8 +619,38 @@ class Visualization():
     def setCamPosition(self, position):
         self.camPosition = position
         
+    def setCamViewCenter(self, position):
+        self.camViewCenter = position
+        
     def setCamAngle(self, angle):
         self.camAngle = angle   
+        
+    def setScenePosition(self, position):
+        
+        self.scenePosition = position    
+        
+        self.updateSceneTransform()
+ 
+    def setSceneRotation(self, rotation):
+        
+        self.sceneRotation = rotation    
+        
+        self.updateSceneTransform()    
+        
+    def updateSceneTransform(self):
+        
+        defaultScale = np.ones((3))
+        defaultRot = np.array([1.0, 0.0, 0.0, 0.0])
+        defaultPos = np.array([0.0, 0.0, 0.0])
+        defaultRotMat = (t3d.quaternions.quat2mat(defaultRot))
+        
+        sceneRotMat = t3d.quaternions.quat2mat(self.sceneRotation)
+        sceneTransMat = t3d.affines.compose(self.scenePosition, defaultRotMat, defaultScale)
+        sceneRotMat = t3d.affines.compose(defaultPos, sceneRotMat, defaultScale)
+
+        self.sceneTransform = np.transpose(np.matmul(sceneRotMat, sceneTransMat))
+        
+        #print("self.objectTransforms[index] ", self.objectTransforms[index])
         
     def setLightPosition(self, position):
         self.lightPosition = position
@@ -923,3 +1034,4 @@ class Visualization():
     def setSkelObjectSmoothing(self, smoothing):
         
         self.skelObjectSmoothing = smoothing
+        

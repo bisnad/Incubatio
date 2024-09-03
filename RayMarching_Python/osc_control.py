@@ -16,6 +16,12 @@ class OscControl():
         self.port = port
          
         self.dispatcher = dispatcher.Dispatcher()
+        self.mocap_running = True
+        
+        self.dispatcher.map("/mocap/initskelconfig", self.initSkeletonConfig)
+        self.dispatcher.map("/mocap/start", self.startMocap)
+        self.dispatcher.map("/mocap/stop", self.stopMocap)
+        
         self.dispatcher.map("/mocap/updatesmoothing", self.setMocapUpdateSmoothing)
         
         self.dispatcher.map("/mocap/skelposworld", self.setMocapSkeletonPosition)
@@ -25,6 +31,9 @@ class OscControl():
         
         self.dispatcher.map("/vis/camposition", self.setVisCamPosition)
         self.dispatcher.map("/vis/camangle", self.setVisCamAngle)
+        
+        self.dispatcher.map("/vis/sceneposition", self.setVisScenePosition)
+        self.dispatcher.map("/vis/scenerotation", self.setVisSceneRotation)
         
         self.dispatcher.map("/vis/lightposition", self.setVisLightPosition)
         self.dispatcher.map("/vis/shadowsmooth", self.setVisShadowSmooth)
@@ -100,6 +109,28 @@ class OscControl():
         
     def stop(self):
         self.server.server_close()
+        
+    def initSkeletonConfig(self, address, *args):
+
+        self.skeleton.initConfig(args[0])
+        self.visualization.resetSkeleton(self.skeleton)
+        
+    def startMocap(self, address, *args):
+        
+        print("startMocap")
+        
+        self.visualization.startVis()
+        
+        self.mocap_running = True
+
+        
+    def stopMocap(self, address, *args):
+        
+        print("stopMocap")
+        
+        self.visualization.stopVis()
+        
+        self.mocap_running = False
     
     def setMocapUpdateSmoothing(self, address, *args):
         
@@ -116,6 +147,9 @@ class OscControl():
         self.skeleton.setPosition(position)
         
     def setMocapJointPositions(self, address, *args):
+
+        if self.mocap_running == False:
+            return
 
         argCount = len(args)
         posCount = argCount // 3
@@ -141,6 +175,9 @@ class OscControl():
         self.skeleton.setJointPositions(positions)
 
     def setMocapJointRotations(self, address, *args):
+        
+        if self.mocap_running == False:
+            return
 
         argCount = len(args)
         rotCount = argCount // 4
@@ -168,6 +205,18 @@ class OscControl():
         angle = np.array(args)
 
         self.visualization.setCamAngle(angle)
+        
+    def setVisScenePosition(self, address, *args):
+        
+        position = np.array(args)
+
+        self.visualization.setScenePosition(position)
+
+    def setVisSceneRotation(self, address, *args):
+        
+        rotation = np.array(args)
+
+        self.visualization.setSceneRotation(rotation)
         
     def setVisLightPosition(self, address, *args):
         
@@ -714,7 +763,7 @@ class OscControl():
         self.visualization.setJointEdgeSmoothing(smooth)
         
     def setVisSkelObjectSmoothing(self, address, *args):
-        
+    
         smooth = args[0]
         smooth = max(smooth, 0.0001)
         

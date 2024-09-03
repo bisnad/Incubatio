@@ -27,7 +27,7 @@ osc_receive_ip = "127.0.0.1"
 osc_receive_port = 9006
 
 osc_send_ip = "127.0.0.1"
-osc_send_port = 9007
+osc_send_port = 10000
 
 osc_running = False
 osc_rec_message_address = "/mocap/joint/rot_world"

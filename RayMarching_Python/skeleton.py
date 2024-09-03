@@ -3,6 +3,8 @@ import transforms3d as t3d
 from common.quaternion import slerp
 from enum import Enum
 
+import json
+
 def slerp_pose(q0, q1, t=0.5):
     
     joint_count = q0.shape[0]
@@ -88,6 +90,44 @@ class Skeleton():
         
         self.skeletonMode = SkeletonMode.Avatar
         
+    def initConfig(self, configFileName):
+        
+        with open(configFileName) as f:
+            joint_settings = json.load(f)
+            
+        jointFilter = joint_settings["jointFilter"]
+        jointConnectivity = joint_settings["jointConnectivity"]
+        
+        self.initTopology(jointFilter, jointConnectivity)
+        
+        if "avatar" in configFileName:
+            self.setSkeletonMode(SkeletonMode.Avatar)
+        elif "swarm" in configFileName:
+            self.setSkeletonMode(SkeletonMode.Swarm)
+        elif "arm" in configFileName:
+            self.setSkeletonMode(SkeletonMode.Arms)
+
+    def initTopology(self, jointFilter, jointConnectivity):
+        
+        self.jointFilter = jointFilter
+        self.jointConnectivity = jointConnectivity
+        
+        self.jointCount = len(self.jointFilter)
+        self.jointPositions = np.random.rand(self.jointCount, 3)
+        self.jointRotations = np.random.rand(self.jointCount, 4)
+        self.jointTransforms = np.zeros((self.jointCount, 4, 4))
+                
+        self.edgeCount = 0
+        for jointChildren in self.jointConnectivity:
+            self.edgeCount += len(jointChildren)
+                    
+        self.edgeTransforms = np.zeros((self.edgeCount, 4, 4))
+        self.edgeLengths = np.ones(self.edgeCount)
+                
+        self.udateSmoothing = 0.0
+                
+        print("skel jointCount ", self.jointCount, " edgeCount ", self.edgeCount)
+        
     def setSkeletonMode(self, skeletonMode):
         self.skeletonMode = skeletonMode
         
@@ -103,12 +143,13 @@ class Skeleton():
         
         #print("setJointPositions positions s ", positions.shape, " self.jointPositions s ", self.jointPositions.shape)
         
-        
         if self.skeletonMode == SkeletonMode.Avatar:    
             positions = self.setAvatarJointPositions(positions)
         elif self.skeletonMode == SkeletonMode.Arms:   
             positions = self.setArmsJointPositions(positions)
-        
+        elif self.skeletonMode == SkeletonMode.Swarm:   
+            positions = self.setSwarmJointPositions(positions)
+    
         self.jointPositions = self.jointPositions * self.udateSmoothing + positions * (1.0 - self.udateSmoothing)
         
         self.updateJointTransforms()
@@ -122,6 +163,8 @@ class Skeleton():
             rotations = self.setAvatarJointRotations(rotations)
         if self.skeletonMode == SkeletonMode.Arms:    
             rotations = self.setArmsJointRotations(rotations)
+        if self.skeletonMode == SkeletonMode.Swarm:    
+            rotations = self.setSwarmJointRotations(rotations)
  
         # TODO: address problem where rotation and position interpolation doesn't match
         self.jointRotations = slerp_pose(self.jointRotations, rotations, np.ones(self.jointCount) * (1.0 - self.udateSmoothing))
@@ -139,6 +182,12 @@ class Skeleton():
         return positions
     
     def setArmsJointPositions(self, positions):
+        
+        positions = positions[self.jointFilter, :]
+        
+        return positions
+    
+    def setSwarmJointPositions(self, positions):
         
         positions = positions[self.jointFilter, :]
         
@@ -203,6 +252,12 @@ class Skeleton():
         return rotations
     
     def setArmsJointRotations(self, rotations):
+        
+        rotations = rotations[self.jointFilter, :]
+        
+        return rotations
+    
+    def setSwarmJointRotations(self, rotations):
         
         rotations = rotations[self.jointFilter, :]
         
