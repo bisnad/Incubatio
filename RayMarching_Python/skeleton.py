@@ -60,6 +60,7 @@ class SkeletonMode(Enum):
     Avatar = 1
     Arms = 2
     Swarm = 3
+    SnakeAvatar = 4
     
 
 class Skeleton():
@@ -102,6 +103,8 @@ class Skeleton():
         
         if "avatar" in configFileName:
             self.setSkeletonMode(SkeletonMode.Avatar)
+        elif "snakeavatar" in configFileName:
+            self.setSkeletonMode(SkeletonMode.SnakeAvatar)
         elif "swarm" in configFileName:
             self.setSkeletonMode(SkeletonMode.Swarm)
         elif "arm" in configFileName:
@@ -145,6 +148,8 @@ class Skeleton():
         
         if self.skeletonMode == SkeletonMode.Avatar:    
             positions = self.setAvatarJointPositions(positions)
+        elif self.skeletonMode == SkeletonMode.SnakeAvatar:    
+            positions = self.setSnakeAvatarJointPositions(positions)
         elif self.skeletonMode == SkeletonMode.Arms:   
             positions = self.setArmsJointPositions(positions)
         elif self.skeletonMode == SkeletonMode.Swarm:   
@@ -161,9 +166,11 @@ class Skeleton():
         
         if self.skeletonMode == SkeletonMode.Avatar:    
             rotations = self.setAvatarJointRotations(rotations)
-        if self.skeletonMode == SkeletonMode.Arms:    
+        elif self.skeletonMode == SkeletonMode.SnakeAvatar:    
+            rotations = self.setSnakeAvatarJointRotations(rotations)
+        elif self.skeletonMode == SkeletonMode.Arms:    
             rotations = self.setArmsJointRotations(rotations)
-        if self.skeletonMode == SkeletonMode.Swarm:    
+        elif self.skeletonMode == SkeletonMode.Swarm:    
             rotations = self.setSwarmJointRotations(rotations)
  
         # TODO: address problem where rotation and position interpolation doesn't match
@@ -181,6 +188,12 @@ class Skeleton():
         
         return positions
     
+    def setSnakeAvatarJointPositions(self, positions):
+        
+        positions = positions[self.jointFilter, :]
+        
+        return positions
+    
     def setArmsJointPositions(self, positions):
         
         positions = positions[self.jointFilter, :]
@@ -192,7 +205,7 @@ class Skeleton():
         positions = positions[self.jointFilter, :]
         
         return positions
-        
+
     def setAvatarJointRotations(self, rotations):
         
         rotations = rotations[self.jointFilter, :]
@@ -250,6 +263,41 @@ class Skeleton():
         rotations[20,:] = t3d.quaternions.qmult(t3d.euler.euler2quat(0.0, 0.0, np.pi / 2.0, axes='sxyz'), rotations[20,:])     
 
         return rotations
+        
+    def setSnakeAvatarJointRotations(self, rotations):
+        
+        rotations = rotations[self.jointFilter, :]
+        
+        # 0  : Hips
+        #rotations[0,:] = t3d.quaternions.qmult(t3d.euler.euler2quat(0.0, 0.0,  np.pi / 2.0, axes='sxyz'), rotations[0,:])
+        # 4 : Spine
+        #rotations[4,:] = t3d.quaternions.qmult(t3d.euler.euler2quat(0.0, np.pi / 2.0, 0.0, axes='sxyz'), rotations[4,:])
+        # 5 : Spine1
+        #rotations[5,:] = t3d.quaternions.qmult(t3d.euler.euler2quat(0.0, np.pi / 2.0, 0.0, axes='sxyz'), rotations[5,:])
+        # 6 : Spine2
+        #rotations[6,:] = t3d.quaternions.qmult(t3d.euler.euler2quat(0.0, np.pi / 2.0, 0.0, axes='sxyz'), rotations[6,:])
+        # 7 : Spine3
+        #rotations[7,:] = t3d.quaternions.qmult(t3d.euler.euler2quat(0.0, np.pi / 2.0, 0.0, axes='sxyz'), rotations[7,:])
+                                         
+        # 1  : RightLeg
+        #rotations[1,:] = t3d.quaternions.qmult(t3d.euler.euler2quat(np.pi / 2.0, 0.0, 0.0, axes='sxyz'), rotations[1,:])
+        # 2  : RightFoot
+        #rotations[2,:] = t3d.quaternions.qmult(t3d.euler.euler2quat(np.pi / 2.0, 0.0, 0.0, axes='sxyz'), rotations[2,:])
+        # 3  : RightFoot_Nub
+        #rotations[3,:] = t3d.quaternions.qmult(t3d.euler.euler2quat(np.pi / 2.0, 0.0, 0.0, axes='sxyz'), rotations[3,:])
+    
+        # 8 : RightShoulder
+        rotations[8,:] = t3d.quaternions.qmult(t3d.euler.euler2quat(np.pi / 2.0, 0.0, 0.0, axes='sxyz'), rotations[8,:])
+        # 9 : RightArm
+        rotations[9,:] = t3d.quaternions.qmult(t3d.euler.euler2quat(np.pi / 2.0, 0.0, 0.0, axes='sxyz'), rotations[9,:])
+        # 22 : RightForeArm
+        rotations[10,:] = t3d.quaternions.qmult(t3d.euler.euler2quat(np.pi / 2.0, 0.0, 0.0, axes='sxyz'), rotations[10,:])
+        # 11 : RightHand
+        rotations[11,:] = t3d.quaternions.qmult(t3d.euler.euler2quat(np.pi / 2.0, 0.0, 0.0, axes='sxyz'), rotations[11,:])
+        # 12 : RightHand_Nub
+        rotations[12,:] = t3d.quaternions.qmult(t3d.euler.euler2quat(np.pi / 2.0, 0.0, 0.0, axes='sxyz'), rotations[12,:])  
+
+        return rotations
     
     def setArmsJointRotations(self, rotations):
         
@@ -277,6 +325,10 @@ class Skeleton():
             
             if self.skeletonMode == SkeletonMode.Avatar:
                 jointRotation = t3d.quaternions.qmult(t3d.euler.euler2quat(0.0, np.pi / 2.0, 0.0, axes='sxyz'), jointRotation)
+            """
+            elif self.skeletonMode == SkeletonMode.SnakeAvatar:
+                jointRotation = t3d.quaternions.qmult(t3d.euler.euler2quat(0.0, np.pi / 2.0, 0.0, axes='sxyz'), jointRotation)
+            """
             
             jointRotMat = t3d.quaternions.quat2mat(jointRotation)
             jointRotMat = t3d.affines.compose(defaultPos, jointRotMat, defaultScale)

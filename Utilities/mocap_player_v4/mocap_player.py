@@ -16,6 +16,13 @@ motion_player.config = {
 
 """
 motion_player.config = { 
+    "file_name": "D:/Data/mocap/stocos/Incubatio/gaiska_snake_bvh/240612_snake-001.bvh",
+    "fps": 50
+    }
+"""
+
+"""
+motion_player.config = { 
     "file_name": "D:/Data/mocap/Motion2Audio/stocos/bvh/Take_1_50fps_crop.bvh",
     "fps": 50
     }

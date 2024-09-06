@@ -16,6 +16,11 @@ class Visualization():
         
         self.jointCount = skeleton.getJointCount()
         self.edgeCount = skeleton.getEdgeCount()
+        
+        print("visualization")
+        print("self.jointCount ", self.jointCount)
+        print("self.edgeCount ", self.edgeCount)
+        
         self.objectCount = 10;
         
         self.shader_jointCount = 24;
@@ -81,7 +86,7 @@ class Visualization():
         self.edgeSizes[:, 0] *= 0.01
         self.edgeSizes[:, 1] *= 0.01
         self.edgeSizes[:, 2] *= 1.0
-        self.edgeRoundings = np.ones((self.jointCount)) * 0.01
+        self.edgeRoundings = np.ones((self.edgeCount)) * 0.01
         self.edgeSmoothings = np.ones((self.edgeCount)) * 0.01
 
         # object settings

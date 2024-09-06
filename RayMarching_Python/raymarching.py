@@ -32,6 +32,7 @@ Setup Skeleton
 """
 
 
+"""
 # Avatar Mode
 joint_settings_file = "avatar_joint_settings.json"
 
@@ -42,8 +43,21 @@ jointFilter = joint_settings["jointFilter"]
 jointConnectivity = joint_settings["jointConnectivity"]
 skeleton = Skeleton(jointFilter, jointConnectivity)
 skeleton.setSkeletonMode(SkeletonMode.Avatar)
+"""
 
+"""
+# Snake Avatar Mode (right body half)
+joint_settings_file = "snakeavatar_joint_settings.json"
 
+with open(joint_settings_file) as f:
+    joint_settings = json.load(f)
+    
+jointFilter = joint_settings["jointFilter"]
+jointConnectivity = joint_settings["jointConnectivity"]
+skeleton = Skeleton(jointFilter, jointConnectivity)
+skeleton.setSkeletonMode(SkeletonMode.SnakeAvatar)#
+#skeleton.setSkeletonMode(SkeletonMode.Avatar)
+"""
 
 """
 # Arms1 Mode
@@ -72,7 +86,6 @@ skeleton = Skeleton(jointFilter, jointConnectivity)
 skeleton.setSkeletonMode(SkeletonMode.Arms)
 """
 
-"""
 # Swarm Mode
 joint_settings_file = "swarm_joint_settings.json"
 
@@ -83,7 +96,6 @@ jointFilter = joint_settings["jointFilter"]
 jointConnectivity = joint_settings["jointConnectivity"]
 skeleton = Skeleton(jointFilter, jointConnectivity)
 skeleton.setSkeletonMode(SkeletonMode.Swarm)
-"""
 
 
 jointCount = skeleton.getJointCount()

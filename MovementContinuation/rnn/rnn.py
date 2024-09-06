@@ -43,13 +43,13 @@ mocap_pos_scale = 1.0
 mocap_fps = 30
 """
 
-
+"""
 mocap_file_path = "D:/Data/mocap/stocos/Solos/Canal_14-08-2023/fbx_50hz/"
 mocap_files = ["Muriel_Embodied_Machine_variation.fbx"]
 mocap_valid_frame_ranges = [ [ [ 150, 6400 ] ] ]
 mocap_pos_scale = 1.0
 mocap_fps = 50
-
+"""
 
 """
 mocap_file_path = "D:/Data/mocap/stocos/Duets/Amsterdam_2024/fbx_50hz"
@@ -68,13 +68,13 @@ mocap_pos_scale = 1.0
 mocap_fps = 30
 """
 
-"""
+
 mocap_file_path = "D:/Data/mocap/stocos/Incubatio/gaiska_snake_bvh/"
 mocap_files = ["240612_snake-001.bvh", "240612_snake-002.bvh"]
 mocap_valid_frame_ranges = [ [ [ 100, 14597 ] ], [ [ 10, 13623 ] ] ]
 mocap_pos_scale = 1.0
 mocap_fps = 50
-"""
+
 
 """
 Model Settings
