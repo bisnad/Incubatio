@@ -1243,7 +1243,15 @@
 					"skeletonPosZ" : [ 0.479064091680815 ],
 					"skeletonPosZ_max" : [ 20.0 ],
 					"skeletonPosZ_min" : [ -20.0 ],
-					"skeletonPos_interest" : [ 0 ]
+					"skeletonPos_interest" : [ 0 ],
+					"fogMaxDist_max[1]" : [  ],
+					"fogMaxDist_min[1]" : [  ],
+					"fogMaxDist[1]" : [  ],
+					"fogMaxDist_interest[1]" : [  ],
+					"fogMinDist_max[1]" : [  ],
+					"fogMinDist_min[1]" : [  ],
+					"fogMinDist[1]" : [  ],
+					"fogMinDist_interest[1]" : [  ]
 				}
 
 			}
@@ -2489,7 +2497,15 @@
 					"skeletonPosZ" : [ 0.5 ],
 					"skeletonPosZ_max" : [ 20.0 ],
 					"skeletonPosZ_min" : [ -20.0 ],
-					"skeletonPos_interest" : [ 0 ]
+					"skeletonPos_interest" : [ 0 ],
+					"fogMaxDist_max[1]" : [  ],
+					"fogMaxDist_min[1]" : [  ],
+					"fogMaxDist[1]" : [  ],
+					"fogMaxDist_interest[1]" : [  ],
+					"fogMinDist_max[1]" : [  ],
+					"fogMinDist_min[1]" : [  ],
+					"fogMinDist[1]" : [  ],
+					"fogMinDist_interest[1]" : [  ]
 				}
 
 			}
@@ -3735,7 +3751,15 @@
 					"skeletonPosZ" : [ 0.5 ],
 					"skeletonPosZ_max" : [ 20.0 ],
 					"skeletonPosZ_min" : [ -20.0 ],
-					"skeletonPos_interest" : [ 0 ]
+					"skeletonPos_interest" : [ 0 ],
+					"fogMaxDist_max[1]" : [  ],
+					"fogMaxDist_min[1]" : [  ],
+					"fogMaxDist[1]" : [  ],
+					"fogMaxDist_interest[1]" : [  ],
+					"fogMinDist_max[1]" : [  ],
+					"fogMinDist_min[1]" : [  ],
+					"fogMinDist[1]" : [  ],
+					"fogMinDist_interest[1]" : [  ]
 				}
 
 			}
@@ -4981,7 +5005,15 @@
 					"skeletonPosZ" : [ 0.5 ],
 					"skeletonPosZ_max" : [ 20.0 ],
 					"skeletonPosZ_min" : [ -20.0 ],
-					"skeletonPos_interest" : [ 0 ]
+					"skeletonPos_interest" : [ 0 ],
+					"fogMaxDist_max[1]" : [  ],
+					"fogMaxDist_min[1]" : [  ],
+					"fogMaxDist[1]" : [  ],
+					"fogMaxDist_interest[1]" : [  ],
+					"fogMinDist_max[1]" : [  ],
+					"fogMinDist_min[1]" : [  ],
+					"fogMinDist[1]" : [  ],
+					"fogMinDist_interest[1]" : [  ]
 				}
 
 			}
@@ -6227,7 +6259,15 @@
 					"skeletonPosZ" : [ 0.475647283531409 ],
 					"skeletonPosZ_max" : [ 20.0 ],
 					"skeletonPosZ_min" : [ -20.0 ],
-					"skeletonPos_interest" : [ 0 ]
+					"skeletonPos_interest" : [ 0 ],
+					"fogMaxDist_max[1]" : [  ],
+					"fogMaxDist_min[1]" : [  ],
+					"fogMaxDist[1]" : [  ],
+					"fogMaxDist_interest[1]" : [  ],
+					"fogMinDist_max[1]" : [  ],
+					"fogMinDist_min[1]" : [  ],
+					"fogMinDist[1]" : [  ],
+					"fogMinDist_interest[1]" : [  ]
 				}
 
 			}
@@ -7473,7 +7513,15 @@
 					"skeletonPosZ" : [ 0.47919142614601 ],
 					"skeletonPosZ_max" : [ 20.0 ],
 					"skeletonPosZ_min" : [ -20.0 ],
-					"skeletonPos_interest" : [ 0 ]
+					"skeletonPos_interest" : [ 0 ],
+					"fogMaxDist_max[1]" : [  ],
+					"fogMaxDist_min[1]" : [  ],
+					"fogMaxDist[1]" : [  ],
+					"fogMaxDist_interest[1]" : [  ],
+					"fogMinDist_max[1]" : [  ],
+					"fogMinDist_min[1]" : [  ],
+					"fogMinDist[1]" : [  ],
+					"fogMinDist_interest[1]" : [  ]
 				}
 
 			}
@@ -8719,7 +8767,15 @@
 					"skeletonPosZ" : [ 0.475392614601019 ],
 					"skeletonPosZ_max" : [ 20.0 ],
 					"skeletonPosZ_min" : [ -20.0 ],
-					"skeletonPos_interest" : [ 0 ]
+					"skeletonPos_interest" : [ 0 ],
+					"fogMaxDist_max[1]" : [  ],
+					"fogMaxDist_min[1]" : [  ],
+					"fogMaxDist[1]" : [  ],
+					"fogMaxDist_interest[1]" : [  ],
+					"fogMinDist_max[1]" : [  ],
+					"fogMinDist_min[1]" : [  ],
+					"fogMinDist[1]" : [  ],
+					"fogMinDist_interest[1]" : [  ]
 				}
 
 			}
@@ -9965,7 +10021,15 @@
 					"skeletonPosZ" : [ 0.5 ],
 					"skeletonPosZ_max" : [ 20.0 ],
 					"skeletonPosZ_min" : [ -20.0 ],
-					"skeletonPos_interest" : [ 0 ]
+					"skeletonPos_interest" : [ 0 ],
+					"fogMaxDist_max[1]" : [  ],
+					"fogMaxDist_min[1]" : [  ],
+					"fogMaxDist[1]" : [  ],
+					"fogMaxDist_interest[1]" : [  ],
+					"fogMinDist_max[1]" : [  ],
+					"fogMinDist_min[1]" : [  ],
+					"fogMinDist[1]" : [  ],
+					"fogMinDist_interest[1]" : [  ]
 				}
 
 			}
@@ -11211,7 +11275,15 @@
 					"skeletonPosZ" : [ 0.48197156196944 ],
 					"skeletonPosZ_max" : [ 20.0 ],
 					"skeletonPosZ_min" : [ -20.0 ],
-					"skeletonPos_interest" : [ 0 ]
+					"skeletonPos_interest" : [ 0 ],
+					"fogMaxDist_max[1]" : [  ],
+					"fogMaxDist_min[1]" : [  ],
+					"fogMaxDist[1]" : [  ],
+					"fogMaxDist_interest[1]" : [  ],
+					"fogMinDist_max[1]" : [  ],
+					"fogMinDist_min[1]" : [  ],
+					"fogMinDist[1]" : [  ],
+					"fogMinDist_interest[1]" : [  ]
 				}
 
 			}
@@ -12457,7 +12529,15 @@
 					"skeletonPosZ" : [ 0.482162563667233 ],
 					"skeletonPosZ_max" : [ 20.0 ],
 					"skeletonPosZ_min" : [ -20.0 ],
-					"skeletonPos_interest" : [ 0 ]
+					"skeletonPos_interest" : [ 0 ],
+					"fogMaxDist_max[1]" : [  ],
+					"fogMaxDist_min[1]" : [  ],
+					"fogMaxDist[1]" : [  ],
+					"fogMaxDist_interest[1]" : [  ],
+					"fogMinDist_max[1]" : [  ],
+					"fogMinDist_min[1]" : [  ],
+					"fogMinDist[1]" : [  ],
+					"fogMinDist_interest[1]" : [  ]
 				}
 
 			}
@@ -13703,7 +13783,15 @@
 					"skeletonPosZ" : [ 0.482162563667233 ],
 					"skeletonPosZ_max" : [ 20.0 ],
 					"skeletonPosZ_min" : [ -20.0 ],
-					"skeletonPos_interest" : [ 0 ]
+					"skeletonPos_interest" : [ 0 ],
+					"fogMaxDist_max[1]" : [  ],
+					"fogMaxDist_min[1]" : [  ],
+					"fogMaxDist[1]" : [  ],
+					"fogMaxDist_interest[1]" : [  ],
+					"fogMinDist_max[1]" : [  ],
+					"fogMinDist_min[1]" : [  ],
+					"fogMinDist[1]" : [  ],
+					"fogMinDist_interest[1]" : [  ]
 				}
 
 			}
@@ -14949,7 +15037,15 @@
 					"skeletonPosZ" : [ 0.49443 ],
 					"skeletonPosZ_max" : [ 20.0 ],
 					"skeletonPosZ_min" : [ -20.0 ],
-					"skeletonPos_interest" : [ 0 ]
+					"skeletonPos_interest" : [ 0 ],
+					"fogMaxDist_max[1]" : [  ],
+					"fogMaxDist_min[1]" : [  ],
+					"fogMaxDist[1]" : [  ],
+					"fogMaxDist_interest[1]" : [  ],
+					"fogMinDist_max[1]" : [  ],
+					"fogMinDist_min[1]" : [  ],
+					"fogMinDist[1]" : [  ],
+					"fogMinDist_interest[1]" : [  ]
 				}
 
 			}
@@ -16195,7 +16291,15 @@
 					"skeletonPosZ" : [ 0.484626987323494 ],
 					"skeletonPosZ_max" : [ 20.0 ],
 					"skeletonPosZ_min" : [ -20.0 ],
-					"skeletonPos_interest" : [ 0 ]
+					"skeletonPos_interest" : [ 0 ],
+					"fogMaxDist_max[1]" : [  ],
+					"fogMaxDist_min[1]" : [  ],
+					"fogMaxDist[1]" : [  ],
+					"fogMaxDist_interest[1]" : [  ],
+					"fogMinDist_max[1]" : [  ],
+					"fogMinDist_min[1]" : [  ],
+					"fogMinDist[1]" : [  ],
+					"fogMinDist_interest[1]" : [  ]
 				}
 
 			}
@@ -17441,7 +17545,15 @@
 					"skeletonPosZ" : [ 0.497845925297114 ],
 					"skeletonPosZ_max" : [ 20.0 ],
 					"skeletonPosZ_min" : [ -20.0 ],
-					"skeletonPos_interest" : [ 0 ]
+					"skeletonPos_interest" : [ 0 ],
+					"fogMaxDist_max[1]" : [  ],
+					"fogMaxDist_min[1]" : [  ],
+					"fogMaxDist[1]" : [  ],
+					"fogMaxDist_interest[1]" : [  ],
+					"fogMinDist_max[1]" : [  ],
+					"fogMinDist_min[1]" : [  ],
+					"fogMinDist[1]" : [  ],
+					"fogMinDist_interest[1]" : [  ]
 				}
 
 			}
@@ -18687,7 +18799,15 @@
 					"skeletonPosZ" : [ 0.484626987323494 ],
 					"skeletonPosZ_max" : [ 20.0 ],
 					"skeletonPosZ_min" : [ -20.0 ],
-					"skeletonPos_interest" : [ 0 ]
+					"skeletonPos_interest" : [ 0 ],
+					"fogMaxDist_max[1]" : [  ],
+					"fogMaxDist_min[1]" : [  ],
+					"fogMaxDist[1]" : [  ],
+					"fogMaxDist_interest[1]" : [  ],
+					"fogMinDist_max[1]" : [  ],
+					"fogMinDist_min[1]" : [  ],
+					"fogMinDist[1]" : [  ],
+					"fogMinDist_interest[1]" : [  ]
 				}
 
 			}
@@ -19933,7 +20053,15 @@
 					"skeletonPosZ" : [ 0.469323005093379 ],
 					"skeletonPosZ_max" : [ 20.0 ],
 					"skeletonPosZ_min" : [ -20.0 ],
-					"skeletonPos_interest" : [ 0 ]
+					"skeletonPos_interest" : [ 0 ],
+					"fogMaxDist_max[1]" : [  ],
+					"fogMaxDist_min[1]" : [  ],
+					"fogMaxDist[1]" : [  ],
+					"fogMaxDist_interest[1]" : [  ],
+					"fogMinDist_max[1]" : [  ],
+					"fogMinDist_min[1]" : [  ],
+					"fogMinDist[1]" : [  ],
+					"fogMinDist_interest[1]" : [  ]
 				}
 
 			}
@@ -21179,7 +21307,15 @@
 					"skeletonPosZ" : [ 0.5 ],
 					"skeletonPosZ_max" : [ 20.0 ],
 					"skeletonPosZ_min" : [ -20.0 ],
-					"skeletonPos_interest" : [ 0 ]
+					"skeletonPos_interest" : [ 0 ],
+					"fogMaxDist_max[1]" : [  ],
+					"fogMaxDist_min[1]" : [  ],
+					"fogMaxDist[1]" : [  ],
+					"fogMaxDist_interest[1]" : [  ],
+					"fogMinDist_max[1]" : [  ],
+					"fogMinDist_min[1]" : [  ],
+					"fogMinDist[1]" : [  ],
+					"fogMinDist_interest[1]" : [  ]
 				}
 
 			}
@@ -22425,7 +22561,15 @@
 					"skeletonPosZ" : [ 0.466097198641766 ],
 					"skeletonPosZ_max" : [ 20.0 ],
 					"skeletonPosZ_min" : [ -20.0 ],
-					"skeletonPos_interest" : [ 0 ]
+					"skeletonPos_interest" : [ 0 ],
+					"fogMaxDist_max[1]" : [  ],
+					"fogMaxDist_min[1]" : [  ],
+					"fogMaxDist[1]" : [  ],
+					"fogMaxDist_interest[1]" : [  ],
+					"fogMinDist_max[1]" : [  ],
+					"fogMinDist_min[1]" : [  ],
+					"fogMinDist[1]" : [  ],
+					"fogMinDist_interest[1]" : [  ]
 				}
 
 			}
@@ -23671,7 +23815,15 @@
 					"skeletonPosZ" : [ 0.479064091680815 ],
 					"skeletonPosZ_max" : [ 20.0 ],
 					"skeletonPosZ_min" : [ -20.0 ],
-					"skeletonPos_interest" : [ 0 ]
+					"skeletonPos_interest" : [ 0 ],
+					"fogMaxDist_max[1]" : [  ],
+					"fogMaxDist_min[1]" : [  ],
+					"fogMaxDist[1]" : [  ],
+					"fogMaxDist_interest[1]" : [  ],
+					"fogMinDist_max[1]" : [  ],
+					"fogMinDist_min[1]" : [  ],
+					"fogMinDist[1]" : [  ],
+					"fogMinDist_interest[1]" : [  ]
 				}
 
 			}
@@ -24917,7 +25069,15 @@
 					"skeletonPosZ" : [ 0.500945 ],
 					"skeletonPosZ_max" : [ 20.0 ],
 					"skeletonPosZ_min" : [ -20.0 ],
-					"skeletonPos_interest" : [ 0 ]
+					"skeletonPos_interest" : [ 0 ],
+					"fogMaxDist_max[1]" : [  ],
+					"fogMaxDist_min[1]" : [  ],
+					"fogMaxDist[1]" : [  ],
+					"fogMaxDist_interest[1]" : [  ],
+					"fogMinDist_max[1]" : [  ],
+					"fogMinDist_min[1]" : [  ],
+					"fogMinDist[1]" : [  ],
+					"fogMinDist_interest[1]" : [  ]
 				}
 
 			}
@@ -26163,7 +26323,15 @@
 					"skeletonPosZ" : [ 0.49443 ],
 					"skeletonPosZ_max" : [ 20.0 ],
 					"skeletonPosZ_min" : [ -20.0 ],
-					"skeletonPos_interest" : [ 0 ]
+					"skeletonPos_interest" : [ 0 ],
+					"fogMaxDist_max[1]" : [  ],
+					"fogMaxDist_min[1]" : [  ],
+					"fogMaxDist[1]" : [  ],
+					"fogMaxDist_interest[1]" : [  ],
+					"fogMinDist_max[1]" : [  ],
+					"fogMinDist_min[1]" : [  ],
+					"fogMinDist[1]" : [  ],
+					"fogMinDist_interest[1]" : [  ]
 				}
 
 			}
@@ -27409,7 +27577,15 @@
 					"skeletonPosZ" : [ 0.49443 ],
 					"skeletonPosZ_max" : [ 20.0 ],
 					"skeletonPosZ_min" : [ -20.0 ],
-					"skeletonPos_interest" : [ 0 ]
+					"skeletonPos_interest" : [ 0 ],
+					"fogMaxDist_max[1]" : [  ],
+					"fogMaxDist_min[1]" : [  ],
+					"fogMaxDist[1]" : [  ],
+					"fogMaxDist_interest[1]" : [  ],
+					"fogMinDist_max[1]" : [  ],
+					"fogMinDist_min[1]" : [  ],
+					"fogMinDist[1]" : [  ],
+					"fogMinDist_interest[1]" : [  ]
 				}
 
 			}
@@ -28655,7 +28831,15 @@
 					"skeletonPosZ" : [ 0.49443 ],
 					"skeletonPosZ_max" : [ 20.0 ],
 					"skeletonPosZ_min" : [ -20.0 ],
-					"skeletonPos_interest" : [ 0 ]
+					"skeletonPos_interest" : [ 0 ],
+					"fogMaxDist_max[1]" : [  ],
+					"fogMaxDist_min[1]" : [  ],
+					"fogMaxDist[1]" : [  ],
+					"fogMaxDist_interest[1]" : [  ],
+					"fogMinDist_max[1]" : [  ],
+					"fogMinDist_min[1]" : [  ],
+					"fogMinDist[1]" : [  ],
+					"fogMinDist_interest[1]" : [  ]
 				}
 
 			}
@@ -29901,7 +30085,15 @@
 					"skeletonPosZ" : [ 0.49443 ],
 					"skeletonPosZ_max" : [ 20.0 ],
 					"skeletonPosZ_min" : [ -20.0 ],
-					"skeletonPos_interest" : [ 0 ]
+					"skeletonPos_interest" : [ 0 ],
+					"fogMaxDist_max[1]" : [  ],
+					"fogMaxDist_min[1]" : [  ],
+					"fogMaxDist[1]" : [  ],
+					"fogMaxDist_interest[1]" : [  ],
+					"fogMinDist_max[1]" : [  ],
+					"fogMinDist_min[1]" : [  ],
+					"fogMinDist[1]" : [  ],
+					"fogMinDist_interest[1]" : [  ]
 				}
 
 			}
@@ -31147,7 +31339,15 @@
 					"skeletonPosZ" : [ 0.49443 ],
 					"skeletonPosZ_max" : [ 20.0 ],
 					"skeletonPosZ_min" : [ -20.0 ],
-					"skeletonPos_interest" : [ 0 ]
+					"skeletonPos_interest" : [ 0 ],
+					"fogMaxDist_max[1]" : [  ],
+					"fogMaxDist_min[1]" : [  ],
+					"fogMaxDist[1]" : [  ],
+					"fogMaxDist_interest[1]" : [  ],
+					"fogMinDist_max[1]" : [  ],
+					"fogMinDist_min[1]" : [  ],
+					"fogMinDist[1]" : [  ],
+					"fogMinDist_interest[1]" : [  ]
 				}
 
 			}
@@ -32393,7 +32593,15 @@
 					"skeletonPosZ" : [ 0.49443 ],
 					"skeletonPosZ_max" : [ 20.0 ],
 					"skeletonPosZ_min" : [ -20.0 ],
-					"skeletonPos_interest" : [ 0 ]
+					"skeletonPos_interest" : [ 0 ],
+					"fogMaxDist_max[1]" : [  ],
+					"fogMaxDist_min[1]" : [  ],
+					"fogMaxDist[1]" : [  ],
+					"fogMaxDist_interest[1]" : [  ],
+					"fogMinDist_max[1]" : [  ],
+					"fogMinDist_min[1]" : [  ],
+					"fogMinDist[1]" : [  ],
+					"fogMinDist_interest[1]" : [  ]
 				}
 
 			}
@@ -33639,7 +33847,15 @@
 					"skeletonPosZ" : [ 0.49443 ],
 					"skeletonPosZ_max" : [ 20.0 ],
 					"skeletonPosZ_min" : [ -20.0 ],
-					"skeletonPos_interest" : [ 0 ]
+					"skeletonPos_interest" : [ 0 ],
+					"fogMaxDist_max[1]" : [  ],
+					"fogMaxDist_min[1]" : [  ],
+					"fogMaxDist[1]" : [  ],
+					"fogMaxDist_interest[1]" : [  ],
+					"fogMinDist_max[1]" : [  ],
+					"fogMinDist_min[1]" : [  ],
+					"fogMinDist[1]" : [  ],
+					"fogMinDist_interest[1]" : [  ]
 				}
 
 			}
@@ -34885,7 +35101,15 @@
 					"skeletonPosZ" : [ 0.49443 ],
 					"skeletonPosZ_max" : [ 20.0 ],
 					"skeletonPosZ_min" : [ -20.0 ],
-					"skeletonPos_interest" : [ 0 ]
+					"skeletonPos_interest" : [ 0 ],
+					"fogMaxDist_max[1]" : [  ],
+					"fogMaxDist_min[1]" : [  ],
+					"fogMaxDist[1]" : [  ],
+					"fogMaxDist_interest[1]" : [  ],
+					"fogMinDist_max[1]" : [  ],
+					"fogMinDist_min[1]" : [  ],
+					"fogMinDist[1]" : [  ],
+					"fogMinDist_interest[1]" : [  ]
 				}
 
 			}
@@ -36131,7 +36355,15 @@
 					"skeletonPosZ" : [ 0.49443 ],
 					"skeletonPosZ_max" : [ 20.0 ],
 					"skeletonPosZ_min" : [ -20.0 ],
-					"skeletonPos_interest" : [ 0 ]
+					"skeletonPos_interest" : [ 0 ],
+					"fogMaxDist_max[1]" : [  ],
+					"fogMaxDist_min[1]" : [  ],
+					"fogMaxDist[1]" : [  ],
+					"fogMaxDist_interest[1]" : [  ],
+					"fogMinDist_max[1]" : [  ],
+					"fogMinDist_min[1]" : [  ],
+					"fogMinDist[1]" : [  ],
+					"fogMinDist_interest[1]" : [  ]
 				}
 
 			}
@@ -37377,7 +37609,15 @@
 					"skeletonPosZ" : [ 0.49443 ],
 					"skeletonPosZ_max" : [ 20.0 ],
 					"skeletonPosZ_min" : [ -20.0 ],
-					"skeletonPos_interest" : [ 0 ]
+					"skeletonPos_interest" : [ 0 ],
+					"fogMaxDist_max[1]" : [  ],
+					"fogMaxDist_min[1]" : [  ],
+					"fogMaxDist[1]" : [  ],
+					"fogMaxDist_interest[1]" : [  ],
+					"fogMinDist_max[1]" : [  ],
+					"fogMinDist_min[1]" : [  ],
+					"fogMinDist[1]" : [  ],
+					"fogMinDist_interest[1]" : [  ]
 				}
 
 			}
@@ -38623,7 +38863,15 @@
 					"skeletonPosZ" : [ 0.49443 ],
 					"skeletonPosZ_max" : [ 20.0 ],
 					"skeletonPosZ_min" : [ -20.0 ],
-					"skeletonPos_interest" : [ 0 ]
+					"skeletonPos_interest" : [ 0 ],
+					"fogMaxDist_max[1]" : [  ],
+					"fogMaxDist_min[1]" : [  ],
+					"fogMaxDist[1]" : [  ],
+					"fogMaxDist_interest[1]" : [  ],
+					"fogMinDist_max[1]" : [  ],
+					"fogMinDist_min[1]" : [  ],
+					"fogMinDist[1]" : [  ],
+					"fogMinDist_interest[1]" : [  ]
 				}
 
 			}
@@ -39869,7 +40117,15 @@
 					"skeletonPosZ" : [ 0.49443 ],
 					"skeletonPosZ_max" : [ 20.0 ],
 					"skeletonPosZ_min" : [ -20.0 ],
-					"skeletonPos_interest" : [ 0 ]
+					"skeletonPos_interest" : [ 0 ],
+					"fogMaxDist_max[1]" : [  ],
+					"fogMaxDist_min[1]" : [  ],
+					"fogMaxDist[1]" : [  ],
+					"fogMaxDist_interest[1]" : [  ],
+					"fogMinDist_max[1]" : [  ],
+					"fogMinDist_min[1]" : [  ],
+					"fogMinDist[1]" : [  ],
+					"fogMinDist_interest[1]" : [  ]
 				}
 
 			}
@@ -41115,7 +41371,15 @@
 					"skeletonPosZ" : [ 0.49443 ],
 					"skeletonPosZ_max" : [ 20.0 ],
 					"skeletonPosZ_min" : [ -20.0 ],
-					"skeletonPos_interest" : [ 0 ]
+					"skeletonPos_interest" : [ 0 ],
+					"fogMaxDist_max[1]" : [  ],
+					"fogMaxDist_min[1]" : [  ],
+					"fogMaxDist[1]" : [  ],
+					"fogMaxDist_interest[1]" : [  ],
+					"fogMinDist_max[1]" : [  ],
+					"fogMinDist_min[1]" : [  ],
+					"fogMinDist[1]" : [  ],
+					"fogMinDist_interest[1]" : [  ]
 				}
 
 			}
@@ -42361,7 +42625,15 @@
 					"skeletonPosZ" : [ 0.49443 ],
 					"skeletonPosZ_max" : [ 20.0 ],
 					"skeletonPosZ_min" : [ -20.0 ],
-					"skeletonPos_interest" : [ 0 ]
+					"skeletonPos_interest" : [ 0 ],
+					"fogMaxDist_max[1]" : [  ],
+					"fogMaxDist_min[1]" : [  ],
+					"fogMaxDist[1]" : [  ],
+					"fogMaxDist_interest[1]" : [  ],
+					"fogMinDist_max[1]" : [  ],
+					"fogMinDist_min[1]" : [  ],
+					"fogMinDist[1]" : [  ],
+					"fogMinDist_interest[1]" : [  ]
 				}
 
 			}
@@ -43607,7 +43879,15 @@
 					"skeletonPosZ" : [ 0.5 ],
 					"skeletonPosZ_max" : [ 20.0 ],
 					"skeletonPosZ_min" : [ -20.0 ],
-					"skeletonPos_interest" : [ 0 ]
+					"skeletonPos_interest" : [ 0 ],
+					"fogMaxDist_max[1]" : [  ],
+					"fogMaxDist_min[1]" : [  ],
+					"fogMaxDist[1]" : [  ],
+					"fogMaxDist_interest[1]" : [  ],
+					"fogMinDist_max[1]" : [  ],
+					"fogMinDist_min[1]" : [  ],
+					"fogMinDist[1]" : [  ],
+					"fogMinDist_interest[1]" : [  ]
 				}
 
 			}
@@ -44853,7 +45133,15 @@
 					"skeletonPosZ" : [ 0.49443 ],
 					"skeletonPosZ_max" : [ 20.0 ],
 					"skeletonPosZ_min" : [ -20.0 ],
-					"skeletonPos_interest" : [ 0 ]
+					"skeletonPos_interest" : [ 0 ],
+					"fogMaxDist_max[1]" : [  ],
+					"fogMaxDist_min[1]" : [  ],
+					"fogMaxDist[1]" : [  ],
+					"fogMaxDist_interest[1]" : [  ],
+					"fogMinDist_max[1]" : [  ],
+					"fogMinDist_min[1]" : [  ],
+					"fogMinDist[1]" : [  ],
+					"fogMinDist_interest[1]" : [  ]
 				}
 
 			}
@@ -46099,7 +46387,15 @@
 					"skeletonPosZ" : [ 0.49443 ],
 					"skeletonPosZ_max" : [ 20.0 ],
 					"skeletonPosZ_min" : [ -20.0 ],
-					"skeletonPos_interest" : [ 0 ]
+					"skeletonPos_interest" : [ 0 ],
+					"fogMaxDist_max[1]" : [  ],
+					"fogMaxDist_min[1]" : [  ],
+					"fogMaxDist[1]" : [  ],
+					"fogMaxDist_interest[1]" : [  ],
+					"fogMinDist_max[1]" : [  ],
+					"fogMinDist_min[1]" : [  ],
+					"fogMinDist[1]" : [  ],
+					"fogMinDist_interest[1]" : [  ]
 				}
 
 			}
@@ -47345,7 +47641,15 @@
 					"skeletonPosZ" : [ 0.49443 ],
 					"skeletonPosZ_max" : [ 20.0 ],
 					"skeletonPosZ_min" : [ -20.0 ],
-					"skeletonPos_interest" : [ 0 ]
+					"skeletonPos_interest" : [ 0 ],
+					"fogMaxDist_max[1]" : [  ],
+					"fogMaxDist_min[1]" : [  ],
+					"fogMaxDist[1]" : [  ],
+					"fogMaxDist_interest[1]" : [  ],
+					"fogMinDist_max[1]" : [  ],
+					"fogMinDist_min[1]" : [  ],
+					"fogMinDist[1]" : [  ],
+					"fogMinDist_interest[1]" : [  ]
 				}
 
 			}
@@ -48591,7 +48895,15 @@
 					"skeletonPosZ" : [ 0.49443 ],
 					"skeletonPosZ_max" : [ 20.0 ],
 					"skeletonPosZ_min" : [ -20.0 ],
-					"skeletonPos_interest" : [ 0 ]
+					"skeletonPos_interest" : [ 0 ],
+					"fogMaxDist_max[1]" : [  ],
+					"fogMaxDist_min[1]" : [  ],
+					"fogMaxDist[1]" : [  ],
+					"fogMaxDist_interest[1]" : [  ],
+					"fogMinDist_max[1]" : [  ],
+					"fogMinDist_min[1]" : [  ],
+					"fogMinDist[1]" : [  ],
+					"fogMinDist_interest[1]" : [  ]
 				}
 
 			}
@@ -49837,7 +50149,15 @@
 					"skeletonPosZ" : [ 0.49443 ],
 					"skeletonPosZ_max" : [ 20.0 ],
 					"skeletonPosZ_min" : [ -20.0 ],
-					"skeletonPos_interest" : [ 0 ]
+					"skeletonPos_interest" : [ 0 ],
+					"fogMaxDist_max[1]" : [  ],
+					"fogMaxDist_min[1]" : [  ],
+					"fogMaxDist[1]" : [  ],
+					"fogMaxDist_interest[1]" : [  ],
+					"fogMinDist_max[1]" : [  ],
+					"fogMinDist_min[1]" : [  ],
+					"fogMinDist[1]" : [  ],
+					"fogMinDist_interest[1]" : [  ]
 				}
 
 			}
@@ -51083,7 +51403,15 @@
 					"skeletonPosZ" : [ 0.5 ],
 					"skeletonPosZ_max" : [ 20.0 ],
 					"skeletonPosZ_min" : [ -20.0 ],
-					"skeletonPos_interest" : [ 0 ]
+					"skeletonPos_interest" : [ 0 ],
+					"fogMaxDist_max[1]" : [  ],
+					"fogMaxDist_min[1]" : [  ],
+					"fogMaxDist[1]" : [  ],
+					"fogMaxDist_interest[1]" : [  ],
+					"fogMinDist_max[1]" : [  ],
+					"fogMinDist_min[1]" : [  ],
+					"fogMinDist[1]" : [  ],
+					"fogMinDist_interest[1]" : [  ]
 				}
 
 			}
@@ -52329,7 +52657,15 @@
 					"skeletonPosZ" : [ 0.5 ],
 					"skeletonPosZ_max" : [ 20.0 ],
 					"skeletonPosZ_min" : [ -20.0 ],
-					"skeletonPos_interest" : [ 0 ]
+					"skeletonPos_interest" : [ 0 ],
+					"fogMaxDist_max[1]" : [  ],
+					"fogMaxDist_min[1]" : [  ],
+					"fogMaxDist[1]" : [  ],
+					"fogMaxDist_interest[1]" : [  ],
+					"fogMinDist_max[1]" : [  ],
+					"fogMinDist_min[1]" : [  ],
+					"fogMinDist[1]" : [  ],
+					"fogMinDist_interest[1]" : [  ]
 				}
 
 			}
@@ -53575,7 +53911,15 @@
 					"skeletonPosZ" : [ 0.5 ],
 					"skeletonPosZ_max" : [ 20.0 ],
 					"skeletonPosZ_min" : [ -20.0 ],
-					"skeletonPos_interest" : [ 0 ]
+					"skeletonPos_interest" : [ 0 ],
+					"fogMaxDist_max[1]" : [  ],
+					"fogMaxDist_min[1]" : [  ],
+					"fogMaxDist[1]" : [  ],
+					"fogMaxDist_interest[1]" : [  ],
+					"fogMinDist_max[1]" : [  ],
+					"fogMinDist_min[1]" : [  ],
+					"fogMinDist[1]" : [  ],
+					"fogMinDist_interest[1]" : [  ]
 				}
 
 			}
@@ -54821,7 +55165,15 @@
 					"skeletonPosZ" : [ 0.5 ],
 					"skeletonPosZ_max" : [ 20.0 ],
 					"skeletonPosZ_min" : [ -20.0 ],
-					"skeletonPos_interest" : [ 0 ]
+					"skeletonPos_interest" : [ 0 ],
+					"fogMaxDist_max[1]" : [  ],
+					"fogMaxDist_min[1]" : [  ],
+					"fogMaxDist[1]" : [  ],
+					"fogMaxDist_interest[1]" : [  ],
+					"fogMinDist_max[1]" : [  ],
+					"fogMinDist_min[1]" : [  ],
+					"fogMinDist[1]" : [  ],
+					"fogMinDist_interest[1]" : [  ]
 				}
 
 			}
@@ -56067,7 +56419,15 @@
 					"skeletonPosZ" : [ 0.500945 ],
 					"skeletonPosZ_max" : [ 20.0 ],
 					"skeletonPosZ_min" : [ -20.0 ],
-					"skeletonPos_interest" : [ 0 ]
+					"skeletonPos_interest" : [ 0 ],
+					"fogMaxDist_max[1]" : [  ],
+					"fogMaxDist_min[1]" : [  ],
+					"fogMaxDist[1]" : [  ],
+					"fogMaxDist_interest[1]" : [  ],
+					"fogMinDist_max[1]" : [  ],
+					"fogMinDist_min[1]" : [  ],
+					"fogMinDist[1]" : [  ],
+					"fogMinDist_interest[1]" : [  ]
 				}
 
 			}
@@ -57313,7 +57673,15 @@
 					"skeletonPosZ" : [ 0.5 ],
 					"skeletonPosZ_max" : [ 20.0 ],
 					"skeletonPosZ_min" : [ -20.0 ],
-					"skeletonPos_interest" : [ 0 ]
+					"skeletonPos_interest" : [ 0 ],
+					"fogMaxDist_max[1]" : [  ],
+					"fogMaxDist_min[1]" : [  ],
+					"fogMaxDist[1]" : [  ],
+					"fogMaxDist_interest[1]" : [  ],
+					"fogMinDist_max[1]" : [  ],
+					"fogMinDist_min[1]" : [  ],
+					"fogMinDist[1]" : [  ],
+					"fogMinDist_interest[1]" : [  ]
 				}
 
 			}
@@ -58559,7 +58927,15 @@
 					"skeletonPosZ" : [ 0.49443 ],
 					"skeletonPosZ_max" : [ 20.0 ],
 					"skeletonPosZ_min" : [ -20.0 ],
-					"skeletonPos_interest" : [ 0 ]
+					"skeletonPos_interest" : [ 0 ],
+					"fogMaxDist_max[1]" : [  ],
+					"fogMaxDist_min[1]" : [  ],
+					"fogMaxDist[1]" : [  ],
+					"fogMaxDist_interest[1]" : [  ],
+					"fogMinDist_max[1]" : [  ],
+					"fogMinDist_min[1]" : [  ],
+					"fogMinDist[1]" : [  ],
+					"fogMinDist_interest[1]" : [  ]
 				}
 
 			}
@@ -59805,7 +60181,15 @@
 					"skeletonPosZ" : [ 0.49443 ],
 					"skeletonPosZ_max" : [ 20.0 ],
 					"skeletonPosZ_min" : [ -20.0 ],
-					"skeletonPos_interest" : [ 0 ]
+					"skeletonPos_interest" : [ 0 ],
+					"fogMaxDist_max[1]" : [  ],
+					"fogMaxDist_min[1]" : [  ],
+					"fogMaxDist[1]" : [  ],
+					"fogMaxDist_interest[1]" : [  ],
+					"fogMinDist_max[1]" : [  ],
+					"fogMinDist_min[1]" : [  ],
+					"fogMinDist[1]" : [  ],
+					"fogMinDist_interest[1]" : [  ]
 				}
 
 			}
@@ -61051,7 +61435,15 @@
 					"skeletonPosZ" : [ 0.49443 ],
 					"skeletonPosZ_max" : [ 20.0 ],
 					"skeletonPosZ_min" : [ -20.0 ],
-					"skeletonPos_interest" : [ 0 ]
+					"skeletonPos_interest" : [ 0 ],
+					"fogMaxDist_max[1]" : [  ],
+					"fogMaxDist_min[1]" : [  ],
+					"fogMaxDist[1]" : [  ],
+					"fogMaxDist_interest[1]" : [  ],
+					"fogMinDist_max[1]" : [  ],
+					"fogMinDist_min[1]" : [  ],
+					"fogMinDist[1]" : [  ],
+					"fogMinDist_interest[1]" : [  ]
 				}
 
 			}
@@ -62297,7 +62689,15 @@
 					"skeletonPosZ" : [ 0.49443 ],
 					"skeletonPosZ_max" : [ 20.0 ],
 					"skeletonPosZ_min" : [ -20.0 ],
-					"skeletonPos_interest" : [ 0 ]
+					"skeletonPos_interest" : [ 0 ],
+					"fogMaxDist_max[1]" : [  ],
+					"fogMaxDist_min[1]" : [  ],
+					"fogMaxDist[1]" : [  ],
+					"fogMaxDist_interest[1]" : [  ],
+					"fogMinDist_max[1]" : [  ],
+					"fogMinDist_min[1]" : [  ],
+					"fogMinDist[1]" : [  ],
+					"fogMinDist_interest[1]" : [  ]
 				}
 
 			}
@@ -63543,7 +63943,15 @@
 					"skeletonPosZ" : [ 0.49443 ],
 					"skeletonPosZ_max" : [ 20.0 ],
 					"skeletonPosZ_min" : [ -20.0 ],
-					"skeletonPos_interest" : [ 0 ]
+					"skeletonPos_interest" : [ 0 ],
+					"fogMaxDist_max[1]" : [  ],
+					"fogMaxDist_min[1]" : [  ],
+					"fogMaxDist[1]" : [  ],
+					"fogMaxDist_interest[1]" : [  ],
+					"fogMinDist_max[1]" : [  ],
+					"fogMinDist_min[1]" : [  ],
+					"fogMinDist[1]" : [  ],
+					"fogMinDist_interest[1]" : [  ]
 				}
 
 			}
@@ -64789,7 +65197,15 @@
 					"skeletonPosZ" : [ 0.49443 ],
 					"skeletonPosZ_max" : [ 20.0 ],
 					"skeletonPosZ_min" : [ -20.0 ],
-					"skeletonPos_interest" : [ 0 ]
+					"skeletonPos_interest" : [ 0 ],
+					"fogMaxDist_max[1]" : [  ],
+					"fogMaxDist_min[1]" : [  ],
+					"fogMaxDist[1]" : [  ],
+					"fogMaxDist_interest[1]" : [  ],
+					"fogMinDist_max[1]" : [  ],
+					"fogMinDist_min[1]" : [  ],
+					"fogMinDist[1]" : [  ],
+					"fogMinDist_interest[1]" : [  ]
 				}
 
 			}
@@ -66035,7 +66451,15 @@
 					"skeletonPosZ" : [ 0.49443 ],
 					"skeletonPosZ_max" : [ 20.0 ],
 					"skeletonPosZ_min" : [ -20.0 ],
-					"skeletonPos_interest" : [ 0 ]
+					"skeletonPos_interest" : [ 0 ],
+					"fogMaxDist_max[1]" : [  ],
+					"fogMaxDist_min[1]" : [  ],
+					"fogMaxDist[1]" : [  ],
+					"fogMaxDist_interest[1]" : [  ],
+					"fogMinDist_max[1]" : [  ],
+					"fogMinDist_min[1]" : [  ],
+					"fogMinDist[1]" : [  ],
+					"fogMinDist_interest[1]" : [  ]
 				}
 
 			}
@@ -67281,7 +67705,15 @@
 					"skeletonPosZ" : [ 0.49443 ],
 					"skeletonPosZ_max" : [ 20.0 ],
 					"skeletonPosZ_min" : [ -20.0 ],
-					"skeletonPos_interest" : [ 0 ]
+					"skeletonPos_interest" : [ 0 ],
+					"fogMaxDist_max[1]" : [  ],
+					"fogMaxDist_min[1]" : [  ],
+					"fogMaxDist[1]" : [  ],
+					"fogMaxDist_interest[1]" : [  ],
+					"fogMinDist_max[1]" : [  ],
+					"fogMinDist_min[1]" : [  ],
+					"fogMinDist[1]" : [  ],
+					"fogMinDist_interest[1]" : [  ]
 				}
 
 			}
@@ -68527,7 +68959,15 @@
 					"skeletonPosZ" : [ 0.49443 ],
 					"skeletonPosZ_max" : [ 20.0 ],
 					"skeletonPosZ_min" : [ -20.0 ],
-					"skeletonPos_interest" : [ 0 ]
+					"skeletonPos_interest" : [ 0 ],
+					"fogMaxDist_max[1]" : [  ],
+					"fogMaxDist_min[1]" : [  ],
+					"fogMaxDist[1]" : [  ],
+					"fogMaxDist_interest[1]" : [  ],
+					"fogMinDist_max[1]" : [  ],
+					"fogMinDist_min[1]" : [  ],
+					"fogMinDist[1]" : [  ],
+					"fogMinDist_interest[1]" : [  ]
 				}
 
 			}
@@ -69773,7 +70213,15 @@
 					"skeletonPosZ" : [ 0.49443 ],
 					"skeletonPosZ_max" : [ 20.0 ],
 					"skeletonPosZ_min" : [ -20.0 ],
-					"skeletonPos_interest" : [ 0 ]
+					"skeletonPos_interest" : [ 0 ],
+					"fogMaxDist_max[1]" : [  ],
+					"fogMaxDist_min[1]" : [  ],
+					"fogMaxDist[1]" : [  ],
+					"fogMaxDist_interest[1]" : [  ],
+					"fogMinDist_max[1]" : [  ],
+					"fogMinDist_min[1]" : [  ],
+					"fogMinDist[1]" : [  ],
+					"fogMinDist_interest[1]" : [  ]
 				}
 
 			}
@@ -71019,7 +71467,15 @@
 					"skeletonPosZ" : [ 0.49443 ],
 					"skeletonPosZ_max" : [ 20.0 ],
 					"skeletonPosZ_min" : [ -20.0 ],
-					"skeletonPos_interest" : [ 0 ]
+					"skeletonPos_interest" : [ 0 ],
+					"fogMaxDist_max[1]" : [  ],
+					"fogMaxDist_min[1]" : [  ],
+					"fogMaxDist[1]" : [  ],
+					"fogMaxDist_interest[1]" : [  ],
+					"fogMinDist_max[1]" : [  ],
+					"fogMinDist_min[1]" : [  ],
+					"fogMinDist[1]" : [  ],
+					"fogMinDist_interest[1]" : [  ]
 				}
 
 			}
@@ -72265,7 +72721,15 @@
 					"skeletonPosZ" : [ 0.49443 ],
 					"skeletonPosZ_max" : [ 20.0 ],
 					"skeletonPosZ_min" : [ -20.0 ],
-					"skeletonPos_interest" : [ 0 ]
+					"skeletonPos_interest" : [ 0 ],
+					"fogMaxDist_max[1]" : [  ],
+					"fogMaxDist_min[1]" : [  ],
+					"fogMaxDist[1]" : [  ],
+					"fogMaxDist_interest[1]" : [  ],
+					"fogMinDist_max[1]" : [  ],
+					"fogMinDist_min[1]" : [  ],
+					"fogMinDist[1]" : [  ],
+					"fogMinDist_interest[1]" : [  ]
 				}
 
 			}
@@ -73511,7 +73975,15 @@
 					"skeletonPosZ" : [ 0.49443 ],
 					"skeletonPosZ_max" : [ 20.0 ],
 					"skeletonPosZ_min" : [ -20.0 ],
-					"skeletonPos_interest" : [ 0 ]
+					"skeletonPos_interest" : [ 0 ],
+					"fogMaxDist_max[1]" : [  ],
+					"fogMaxDist_min[1]" : [  ],
+					"fogMaxDist[1]" : [  ],
+					"fogMaxDist_interest[1]" : [  ],
+					"fogMinDist_max[1]" : [  ],
+					"fogMinDist_min[1]" : [  ],
+					"fogMinDist[1]" : [  ],
+					"fogMinDist_interest[1]" : [  ]
 				}
 
 			}
@@ -74757,7 +75229,15 @@
 					"skeletonPosZ" : [ 0.5 ],
 					"skeletonPosZ_max" : [ 20.0 ],
 					"skeletonPosZ_min" : [ -20.0 ],
-					"skeletonPos_interest" : [ 0 ]
+					"skeletonPos_interest" : [ 0 ],
+					"fogMaxDist_max[1]" : [  ],
+					"fogMaxDist_min[1]" : [  ],
+					"fogMaxDist[1]" : [  ],
+					"fogMaxDist_interest[1]" : [  ],
+					"fogMinDist_max[1]" : [  ],
+					"fogMinDist_min[1]" : [  ],
+					"fogMinDist[1]" : [  ],
+					"fogMinDist_interest[1]" : [  ]
 				}
 
 			}
@@ -76003,7 +76483,15 @@
 					"skeletonPosZ" : [ 0.5 ],
 					"skeletonPosZ_max" : [ 20.0 ],
 					"skeletonPosZ_min" : [ -20.0 ],
-					"skeletonPos_interest" : [ 0 ]
+					"skeletonPos_interest" : [ 0 ],
+					"fogMaxDist_max[1]" : [  ],
+					"fogMaxDist_min[1]" : [  ],
+					"fogMaxDist[1]" : [  ],
+					"fogMaxDist_interest[1]" : [  ],
+					"fogMinDist_max[1]" : [  ],
+					"fogMinDist_min[1]" : [  ],
+					"fogMinDist[1]" : [  ],
+					"fogMinDist_interest[1]" : [  ]
 				}
 
 			}
@@ -77249,7 +77737,15 @@
 					"skeletonPosZ" : [ 0.5 ],
 					"skeletonPosZ_max" : [ 20.0 ],
 					"skeletonPosZ_min" : [ -20.0 ],
-					"skeletonPos_interest" : [ 0 ]
+					"skeletonPos_interest" : [ 0 ],
+					"fogMaxDist_max[1]" : [  ],
+					"fogMaxDist_min[1]" : [  ],
+					"fogMaxDist[1]" : [  ],
+					"fogMaxDist_interest[1]" : [  ],
+					"fogMinDist_max[1]" : [  ],
+					"fogMinDist_min[1]" : [  ],
+					"fogMinDist[1]" : [  ],
+					"fogMinDist_interest[1]" : [  ]
 				}
 
 			}
@@ -78495,7 +78991,15 @@
 					"skeletonPosZ" : [ 0.5 ],
 					"skeletonPosZ_max" : [ 20.0 ],
 					"skeletonPosZ_min" : [ -20.0 ],
-					"skeletonPos_interest" : [ 0 ]
+					"skeletonPos_interest" : [ 0 ],
+					"fogMaxDist_max[1]" : [  ],
+					"fogMaxDist_min[1]" : [  ],
+					"fogMaxDist[1]" : [  ],
+					"fogMaxDist_interest[1]" : [  ],
+					"fogMinDist_max[1]" : [  ],
+					"fogMinDist_min[1]" : [  ],
+					"fogMinDist[1]" : [  ],
+					"fogMinDist_interest[1]" : [  ]
 				}
 
 			}
@@ -79741,7 +80245,15 @@
 					"skeletonPosZ" : [ 0.5 ],
 					"skeletonPosZ_max" : [ 20.0 ],
 					"skeletonPosZ_min" : [ -20.0 ],
-					"skeletonPos_interest" : [ 0 ]
+					"skeletonPos_interest" : [ 0 ],
+					"fogMaxDist_max[1]" : [  ],
+					"fogMaxDist_min[1]" : [  ],
+					"fogMaxDist[1]" : [  ],
+					"fogMaxDist_interest[1]" : [  ],
+					"fogMinDist_max[1]" : [  ],
+					"fogMinDist_min[1]" : [  ],
+					"fogMinDist[1]" : [  ],
+					"fogMinDist_interest[1]" : [  ]
 				}
 
 			}
@@ -80987,7 +81499,15 @@
 					"skeletonPosZ" : [ 0.5 ],
 					"skeletonPosZ_max" : [ 20.0 ],
 					"skeletonPosZ_min" : [ -20.0 ],
-					"skeletonPos_interest" : [ 0 ]
+					"skeletonPos_interest" : [ 0 ],
+					"fogMaxDist_max[1]" : [  ],
+					"fogMaxDist_min[1]" : [  ],
+					"fogMaxDist[1]" : [  ],
+					"fogMaxDist_interest[1]" : [  ],
+					"fogMinDist_max[1]" : [  ],
+					"fogMinDist_min[1]" : [  ],
+					"fogMinDist[1]" : [  ],
+					"fogMinDist_interest[1]" : [  ]
 				}
 
 			}
@@ -82233,7 +82753,15 @@
 					"skeletonPosZ" : [ 0.5 ],
 					"skeletonPosZ_max" : [ 20.0 ],
 					"skeletonPosZ_min" : [ -20.0 ],
-					"skeletonPos_interest" : [ 0 ]
+					"skeletonPos_interest" : [ 0 ],
+					"fogMaxDist_max[1]" : [  ],
+					"fogMaxDist_min[1]" : [  ],
+					"fogMaxDist[1]" : [  ],
+					"fogMaxDist_interest[1]" : [  ],
+					"fogMinDist_max[1]" : [  ],
+					"fogMinDist_min[1]" : [  ],
+					"fogMinDist[1]" : [  ],
+					"fogMinDist_interest[1]" : [  ]
 				}
 
 			}
@@ -83479,7 +84007,15 @@
 					"skeletonPosZ" : [ 0.5 ],
 					"skeletonPosZ_max" : [ 20.0 ],
 					"skeletonPosZ_min" : [ -20.0 ],
-					"skeletonPos_interest" : [ 0 ]
+					"skeletonPos_interest" : [ 0 ],
+					"fogMaxDist_max[1]" : [  ],
+					"fogMaxDist_min[1]" : [  ],
+					"fogMaxDist[1]" : [  ],
+					"fogMaxDist_interest[1]" : [  ],
+					"fogMinDist_max[1]" : [  ],
+					"fogMinDist_min[1]" : [  ],
+					"fogMinDist[1]" : [  ],
+					"fogMinDist_interest[1]" : [  ]
 				}
 
 			}
@@ -84725,7 +85261,15 @@
 					"skeletonPosZ" : [ 0.5 ],
 					"skeletonPosZ_max" : [ 20.0 ],
 					"skeletonPosZ_min" : [ -20.0 ],
-					"skeletonPos_interest" : [ 0 ]
+					"skeletonPos_interest" : [ 0 ],
+					"fogMaxDist_max[1]" : [  ],
+					"fogMaxDist_min[1]" : [  ],
+					"fogMaxDist[1]" : [  ],
+					"fogMaxDist_interest[1]" : [  ],
+					"fogMinDist_max[1]" : [  ],
+					"fogMinDist_min[1]" : [  ],
+					"fogMinDist[1]" : [  ],
+					"fogMinDist_interest[1]" : [  ]
 				}
 
 			}
@@ -85971,7 +86515,15 @@
 					"skeletonPosZ" : [ 0.5 ],
 					"skeletonPosZ_max" : [ 20.0 ],
 					"skeletonPosZ_min" : [ -20.0 ],
-					"skeletonPos_interest" : [ 0 ]
+					"skeletonPos_interest" : [ 0 ],
+					"fogMaxDist_max[1]" : [  ],
+					"fogMaxDist_min[1]" : [  ],
+					"fogMaxDist[1]" : [  ],
+					"fogMaxDist_interest[1]" : [  ],
+					"fogMinDist_max[1]" : [  ],
+					"fogMinDist_min[1]" : [  ],
+					"fogMinDist[1]" : [  ],
+					"fogMinDist_interest[1]" : [  ]
 				}
 
 			}
@@ -87217,7 +87769,15 @@
 					"skeletonPosZ" : [ 0.500944397283531 ],
 					"skeletonPosZ_max" : [ 20.0 ],
 					"skeletonPosZ_min" : [ -20.0 ],
-					"skeletonPos_interest" : [ 0 ]
+					"skeletonPos_interest" : [ 0 ],
+					"fogMaxDist_max[1]" : [  ],
+					"fogMaxDist_min[1]" : [  ],
+					"fogMaxDist[1]" : [  ],
+					"fogMaxDist_interest[1]" : [  ],
+					"fogMinDist_max[1]" : [  ],
+					"fogMinDist_min[1]" : [  ],
+					"fogMinDist[1]" : [  ],
+					"fogMinDist_interest[1]" : [  ]
 				}
 
 			}
@@ -88463,7 +89023,15 @@
 					"skeletonPosZ" : [ 0.500944397283531 ],
 					"skeletonPosZ_max" : [ 20.0 ],
 					"skeletonPosZ_min" : [ -20.0 ],
-					"skeletonPos_interest" : [ 0 ]
+					"skeletonPos_interest" : [ 0 ],
+					"fogMaxDist_max[1]" : [  ],
+					"fogMaxDist_min[1]" : [  ],
+					"fogMaxDist[1]" : [  ],
+					"fogMaxDist_interest[1]" : [  ],
+					"fogMinDist_max[1]" : [  ],
+					"fogMinDist_min[1]" : [  ],
+					"fogMinDist[1]" : [  ],
+					"fogMinDist_interest[1]" : [  ]
 				}
 
 			}
@@ -89709,7 +90277,15 @@
 					"skeletonPosZ" : [ 0.500944397283531 ],
 					"skeletonPosZ_max" : [ 20.0 ],
 					"skeletonPosZ_min" : [ -20.0 ],
-					"skeletonPos_interest" : [ 0 ]
+					"skeletonPos_interest" : [ 0 ],
+					"fogMaxDist_max[1]" : [  ],
+					"fogMaxDist_min[1]" : [  ],
+					"fogMaxDist[1]" : [  ],
+					"fogMaxDist_interest[1]" : [  ],
+					"fogMinDist_max[1]" : [  ],
+					"fogMinDist_min[1]" : [  ],
+					"fogMinDist[1]" : [  ],
+					"fogMinDist_interest[1]" : [  ]
 				}
 
 			}
@@ -90955,7 +91531,15 @@
 					"skeletonPosZ" : [ 0.500945 ],
 					"skeletonPosZ_max" : [ 20.0 ],
 					"skeletonPosZ_min" : [ -20.0 ],
-					"skeletonPos_interest" : [ 0 ]
+					"skeletonPos_interest" : [ 0 ],
+					"fogMaxDist_max[1]" : [  ],
+					"fogMaxDist_min[1]" : [  ],
+					"fogMaxDist[1]" : [  ],
+					"fogMaxDist_interest[1]" : [  ],
+					"fogMinDist_max[1]" : [  ],
+					"fogMinDist_min[1]" : [  ],
+					"fogMinDist[1]" : [  ],
+					"fogMinDist_interest[1]" : [  ]
 				}
 
 			}
@@ -92201,7 +92785,15 @@
 					"skeletonPosZ" : [ 0.514165959252971 ],
 					"skeletonPosZ_max" : [ 20.0 ],
 					"skeletonPosZ_min" : [ -20.0 ],
-					"skeletonPos_interest" : [ 0 ]
+					"skeletonPos_interest" : [ 0 ],
+					"fogMaxDist_max[1]" : [  ],
+					"fogMaxDist_min[1]" : [  ],
+					"fogMaxDist[1]" : [  ],
+					"fogMaxDist_interest[1]" : [  ],
+					"fogMinDist_max[1]" : [  ],
+					"fogMinDist_min[1]" : [  ],
+					"fogMinDist[1]" : [  ],
+					"fogMinDist_interest[1]" : [  ]
 				}
 
 			}
@@ -93447,7 +94039,15 @@
 					"skeletonPosZ" : [ 0.5 ],
 					"skeletonPosZ_max" : [ 20.0 ],
 					"skeletonPosZ_min" : [ -20.0 ],
-					"skeletonPos_interest" : [ 0 ]
+					"skeletonPos_interest" : [ 0 ],
+					"fogMaxDist_max[1]" : [  ],
+					"fogMaxDist_min[1]" : [  ],
+					"fogMaxDist[1]" : [  ],
+					"fogMaxDist_interest[1]" : [  ],
+					"fogMinDist_max[1]" : [  ],
+					"fogMinDist_min[1]" : [  ],
+					"fogMinDist[1]" : [  ],
+					"fogMinDist_interest[1]" : [  ]
 				}
 
 			}
@@ -94693,7 +95293,15 @@
 					"skeletonPosZ" : [ 0.500945 ],
 					"skeletonPosZ_max" : [ 20.0 ],
 					"skeletonPosZ_min" : [ -20.0 ],
-					"skeletonPos_interest" : [ 0 ]
+					"skeletonPos_interest" : [ 0 ],
+					"fogMaxDist_max[1]" : [  ],
+					"fogMaxDist_min[1]" : [  ],
+					"fogMaxDist[1]" : [  ],
+					"fogMaxDist_interest[1]" : [  ],
+					"fogMinDist_max[1]" : [  ],
+					"fogMinDist_min[1]" : [  ],
+					"fogMinDist[1]" : [  ],
+					"fogMinDist_interest[1]" : [  ]
 				}
 
 			}
@@ -95939,7 +96547,15 @@
 					"skeletonPosZ" : [ 0.5 ],
 					"skeletonPosZ_max" : [ 20.0 ],
 					"skeletonPosZ_min" : [ -20.0 ],
-					"skeletonPos_interest" : [ 0 ]
+					"skeletonPos_interest" : [ 0 ],
+					"fogMaxDist_max[1]" : [  ],
+					"fogMaxDist_min[1]" : [  ],
+					"fogMaxDist[1]" : [  ],
+					"fogMaxDist_interest[1]" : [  ],
+					"fogMinDist_max[1]" : [  ],
+					"fogMinDist_min[1]" : [  ],
+					"fogMinDist[1]" : [  ],
+					"fogMinDist_interest[1]" : [  ]
 				}
 
 			}
@@ -97185,7 +97801,15 @@
 					"skeletonPosZ" : [ 0.488486842105263 ],
 					"skeletonPosZ_max" : [ 20.0 ],
 					"skeletonPosZ_min" : [ -20.0 ],
-					"skeletonPos_interest" : [ 0 ]
+					"skeletonPos_interest" : [ 0 ],
+					"fogMaxDist_max[1]" : [  ],
+					"fogMaxDist_min[1]" : [  ],
+					"fogMaxDist[1]" : [  ],
+					"fogMaxDist_interest[1]" : [  ],
+					"fogMinDist_max[1]" : [  ],
+					"fogMinDist_min[1]" : [  ],
+					"fogMinDist[1]" : [  ],
+					"fogMinDist_interest[1]" : [  ]
 				}
 
 			}
@@ -98431,7 +99055,15 @@
 					"skeletonPosZ" : [ 0.488486842105263 ],
 					"skeletonPosZ_max" : [ 20.0 ],
 					"skeletonPosZ_min" : [ -20.0 ],
-					"skeletonPos_interest" : [ 0 ]
+					"skeletonPos_interest" : [ 0 ],
+					"fogMaxDist_max[1]" : [  ],
+					"fogMaxDist_min[1]" : [  ],
+					"fogMaxDist[1]" : [  ],
+					"fogMaxDist_interest[1]" : [  ],
+					"fogMinDist_max[1]" : [  ],
+					"fogMinDist_min[1]" : [  ],
+					"fogMinDist[1]" : [  ],
+					"fogMinDist_interest[1]" : [  ]
 				}
 
 			}
@@ -99677,7 +100309,15 @@
 					"skeletonPosZ" : [ 0.49443 ],
 					"skeletonPosZ_max" : [ 20.0 ],
 					"skeletonPosZ_min" : [ -20.0 ],
-					"skeletonPos_interest" : [ 0 ]
+					"skeletonPos_interest" : [ 0 ],
+					"fogMaxDist_max[1]" : [  ],
+					"fogMaxDist_min[1]" : [  ],
+					"fogMaxDist[1]" : [  ],
+					"fogMaxDist_interest[1]" : [  ],
+					"fogMinDist_max[1]" : [  ],
+					"fogMinDist_min[1]" : [  ],
+					"fogMinDist[1]" : [  ],
+					"fogMinDist_interest[1]" : [  ]
 				}
 
 			}
@@ -100923,7 +101563,15 @@
 					"skeletonPosZ" : [ 0.49443 ],
 					"skeletonPosZ_max" : [ 20.0 ],
 					"skeletonPosZ_min" : [ -20.0 ],
-					"skeletonPos_interest" : [ 0 ]
+					"skeletonPos_interest" : [ 0 ],
+					"fogMaxDist_max[1]" : [  ],
+					"fogMaxDist_min[1]" : [  ],
+					"fogMaxDist[1]" : [  ],
+					"fogMaxDist_interest[1]" : [  ],
+					"fogMinDist_max[1]" : [  ],
+					"fogMinDist_min[1]" : [  ],
+					"fogMinDist[1]" : [  ],
+					"fogMinDist_interest[1]" : [  ]
 				}
 
 			}
