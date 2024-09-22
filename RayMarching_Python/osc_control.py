@@ -44,6 +44,10 @@ class OscControl():
         
         self.dispatcher.map("/vis/fogmindist", self.setVisFogMinDist)
         self.dispatcher.map("/vis/fogmaxdist", self.setVisFogMaxDist)
+
+        self.dispatcher.map("/vis/rayrotation", self.setVisRayRot)
+        self.dispatcher.map("/vis/raywiggle", self.setVisRayWig)
+
         
         self.dispatcher.map("/vis/jointcolor", self.setVisJointColor)
         self.dispatcher.map("/vis/jointambientscale", self.setVisJointAmbientScale)
@@ -264,7 +268,20 @@ class OscControl():
         
         #print("setVisFogMaxDist ", dist)
 
-        
+
+    def setVisRayRot(self, address, *args):
+
+        rot = args[0]
+
+        self.visualization.setRayRotation(rot)
+
+    def setVisRayWig(self, address, *args):
+
+        wig = args[0]
+
+        self.visualization.setRayWiggle(wig)
+
+
     def setVisJointColor(self, address, *args):
 
         color = np.array(args)

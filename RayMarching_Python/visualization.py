@@ -52,6 +52,10 @@ class Visualization():
         self.fogMinDist = 99.0
         self.fogMaxDist = 100
         
+        # ray settings
+        self.rayRotation = 0
+        self.rayWiggle = 0
+
         self.identity_transform = np.eye(4)
  
         # skeleton joint settings
@@ -206,6 +210,10 @@ class Visualization():
         # fog settings
         self.shader_fogMinDist = gl.glGetUniformLocation(self.program, "fog_min_dist")
         self.shader_fogMaxDist = gl.glGetUniformLocation(self.program, "fog_max_dist")
+
+         # ray settings
+        self.shader_rayRotation = gl.glGetUniformLocation(self.program, "rayRotation")
+        self.shader_rayWiggle = gl.glGetUniformLocation(self.program, "rayWiggle")
         
         # skeleton joint settings
         self.shader_jointColor = gl.glGetUniformLocation(self.program, "jointColor")
@@ -335,6 +343,10 @@ class Visualization():
         gl.glUniform1f(self.shader_fogMinDist, self.fogMinDist);
         gl.glUniform1f(self.shader_fogMaxDist, self.fogMaxDist);
         
+        # ray settings
+        gl.glUniform1f(self.shader_rayRotation, self.rayRotation)
+        gl.glUniform1f(self.shader_rayWiggle, self.rayWiggle)
+
         # skeleton joint settings
         gl.glUniform3f(self.shader_jointColor, *self.jointColor.tolist())
         gl.glUniform1f(self.shader_jointAmbientScale, self.jointAmbientScale)
@@ -680,7 +692,13 @@ class Visualization():
         
     def setFogMaxDist(self, dist):
         self.fogMaxDist = dist
-        
+
+    def setRayRotation(self, rot):
+        self.rayRotation = rot
+
+    def setRayWiggle(self, wig):
+        self.rayWiggle = wig    
+
     def setJointColor(self, color):
         self.jointColor = color       
         

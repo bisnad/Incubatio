@@ -37,6 +37,10 @@ uniform vec3 bgOcclusionColor;
 uniform float fog_min_dist;
 uniform float fog_max_dist;
 
+//ray settings
+uniform float rayRotation;
+uniform float rayWiggle;
+
 // surface struct
 
 struct Surface 
@@ -130,6 +134,12 @@ mat4 translate(vec3 pos)
         vec4(0, 0, 1, 0),
 		vec4(pos.x, pos.y, pos.z, 1)
     );
+}
+
+mat2 rot2D(float angle){
+    float s = sin(angle);
+    float c = cos(angle);
+    return mat2(c, -s, s, c);
 }
 
 // Rotation matrix around the X axis.
@@ -1175,8 +1185,18 @@ float julia(vec3 pos, vec3 scale)
     return 0.25 * sqrt(r2 / dr2) * log(r2);
 }
 
+float snake(vec3 pos, vec3 scale, float radius)
+{
+    pos.z += vectorTime.y * .4;
 
+    //repetition
+    pos.xy = (fract(pos.xy) - .5); 
+    pos.z = mod(pos.z, .25) - .125; 
 
+    float box = roundBoxSDF(pos, vec3(scale.x/100, scale.y/100 , scale.z/100), radius);
+
+    return box;
+}
 /**
  * Signed distance function describing the scene.
  * 
@@ -1337,7 +1357,11 @@ float sceneSDF(vec3 samplePoint)
         else if(objectPrimitives[oI] == 16) // julia
         {
             distObjects = poly_smin( distObjects, julia((objectTransforms[oI] * samplePoint4D).xyz, objectSizes[oI]), objectSmoothings[oI] ); 
-        }        
+        }    
+        else if(objectPrimitives[oI] == 17) // snake
+        {
+            distObjects = poly_smin( distObjects, snake((objectTransforms[oI] * samplePoint4D).xyz, objectSizes[oI], objectRoundings[oI]), objectSmoothings[oI] ); 
+        }       
 
     }
     
@@ -1527,6 +1551,10 @@ Surface sceneSDF_surface(vec3 samplePoint)
         else if(objectPrimitives[oI] == 16) // julia
         {
             distObjects = poly_smin( distObjects, julia((objectTransforms[oI] * samplePoint4D).xyz, objectSizes[oI]), objectSmoothings[oI] ); 
+        } 
+         else if(objectPrimitives[oI] == 17) // snake
+        {
+            distObjects = poly_smin( distObjects, snake((objectTransforms[oI] * samplePoint4D).xyz, objectSizes[oI], objectRoundings[oI]), objectSmoothings[oI] ); 
         }   
         
         Surface tmpSurface = Surface(objectColors[oI], objectAmbientScales[oI], objectDiffuseScales[oI], objectSpecularScales[oI], objectSpecularPows[oI], objectOcclusionScales[oI], objectOcclusionRanges[oI], objectOcclusionResolutions[oI], objectOcclusionColors[oI], distObjects);
@@ -1641,7 +1669,17 @@ float shortestDistanceToSurface(vec3 eye, vec3 marchingDirection, float start, f
     float depth = start;
     for (int i = 0; i < MAX_MARCHING_STEPS; i++) 
     {
-        float dist = sceneSDF(eye + depth * marchingDirection);
+        vec3 p = eye + depth * marchingDirection ;
+
+        if (rayRotation != 0.0){
+            p.xy *= rot2D(depth *.2 * (rayRotation));
+        }
+
+        if (rayWiggle != 0.0){
+            p.y += sin(depth*(rayWiggle + 1)*.5)*.35;
+        }    
+
+        float dist = sceneSDF(p);
         if (dist < EPSILON) 
         {
 			return depth;
@@ -1662,7 +1700,18 @@ Surface shortestDistanceToSurface_surface(vec3 eye, vec3 marchingDirection, floa
 
     for (int i = 0; i < MAX_MARCHING_STEPS; i++) 
     {
-        closestSurface = sceneSDF_surface(eye + depth * marchingDirection);
+        vec3 p = eye + depth * marchingDirection ;
+       
+        if (rayRotation != 0.0){
+            p.xy *= rot2D(depth *.2 * (rayRotation));
+        }
+
+        if (rayWiggle != 0.0){
+            p.y += sin(depth*(rayWiggle + 1)*.5)*.35;
+        }    
+        
+
+        closestSurface = sceneSDF_surface(p);
 
         if (closestSurface.signedDistance < EPSILON) 
         {
