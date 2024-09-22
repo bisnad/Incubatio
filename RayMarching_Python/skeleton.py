@@ -58,9 +58,10 @@ def slerp_pose(q0, q1, t=0.5):
 
 class SkeletonMode(Enum):
     Avatar = 1
-    Arms = 2
-    Swarm = 3
-    SnakeAvatar = 4
+    Hand = 2
+    Arms = 3
+    Swarm = 4
+    SnakeAvatar = 5
     
 
 class Skeleton():
@@ -103,6 +104,8 @@ class Skeleton():
         
         if "avatar" in configFileName:
             self.setSkeletonMode(SkeletonMode.Avatar)
+        if "hand" in configFileName:
+            self.setSkeletonMode(SkeletonMode.Hand)
         elif "snakeavatar" in configFileName:
             self.setSkeletonMode(SkeletonMode.SnakeAvatar)
         elif "swarm" in configFileName:
@@ -148,6 +151,8 @@ class Skeleton():
         
         if self.skeletonMode == SkeletonMode.Avatar:    
             positions = self.setAvatarJointPositions(positions)
+        elif self.skeletonMode == SkeletonMode.Hand:    
+            positions = self.setHandJointPositions(positions)
         elif self.skeletonMode == SkeletonMode.SnakeAvatar:    
             positions = self.setSnakeAvatarJointPositions(positions)
         elif self.skeletonMode == SkeletonMode.Arms:   
@@ -166,6 +171,8 @@ class Skeleton():
         
         if self.skeletonMode == SkeletonMode.Avatar:    
             rotations = self.setAvatarJointRotations(rotations)
+        elif self.skeletonMode == SkeletonMode.Hand:    
+            rotations = self.setHandJointRotations(rotations)
         elif self.skeletonMode == SkeletonMode.SnakeAvatar:    
             rotations = self.setSnakeAvatarJointRotations(rotations)
         elif self.skeletonMode == SkeletonMode.Arms:    
@@ -183,6 +190,12 @@ class Skeleton():
         self.updateEdgeTransforms()
         
     def setAvatarJointPositions(self, positions):
+        
+        positions = positions[self.jointFilter, :]
+        
+        return positions
+    
+    def setHandJointPositions(self, positions):
         
         positions = positions[self.jointFilter, :]
         
@@ -263,7 +276,77 @@ class Skeleton():
         rotations[20,:] = t3d.quaternions.qmult(t3d.euler.euler2quat(0.0, 0.0, np.pi / 2.0, axes='sxyz'), rotations[20,:])     
 
         return rotations
+
+    def setHandJointRotations(self, rotations):
+
         
+        rotations = rotations[self.jointFilter, :]
+        
+        # 0 : RightHand
+        rotations[0,:] = t3d.quaternions.qmult(t3d.euler.euler2quat(0.0, 0.0, np.pi / 2.0, axes='sxyz'), rotations[0,:])
+        
+        # 1 : RightHandThumb1
+        rotations[1,:] = t3d.quaternions.qmult(t3d.euler.euler2quat(0.0, 0.0, np.pi / 2.0, axes='sxyz'), rotations[1,:])
+        
+        # 2 : RightHandThumb2
+        rotations[2,:] = t3d.quaternions.qmult(t3d.euler.euler2quat(0.0, 0.0, np.pi / 2.0, axes='sxyz'), rotations[2,:])
+        
+        # 3 : RightHandThumb3
+        rotations[3,:] = t3d.quaternions.qmult(t3d.euler.euler2quat(0.0, 0.0, np.pi / 2.0, axes='sxyz'), rotations[3,:])
+        
+        # 4 : RightHandThumb3_Nub
+        rotations[4,:] = t3d.quaternions.qmult(t3d.euler.euler2quat(0.0, 0.0, 0.0, axes='sxyz'), rotations[4,:])
+        
+        # 5 : RightHandIndex1
+        rotations[5,:] = t3d.quaternions.qmult(t3d.euler.euler2quat(0.0, 0.0, np.pi / 2.0, axes='sxyz'), rotations[5,:])
+        
+        # 6 : RightHandIndex2
+        rotations[6,:] = t3d.quaternions.qmult(t3d.euler.euler2quat(0.0, 0.0, np.pi / 2.0, axes='sxyz'), rotations[6,:])
+        
+        # 7 : RightHandIndex3
+        rotations[7,:] = t3d.quaternions.qmult(t3d.euler.euler2quat(0.0, 0.0, np.pi / 2.0, axes='sxyz'), rotations[7,:])
+        
+        # 8 : RightHandIndex3_Nub
+        rotations[8,:] = t3d.quaternions.qmult(t3d.euler.euler2quat(0.0, 0.0, 0.0, axes='sxyz'), rotations[8,:])
+        
+        # 9 : RightHandMiddle1
+        rotations[9,:] = t3d.quaternions.qmult(t3d.euler.euler2quat(0.0, 0.0, np.pi / 2.0, axes='sxyz'), rotations[9,:])
+        
+        # 10 : RightHandMiddle2
+        rotations[10,:] = t3d.quaternions.qmult(t3d.euler.euler2quat(0.0, 0.0, np.pi / 2.0, axes='sxyz'), rotations[10,:])
+        
+        # 11 : RightHandMiddle3
+        rotations[11,:] = t3d.quaternions.qmult(t3d.euler.euler2quat(0.0, 0.0, np.pi / 2.0, axes='sxyz'), rotations[11,:])
+        
+        # 12 : RightHandMiddle3_Nub
+        rotations[12,:] = t3d.quaternions.qmult(t3d.euler.euler2quat(0.0, 0.0, 0.0, axes='sxyz'), rotations[12,:])
+        
+        # 13 : RightHandRing1
+        rotations[13,:] = t3d.quaternions.qmult(t3d.euler.euler2quat(0.0, 0.0, np.pi / 2.0, axes='sxyz'), rotations[13,:])
+        
+        # 14 : RightHandRing2
+        rotations[14,:] = t3d.quaternions.qmult(t3d.euler.euler2quat(0.0, 0.0, np.pi / 2.0, axes='sxyz'), rotations[14,:])
+        
+        # 15 : RightHandRing3
+        rotations[15,:] = t3d.quaternions.qmult(t3d.euler.euler2quat(0.0, 0.0, np.pi / 2.0, axes='sxyz'), rotations[15,:])
+        
+        # 16 : RightHandRing3_Nub
+        rotations[16,:] = t3d.quaternions.qmult(t3d.euler.euler2quat(0.0, 0.0, 0.0, axes='sxyz'), rotations[16,:])
+        
+        # 17 : RightHandPinky1
+        rotations[17,:] = t3d.quaternions.qmult(t3d.euler.euler2quat(0.0, 0.0, np.pi / 2.0, axes='sxyz'), rotations[17,:])
+        
+        # 18 : RightHandPinky2
+        rotations[18,:] = t3d.quaternions.qmult(t3d.euler.euler2quat(0.0, 0.0, np.pi / 2.0, axes='sxyz'), rotations[18,:])
+        
+        # 19 : RightHandPinky3
+        rotations[19,:] = t3d.quaternions.qmult(t3d.euler.euler2quat(0.0, 0.0, np.pi / 2.0, axes='sxyz'), rotations[19,:])
+        
+        # 20 : RightHandPinky3_Nub
+        rotations[20,:] = t3d.quaternions.qmult(t3d.euler.euler2quat(0.0, 0.0, 0.0, axes='sxyz'), rotations[20,:])
+        
+        return rotations
+
     def setSnakeAvatarJointRotations(self, rotations):
         
         rotations = rotations[self.jointFilter, :]
@@ -325,6 +408,9 @@ class Skeleton():
             
             if self.skeletonMode == SkeletonMode.Avatar:
                 jointRotation = t3d.quaternions.qmult(t3d.euler.euler2quat(0.0, np.pi / 2.0, 0.0, axes='sxyz'), jointRotation)
+            elif self.skeletonMode == SkeletonMode.Hand:
+                jointRotation = t3d.quaternions.qmult(t3d.euler.euler2quat(0.0, np.pi / 2.0, 0.0, axes='sxyz'), jointRotation)
+            
             """
             elif self.skeletonMode == SkeletonMode.SnakeAvatar:
                 jointRotation = t3d.quaternions.qmult(t3d.euler.euler2quat(0.0, np.pi / 2.0, 0.0, axes='sxyz'), jointRotation)
@@ -337,50 +423,6 @@ class Skeleton():
 
             self.jointTransforms[jI] = np.transpose(np.matmul(jointRotMat, np.matmul(self.skelTransform, jointTransMat)))
 
-    """
-    def updateEdgeTransforms(self):
-
-        defaultScale = np.ones((3))
-        defaultRot = np.array([1.0, 0.0, 0.0, 0.0])
-        defaultPos = np.array([0.0, 0.0, 0.0])
-        defaultRotMat = (t3d.quaternions.quat2mat(defaultRot))
-        refDir = np.array([0.0, 0.0, 1.0])
-        
-        eI = 0
-
-        for pjI in range(self.jointCount):
-            
-            parentJointPos = self.jointPositions[pjI]
-            parentJointRot = self.jointRotations[pjI] / np.linalg.norm(self.jointRotations[pjI])
-
-            children = self.jointConnectivity[pjI]
-            
-            for cjI in children:
-                
-                childJointPos = self.jointPositions[cjI]
-                
-                edgePos = (parentJointPos + childJointPos) / 2
-                
-                edgeVec = childJointPos - parentJointPos
-                edgeLength = np.linalg.norm(edgeVec)
-                
-                #print("pjI ", pjI, " cjI ", cjI, " edgeVec ", edgeVec, " edgeLength ", edgeLength)
-                
-                edgeRotation = self.jointRotations[pjI] # / np.linalg.norm(self.jointRotations[pjI])
-                
-                edgeRotMat = t3d.quaternions.quat2mat(edgeRotation)
-                edgeRotMat = t3d.affines.compose(defaultPos, edgeRotMat, defaultScale)
-
-                edgeTransMat = t3d.affines.compose(edgePos, defaultRotMat, defaultScale)
-                
-                self.edgeLengths[eI] = edgeLength
-                
-                #self.edgeTransforms[eI] = np.transpose(np.matmul(edgeRotMat, edgeTransMat))
-                self.edgeTransforms[eI] = np.transpose(np.matmul(edgeRotMat, np.matmul(self.skelTransform, edgeTransMat)))
-                
-                eI += 1
-    """
-    
 
     def updateEdgeTransforms(self):
 
@@ -419,6 +461,20 @@ class Skeleton():
                     if pjI == 0 and cjI == 5: # hip to LeftUpLeg
                         edgeRotation = t3d.quaternions.qmult(t3d.euler.euler2quat(0.0, 0.0, -np.pi / 2.0, axes='sxyz'), edgeRotation)   
                     
+                    edgeRotation = t3d.quaternions.qmult(t3d.euler.euler2quat(0.0, np.pi / 2.0, 0.0, axes='sxyz'), edgeRotation)
+                elif self.skeletonMode == SkeletonMode.Hand:
+                    
+                    if pjI == 0 and cjI == 1: # RightHand to RightHandThumb1
+                        edgeRotation = t3d.quaternions.qmult(t3d.euler.euler2quat(0.0, 0.0, np.pi / 0.309, axes='sxyz'), edgeRotation)
+                    if pjI == 0 and cjI == 5: # RightHand to RightHandIndex1
+                        edgeRotation = t3d.quaternions.qmult(t3d.euler.euler2quat(0.0, 0.0, np.pi / 0.96, axes='sxyz'), edgeRotation)
+                    if pjI == 0 and cjI == 9: # RightHand to RightHandMiddle1
+                        edgeRotation = t3d.quaternions.qmult(t3d.euler.euler2quat(0.0, 0.0, 0.0, axes='sxyz'), edgeRotation)
+                    if pjI == 0 and cjI == 13: # RightHand to RightHandRing1
+                        edgeRotation = t3d.quaternions.qmult(t3d.euler.euler2quat(0.0, 0.0, -np.pi / 0.96, axes='sxyz'), edgeRotation)
+                    if pjI == 0 and cjI == 17: # RightHand to RightHandPinky1
+                        edgeRotation = t3d.quaternions.qmult(t3d.euler.euler2quat(0.0, 0.0, -np.pi / 0.922, axes='sxyz'), edgeRotation)
+                
                     edgeRotation = t3d.quaternions.qmult(t3d.euler.euler2quat(0.0, np.pi / 2.0, 0.0, axes='sxyz'), edgeRotation)
                 
                 edgeRotMat = t3d.quaternions.quat2mat(edgeRotation)
