@@ -68,7 +68,7 @@ uniform float jointOcclusionRange;
 uniform float jointOcclusionResolution;
 uniform vec3 jointOcclusionColor;
 
-uniform int jointPrimitives[jointCount];
+uniform float jointPrimitives[jointCount];
 uniform mat4 jointTransforms[jointCount];
 uniform vec3 jointSizes[jointCount];
 uniform float jointRoundings[jointCount];
@@ -85,7 +85,7 @@ uniform float edgeOcclusionRange;
 uniform float edgeOcclusionResolution;
 uniform vec3 edgeOcclusionColor;
 
-uniform int edgePrimitives[edgeCount];
+uniform float edgePrimitives[edgeCount];
 uniform mat4 edgeTransforms[edgeCount];
 uniform float edgeLengths[edgeCount];
 uniform vec3 edgeSizes[edgeCount];
@@ -107,7 +107,7 @@ uniform vec3 objectFrequencies[objectCount];
 uniform vec3 objectAmplitudes[objectCount];
 uniform vec3 objectPhases[objectCount];
 
-uniform int objectPrimitives[objectCount];
+uniform float objectPrimitives[objectCount];
 uniform mat4 objectTransforms[objectCount];
 uniform vec3 objectSizes[objectCount];
 uniform float objectRoundings[objectCount];
@@ -460,6 +460,7 @@ float roundCapsuleSDF( vec3 p, float h, float r, float radius )
 	p.z -= clamp( p.z, -(h - radius) / 2.0, (h - radius) / 2.0 );
 	return length( p ) - r - radius;
 }
+
 
 /*
 Fractal Distance Functions
@@ -1197,6 +1198,309 @@ float snake(vec3 pos, vec3 scale, float radius)
 
     return box;
 }
+
+/*
+Primitive Morphing
+*/
+
+float primitiveMorphSDF(vec3 p, vec3 size, float rounding, float primitive) 
+{
+    int primitive1Index = int(primitive);
+    float primitiveMix = fract(primitive);
+    int primitive2Index = primitive1Index;
+    
+    if(primitiveMix != 0.0) primitive2Index += 1;
+    
+    float primitive1dist = 0.0;
+    float primitive2dist = 0.0;
+    
+    if (primitive1Index == 0) // sphere
+    {
+        primitive1dist = sphereSDF(p, size.x);    
+        
+        if (primitive2Index == primitive1Index + 1)
+        {
+            primitive2dist = roundBoxSDF(p, size, rounding);
+        }
+        else
+        {
+            primitive2dist = primitive1dist;
+        }
+    }
+    else if(primitive1Index == 1) // box
+    {
+        primitive1dist = roundBoxSDF(p, size, rounding);  
+        
+        if (primitive2Index == primitive1Index + 1)
+        {
+            primitive2dist = roundCapsuleSDF(p, size.z, size.x, rounding);
+        }
+        else
+        {
+            primitive2dist = primitive1dist;
+        }
+    }
+    else if(primitive1Index == 2) // capsule
+    {
+        primitive1dist = roundCapsuleSDF(p, size.z, size.x, rounding);
+        
+        if (primitive2Index == primitive1Index + 1)
+        {
+            primitive2dist = roundCylinderSDF(p, size.z, size.x, rounding);
+        }
+        else
+        {
+            primitive2dist = primitive1dist;
+        }
+    }
+    else if(primitive1Index == 3) // Cylinder
+    {
+         primitive1dist = roundCylinderSDF(p, size.z, size.x, rounding);
+         primitive2dist = primitive1dist;
+    }
+    else if(primitive1Index == 4) // truchetTower
+    {
+        primitive1dist = truchetTower(p, size.z); 
+        primitive2dist = primitive1dist;
+    }
+    else if(primitive1Index == 5) // apollonian1
+    {
+        primitive1dist = apollonian1(p, size.z); 
+        primitive2dist = primitive1dist;
+    }
+    else if(primitive1Index == 6) // Thing2
+    {
+        primitive1dist = Thing2(p); 
+        primitive2dist = primitive1dist;
+    }
+    else if(primitive1Index == 7) // kaliBox
+    {
+        primitive1dist = kaliBox(p); 
+        primitive2dist = primitive1dist;
+    }        
+    else if(primitive1Index == 8) // mandelbulb_v2
+    {
+        primitive1dist = mandelbulb_v2(p * 0.2, size) / 0.2; 
+        primitive2dist = primitive1dist;
+    }                
+    else if(primitive1Index == 9) // merger
+    {
+        primitive1dist =  merger(p); 
+        primitive2dist = primitive1dist;
+    }    
+    else if(primitive1Index == 10) // sierpinskiPyramid
+    {
+        primitive1dist = sierpinskiPyramid(p); 
+        primitive2dist = primitive1dist;
+    }                
+    else if(primitive1Index == 11) // mengerSponge
+    {
+        primitive1dist = mengerSponge(p); 
+        primitive2dist = primitive1dist;
+    }   
+    else if(primitive1Index == 12) // alteredMenger
+    {
+        primitive1dist = alteredMenger(p); 
+        primitive2dist = primitive1dist;
+    }                 
+    else if(primitive1Index == 13) // evolvingFractal
+    {
+        primitive1dist = evolvingFractal(p); 
+        primitive2dist = primitive1dist;
+    }  
+    else if(primitive1Index == 14) // evolvingFractal2
+    {
+        primitive1dist = evolvingFractal2(p); 
+        primitive2dist = primitive1dist;
+    }      
+    else if(primitive1Index == 15) // mandelbulbSDF
+    {
+        primitive1dist = mandelbulbSDF(p, size.x); 
+        primitive2dist = primitive1dist;
+    }
+    else if(primitive1Index == 16) // julia
+    {
+        primitive1dist = julia(p, size); 
+        primitive2dist = primitive1dist;
+    }    
+    else if(primitive1Index == 17) // snake
+    {
+        primitive1dist = snake(p, size, rounding); 
+        primitive2dist = primitive1dist;
+    }    
+        
+    return mix(primitive1dist, primitive2dist, primitiveMix);
+
+}
+
+float primitiveMorphRippleSDF(vec3 p, vec3 size, float rounding, float primitive, vec3 amplitude, vec3 frequency, vec3 phase) 
+{
+    int primitive1Index = int(primitive);
+    float primitiveMix = fract(primitive);
+    int primitive2Index = primitive1Index;
+    
+    if(primitiveMix != 0.0) primitive2Index += 1;
+    
+    float primitive1dist = 0.0;
+    float primitive2dist = 0.0;
+    
+    if (primitive1Index == 0) // sphere
+    {
+    
+        if(amplitude == 0) // non-rippling
+        {
+            primitive1dist = sphereSDF(p, size.x);    
+        }
+        else
+        {
+            primitive1dist = rippleSphereSDF(p, size.x, frequency, amplitude, phase);
+        }
+        
+        if (primitive2Index == primitive1Index + 1)
+        {
+            if(amplitude == 0) // non-rippling
+            {
+                primitive2dist = roundBoxSDF(p, size, rounding);
+            }
+            else
+            {
+                primitive2dist = rippleBoxSDF(p, size, rounding, frequency, amplitude, phase);
+            }
+        }
+        else
+        {
+            primitive2dist = primitive1dist;
+        }
+    }
+    else if(primitive1Index == 1) // box
+    {
+        if(amplitude == 0) // non-rippling
+        {
+            primitive1dist = roundBoxSDF(p, size, rounding);  
+        }
+        else
+        {
+            primitive1dist = rippleBoxSDF(p, size, rounding, frequency, amplitude, phase);
+        }
+        
+        if (primitive2Index == primitive1Index + 1)
+        {
+            primitive2dist = roundCapsuleSDF(p, size.z, size.x, rounding);
+        }
+        else
+        {
+            primitive2dist = primitive1dist;
+        }
+    }
+    else if(primitive1Index == 2) // capsule
+    {
+        primitive1dist = roundCapsuleSDF(p, size.z, size.x, rounding);
+        
+        if (primitive2Index == primitive1Index + 1)
+        {
+            if(amplitude == 0) // non-rippling
+            {
+                primitive2dist = roundCylinderSDF(p, size.z, size.x, rounding);
+            }   
+            else
+            {
+                primitive2dist = rippleCylinderSDF(p, size.z, size.x, rounding, frequency, amplitude, phase);
+            }
+        }
+        else
+        {
+            primitive2dist = primitive1dist;
+        }
+    }
+    else if(primitive1Index == 3) // Cylinder
+    {
+        if(amplitude == 0) // non-rippling
+        {
+            primitive1dist = roundCylinderSDF(p, size.z, size.x, rounding);
+        }
+        else
+        {
+            primitive1dist = rippleCylinderSDF(p, size.z, size.x, rounding, frequency, amplitude, phase);
+        }
+         
+        primitive2dist = primitive1dist;
+    }
+    else if(primitive1Index == 4) // truchetTower
+    {
+        primitive1dist = truchetTower(p, size.z); 
+        primitive2dist = primitive1dist;
+    }
+    else if(primitive1Index == 5) // apollonian1
+    {
+        primitive1dist = apollonian1(p, size.z); 
+        primitive2dist = primitive1dist;
+    }
+    else if(primitive1Index == 6) // Thing2
+    {
+        primitive1dist = Thing2(p); 
+        primitive2dist = primitive1dist;
+    }
+    else if(primitive1Index == 7) // kaliBox
+    {
+        primitive1dist = kaliBox(p); 
+        primitive2dist = primitive1dist;
+    }        
+    else if(primitive1Index == 8) // mandelbulb_v2
+    {
+        primitive1dist = mandelbulb_v2(p * 0.2, size) / 0.2; 
+        primitive2dist = primitive1dist;
+    }                
+    else if(primitive1Index == 9) // merger
+    {
+        primitive1dist =  merger(p); 
+        primitive2dist = primitive1dist;
+    }    
+    else if(primitive1Index == 10) // sierpinskiPyramid
+    {
+        primitive1dist = sierpinskiPyramid(p); 
+        primitive2dist = primitive1dist;
+    }                
+    else if(primitive1Index == 11) // mengerSponge
+    {
+        primitive1dist = mengerSponge(p); 
+        primitive2dist = primitive1dist;
+    }   
+    else if(primitive1Index == 12) // alteredMenger
+    {
+        primitive1dist = alteredMenger(p); 
+        primitive2dist = primitive1dist;
+    }                 
+    else if(primitive1Index == 13) // evolvingFractal
+    {
+        primitive1dist = evolvingFractal(p); 
+        primitive2dist = primitive1dist;
+    }  
+    else if(primitive1Index == 14) // evolvingFractal2
+    {
+        primitive1dist = evolvingFractal2(p); 
+        primitive2dist = primitive1dist;
+    }      
+    else if(primitive1Index == 15) // mandelbulbSDF
+    {
+        primitive1dist = mandelbulbSDF(p, size.x); 
+        primitive2dist = primitive1dist;
+    }
+    else if(primitive1Index == 16) // julia
+    {
+        primitive1dist = julia(p, size); 
+        primitive2dist = primitive1dist;
+    }    
+    else if(primitive1Index == 17) // snake
+    {
+        primitive1dist = snake(p, size, rounding); 
+        primitive2dist = primitive1dist;
+    }    
+        
+    return mix(primitive1dist, primitive2dist, primitiveMix);
+
+}
+
+
 /**
  * Signed distance function describing the scene.
  * 
@@ -1214,24 +1518,9 @@ float sceneSDF(vec3 samplePoint)
     {
         if(jointPrimitives[jI] < 0) // do nothing
         {}
-        else if(jointPrimitives[jI] == 0) // sphere
+        else
         {
-            distJoints = poly_smin( distJoints, sphereSDF((jointTransforms[jI] * samplePoint4D).xyz, jointSizes[jI].x), jointSmoothings[jI] );
-        }
-        else if(jointPrimitives[jI] == 1) // box
-        {
-            //distJoints = poly_smin( distJoints, boxSDF((jointTransforms[jI] * samplePoint4D).xyz, jointSizes[jI]), jointSmoothings[jI] );
-            distJoints = poly_smin( distJoints, roundBoxSDF((jointTransforms[jI] * samplePoint4D).xyz, jointSizes[jI], jointRoundings[jI]), jointSmoothings[jI] );
-        }
-        else if(jointPrimitives[jI] == 2) // capsule
-        {
-            //distJoints = poly_smin( distJoints, CapsuleSDF((jointTransforms[jI] * samplePoint4D).xyz, jointSizes[jI].z, jointSizes[jI].x), jointSmoothings[jI] ); 
-            distJoints = poly_smin( distJoints, roundCapsuleSDF((jointTransforms[jI] * samplePoint4D).xyz, jointSizes[jI].z, jointSizes[jI].x, jointRoundings[jI]), jointSmoothings[jI] ); 
-        }
-        else if(jointPrimitives[jI] == 3) // cylinder
-        {
-            //distJoints = poly_smin( distJoints, cylinderSDF((jointTransforms[jI] * samplePoint4D).xyz, jointSizes[jI].z, jointSizes[jI].x), jointSmoothings[jI] ); 
-            distJoints = poly_smin( distJoints, roundCylinderSDF((jointTransforms[jI] * samplePoint4D).xyz, jointSizes[jI].z, jointSizes[jI].x, jointRoundings[jI]), jointSmoothings[jI] ); 
+            distJoints = poly_smin( distJoints, primitiveMorphSDF((jointTransforms[jI] * samplePoint4D).xyz, jointSizes[jI], jointRoundings[jI], jointPrimitives[jI]), jointSmoothings[jI] );
         }
     }
     
@@ -1242,24 +1531,9 @@ float sceneSDF(vec3 samplePoint)
     {
         if(edgePrimitives[eI] < 0) // do nothing
         {}
-        else if(edgePrimitives[eI] == 0) // sphere
+        else
         {
-            distEdges = poly_smin( distEdges, sphereSDF((edgeTransforms[eI] * samplePoint4D).xyz, edgeLengths[eI] * edgeSizes[eI].z), edgeSmoothings[eI] );
-        }
-        else if(edgePrimitives[eI] == 1) // box
-        {
-            //distEdges = poly_smin( distEdges, boxSDF((edgeTransforms[eI] * samplePoint4D).xyz, vec3(edgeSizes[eI].x, edgeSizes[eI].y, edgeLengths[eI] * edgeSizes[eI].z)), edgeSmoothings[eI] );
-            distEdges = poly_smin( distEdges, roundBoxSDF((edgeTransforms[eI] * samplePoint4D).xyz, vec3(edgeSizes[eI].x, edgeSizes[eI].y, edgeLengths[eI] * edgeSizes[eI].z), edgeRoundings[eI]), edgeSmoothings[eI] );
-        }
-        else if(edgePrimitives[eI] == 2) // capsule
-        {
-            //distEdges = poly_smin( distEdges, CapsuleSDF((edgeTransforms[eI] * samplePoint4D).xyz, edgeLengths[eI] * edgeSizes[eI].z, edgeSizes[eI].x), edgeSmoothings[eI] ); 
-            distEdges = poly_smin( distEdges, roundCapsuleSDF((edgeTransforms[eI] * samplePoint4D).xyz, edgeLengths[eI] * edgeSizes[eI].z, edgeSizes[eI].x, edgeRoundings[eI]), edgeSmoothings[eI] ); 
-        }
-        else if(edgePrimitives[eI] == 3) // cylinder
-        {
-            //distEdges = poly_smin( distEdges, cylinderSDF((edgeTransforms[eI] * samplePoint4D).xyz, edgeLengths[eI] * edgeSizes[eI].z, edgeSizes[eI].x), edgeSmoothings[eI] ); 
-            distEdges = poly_smin( distEdges, roundCylinderSDF((edgeTransforms[eI] * samplePoint4D).xyz, edgeLengths[eI] * edgeSizes[eI].z, edgeSizes[eI].x, edgeRoundings[eI]), edgeSmoothings[eI] ); 
+            distEdges = poly_smin( distEdges, primitiveMorphSDF((edgeTransforms[eI] * samplePoint4D).xyz, vec3(edgeSizes[eI].x, edgeSizes[eI].y, edgeLengths[eI] * edgeSizes[eI].z), edgeRoundings[eI], edgePrimitives[eI]), edgeSmoothings[eI] );
         }
     }
     
@@ -1269,100 +1543,10 @@ float sceneSDF(vec3 samplePoint)
     {    
         if(objectPrimitives[oI] < 0) // do nothing
         {}
-        else if(objectPrimitives[oI] == 0) // sphere
+        else
         {
-            if(objectAmplitudes[oI] == 0) // non-rippling
-            {
-                distObjects = poly_smin( distObjects, sphereSDF((objectTransforms[oI] * samplePoint4D).xyz, objectSizes[oI].x), objectSmoothings[oI] );
-            }
-            else
-            {
-                distObjects = poly_smin( distObjects, rippleSphereSDF((objectTransforms[oI] * samplePoint4D).xyz, objectSizes[oI].x, objectFrequencies[oI], objectAmplitudes[oI], objectPhases[oI] ), objectSmoothings[oI] );
-            }
+            distObjects = poly_smin( distObjects, primitiveMorphRippleSDF((objectTransforms[oI] * samplePoint4D).xyz, objectSizes[oI], objectRoundings[oI], objectPrimitives[oI], objectFrequencies[oI], objectAmplitudes[oI], objectPhases[oI] ), objectSmoothings[oI] );
         }
-        else if(objectPrimitives[oI] == 1) // box
-        {
-            if(objectAmplitudes[oI] == 0) // non-rippling
-            {
-                distObjects = poly_smin( distObjects, roundBoxSDF((objectTransforms[oI] * samplePoint4D).xyz, objectSizes[oI], objectRoundings[oI]), objectSmoothings[oI] );
-            }
-            else
-            {
-                distObjects = poly_smin( distObjects, rippleBoxSDF((objectTransforms[oI] * samplePoint4D).xyz, objectSizes[oI], objectRoundings[oI], objectFrequencies[oI], objectAmplitudes[oI], objectPhases[oI]), objectSmoothings[oI] );
-            }
-        }
-        else if(objectPrimitives[oI] == 2) // capsule
-        {
-            distObjects = poly_smin( distObjects, roundCapsuleSDF((objectTransforms[oI] * samplePoint4D).xyz, objectSizes[oI].z, objectSizes[oI].x, objectRoundings[oI]), objectSmoothings[oI] ); 
-        }
-        else if(objectPrimitives[oI] == 3) // cylinder
-        {
-            if(objectAmplitudes[oI] == 0) // non-rippling
-            {
-                distObjects = poly_smin( distObjects, roundCylinderSDF((objectTransforms[oI] * samplePoint4D).xyz, objectSizes[oI].z, objectSizes[oI].x, objectRoundings[oI]), objectSmoothings[oI] ); 
-            }
-            else
-            {
-                distObjects = poly_smin( distObjects, rippleCylinderSDF((objectTransforms[oI] * samplePoint4D).xyz, objectSizes[oI].z, objectSizes[oI].x, objectRoundings[oI], objectFrequencies[oI], objectAmplitudes[oI], objectPhases[oI]), objectSmoothings[oI] );
-            }
-        }
-        else if(objectPrimitives[oI] == 4) // truchetTower
-        {
-            distObjects = poly_smin( distObjects, truchetTower((objectTransforms[oI] * samplePoint4D).xyz, objectSizes[oI].z), objectSmoothings[oI] ); 
-        }
-        else if(objectPrimitives[oI] == 5) // apollonian1
-        {
-            distObjects = poly_smin( distObjects, apollonian1((objectTransforms[oI] * samplePoint4D).xyz, objectSizes[oI].z), objectSmoothings[oI] ); 
-        }
-        else if(objectPrimitives[oI] == 6) // Thing2
-        {
-            distObjects = poly_smin( distObjects, Thing2((objectTransforms[oI] * samplePoint4D).xyz), objectSmoothings[oI] ); 
-        }
-        else if(objectPrimitives[oI] == 7) // kaliBox
-        {
-            distObjects = poly_smin( distObjects, kaliBox((objectTransforms[oI] * samplePoint4D).xyz), objectSmoothings[oI] ); 
-        }        
-        else if(objectPrimitives[oI] == 8) // mandelbulb_v2
-        {
-            distObjects = poly_smin( distObjects, mandelbulb_v2(((objectTransforms[oI] * samplePoint4D).xyz) * 0.2, objectSizes[oI]), objectSmoothings[oI] ) / 0.2; 
-        }                
-        else if(objectPrimitives[oI] == 9) // merger
-        {
-            distObjects = poly_smin( distObjects, merger((objectTransforms[oI] * samplePoint4D).xyz), objectSmoothings[oI] ); 
-        }    
-        else if(objectPrimitives[oI] == 10) // sierpinskiPyramid
-        {
-            distObjects = poly_smin( distObjects, sierpinskiPyramid((objectTransforms[oI] * samplePoint4D).xyz), objectSmoothings[oI] ); 
-        }                
-        else if(objectPrimitives[oI] == 11) // mengerSponge
-        {
-            distObjects = poly_smin( distObjects, mengerSponge((objectTransforms[oI] * samplePoint4D).xyz), objectSmoothings[oI] ); 
-        }   
-        else if(objectPrimitives[oI] == 12) // alteredMenger
-        {
-            distObjects = poly_smin( distObjects, alteredMenger((objectTransforms[oI] * samplePoint4D).xyz), objectSmoothings[oI] ); 
-        }                 
-        else if(objectPrimitives[oI] == 13) // evolvingFractal
-        {
-            distObjects = poly_smin( distObjects, evolvingFractal((objectTransforms[oI] * samplePoint4D).xyz), objectSmoothings[oI] ); 
-        }  
-        else if(objectPrimitives[oI] == 14) // evolvingFractal2
-        {
-            distObjects = poly_smin( distObjects, evolvingFractal2((objectTransforms[oI] * samplePoint4D).xyz), objectSmoothings[oI] ); 
-        }      
-        else if(objectPrimitives[oI] == 15) // mandelbulbSDF
-        {
-            distObjects = poly_smin( distObjects, mandelbulbSDF((objectTransforms[oI] * samplePoint4D).xyz, objectSizes[oI].x), objectSmoothings[oI] ); 
-        }
-        else if(objectPrimitives[oI] == 16) // julia
-        {
-            distObjects = poly_smin( distObjects, julia((objectTransforms[oI] * samplePoint4D).xyz, objectSizes[oI]), objectSmoothings[oI] ); 
-        }    
-        else if(objectPrimitives[oI] == 17) // snake
-        {
-            distObjects = poly_smin( distObjects, snake((objectTransforms[oI] * samplePoint4D).xyz, objectSizes[oI], objectRoundings[oI]), objectSmoothings[oI] ); 
-        }       
-
     }
     
     float distJointEdges = 1000.0;
@@ -1405,21 +1589,9 @@ Surface sceneSDF_surface(vec3 samplePoint)
     {
         if(jointPrimitives[jI] < 0) // do nothing
         {}
-        else if(jointPrimitives[jI] == 0) // sphere
+        else
         {
-            distJoints = poly_smin( distJoints, sphereSDF((jointTransforms[jI] * samplePoint4D).xyz, jointSizes[jI].x), jointSmoothings[jI] );
-        }
-        else if(jointPrimitives[jI] == 1) // box
-        {
-            distJoints = poly_smin( distJoints, roundBoxSDF((jointTransforms[jI] * samplePoint4D).xyz, jointSizes[jI], jointRoundings[jI]), jointSmoothings[jI] );
-        }
-        else if(jointPrimitives[jI] == 2) // capsule
-        {
-            distJoints = poly_smin( distJoints, roundCapsuleSDF((jointTransforms[jI] * samplePoint4D).xyz, jointSizes[jI].z, jointSizes[jI].x, jointRoundings[jI]), jointSmoothings[jI] ); 
-        }
-        else if(jointPrimitives[jI] == 3) // cylinder
-        {
-            distJoints = poly_smin( distJoints, roundCylinderSDF((jointTransforms[jI] * samplePoint4D).xyz, jointSizes[jI].z, jointSizes[jI].x, jointRoundings[jI]), jointSmoothings[jI] ); 
+            distJoints = poly_smin( distJoints, primitiveMorphSDF((jointTransforms[jI] * samplePoint4D).xyz, jointSizes[jI], jointRoundings[jI], jointPrimitives[jI]), jointSmoothings[jI] );
         }
     }
     
@@ -1432,21 +1604,9 @@ Surface sceneSDF_surface(vec3 samplePoint)
     {
         if(edgePrimitives[eI] < 0) // do nothing
         {}
-        else if(edgePrimitives[eI] == 0) // sphere
+        else
         {
-            distEdges = poly_smin( distEdges, sphereSDF((edgeTransforms[eI] * samplePoint4D).xyz, edgeLengths[eI] * edgeSizes[eI].z), edgeSmoothings[eI] );
-        }
-        else if(edgePrimitives[eI] == 1) // box
-        {
-            distEdges = poly_smin( distEdges, roundBoxSDF((edgeTransforms[eI] * samplePoint4D).xyz, vec3(edgeSizes[eI].x, edgeSizes[eI].y, edgeLengths[eI] * edgeSizes[eI].z), edgeRoundings[eI]), edgeSmoothings[eI] );
-        }
-        else if(edgePrimitives[eI] == 2) // capsule
-        {
-            distEdges = poly_smin( distEdges, roundCapsuleSDF((edgeTransforms[eI] * samplePoint4D).xyz, edgeLengths[eI] * edgeSizes[eI].z, edgeSizes[eI].x, edgeRoundings[eI]), edgeSmoothings[eI] ); 
-        }
-        else if(edgePrimitives[eI] == 3) // cylinder
-        {
-            distEdges = poly_smin( distEdges, roundCylinderSDF((edgeTransforms[eI] * samplePoint4D).xyz, edgeLengths[eI] * edgeSizes[eI].z, edgeSizes[eI].x, edgeRoundings[eI]), edgeSmoothings[eI] ); 
+            distEdges = poly_smin( distEdges, primitiveMorphSDF((edgeTransforms[eI] * samplePoint4D).xyz, vec3(edgeSizes[eI].x, edgeSizes[eI].y, edgeLengths[eI] * edgeSizes[eI].z), edgeRoundings[eI], edgePrimitives[eI]), edgeSmoothings[eI] );
         }
     }
     
@@ -1463,99 +1623,10 @@ Surface sceneSDF_surface(vec3 samplePoint)
     
         if(objectPrimitives[oI] < 0) // do nothing
         {}
-        else if(objectPrimitives[oI] == 0) // sphere
+        else
         {
-            if(objectAmplitudes[oI] == 0) // non-rippling
-            {
-                distObjects = poly_smin( distObjects, sphereSDF((objectTransforms[oI] * samplePoint4D).xyz, objectSizes[oI].x), objectSmoothings[oI] );
-            }
-            else
-            {
-                distObjects = poly_smin( distObjects, rippleSphereSDF((objectTransforms[oI] * samplePoint4D).xyz, objectSizes[oI].x, objectFrequencies[oI], objectAmplitudes[oI], objectPhases[oI] ), objectSmoothings[oI] );
-            }
+            distObjects = poly_smin( distObjects, primitiveMorphRippleSDF((objectTransforms[oI] * samplePoint4D).xyz, objectSizes[oI], objectRoundings[oI], objectPrimitives[oI], objectFrequencies[oI], objectAmplitudes[oI], objectPhases[oI] ), objectSmoothings[oI] );
         }
-        else if(objectPrimitives[oI] == 1) // box
-        {
-            if(objectAmplitudes[oI] == 0) // non-rippling
-            {
-                distObjects = poly_smin( distObjects, roundBoxSDF((objectTransforms[oI] * samplePoint4D).xyz, objectSizes[oI], objectRoundings[oI]), objectSmoothings[oI] );
-            }
-            else
-            {
-                distObjects = poly_smin( distObjects, rippleBoxSDF((objectTransforms[oI] * samplePoint4D).xyz, objectSizes[oI], objectRoundings[oI], objectFrequencies[oI], objectAmplitudes[oI], objectPhases[oI]), objectSmoothings[oI] );
-            }
-        }
-        else if(objectPrimitives[oI] == 2) // capsule
-        {
-            distObjects = poly_smin( distObjects, roundCapsuleSDF((objectTransforms[oI] * samplePoint4D).xyz, objectSizes[oI].z, objectSizes[oI].x, objectRoundings[oI]), objectSmoothings[oI] ); 
-        }
-        else if(objectPrimitives[oI] == 3) // cylinder
-        {
-            if(objectAmplitudes[oI] == 0) // non-rippling
-            {
-                distObjects = poly_smin( distObjects, roundCylinderSDF((objectTransforms[oI] * samplePoint4D).xyz, objectSizes[oI].z, objectSizes[oI].x, objectRoundings[oI]), objectSmoothings[oI] ); 
-            }
-            else
-            {
-                distObjects = poly_smin( distObjects, rippleCylinderSDF((objectTransforms[oI] * samplePoint4D).xyz, objectSizes[oI].z, objectSizes[oI].x, objectRoundings[oI], objectFrequencies[oI], objectAmplitudes[oI], objectPhases[oI]), objectSmoothings[oI] );
-            }
-        }
-        else if(objectPrimitives[oI] == 4) // truchetTower
-        {
-            distObjects = poly_smin( distObjects, truchetTower((objectTransforms[oI] * samplePoint4D).xyz, objectSizes[oI].z), objectSmoothings[oI] ); 
-        }
-        else if(objectPrimitives[oI] == 5) // apollonian1
-        {
-            distObjects = poly_smin( distObjects, apollonian1((objectTransforms[oI] * samplePoint4D).xyz, objectSizes[oI].z), objectSmoothings[oI] ); 
-        }
-        else if(objectPrimitives[oI] == 6) // Thing2
-        {
-            distObjects = poly_smin( distObjects, Thing2((objectTransforms[oI] * samplePoint4D).xyz), objectSmoothings[oI] ); 
-        }
-        else if(objectPrimitives[oI] == 7) // kaliBox
-        {
-            distObjects = poly_smin( distObjects, kaliBox((objectTransforms[oI] * samplePoint4D).xyz), objectSmoothings[oI] ); 
-        }
-        else if(objectPrimitives[oI] == 8) // mandelbulb_v2
-        {
-            distObjects = poly_smin( distObjects, mandelbulb_v2((objectTransforms[oI] * samplePoint4D).xyz * 0.2, objectSizes[oI]), objectSmoothings[oI] ) / 0.2; 
-        }
-        else if(objectPrimitives[oI] == 9) // merger
-        {
-            distObjects = poly_smin( distObjects, merger((objectTransforms[oI] * samplePoint4D).xyz), objectSmoothings[oI] ); 
-        }       
-        else if(objectPrimitives[oI] == 10) // sierpinskiPyramid
-        {
-            distObjects = poly_smin( distObjects, sierpinskiPyramid((objectTransforms[oI] * samplePoint4D).xyz), objectSmoothings[oI] ); 
-        }    
-        else if(objectPrimitives[oI] == 11) // mengerSponge
-        {
-            distObjects = poly_smin( distObjects, mengerSponge((objectTransforms[oI] * samplePoint4D).xyz), objectSmoothings[oI] ); 
-        } 
-        else if(objectPrimitives[oI] == 12) // alteredMenger
-        {
-            distObjects = poly_smin( distObjects, alteredMenger((objectTransforms[oI] * samplePoint4D).xyz), objectSmoothings[oI] ); 
-        }   
-        else if(objectPrimitives[oI] == 13) // evolvingFractal
-        {
-            distObjects = poly_smin( distObjects, evolvingFractal((objectTransforms[oI] * samplePoint4D).xyz), objectSmoothings[oI] ); 
-        }     
-        else if(objectPrimitives[oI] == 14) // evolvingFractal2
-        {
-            distObjects = poly_smin( distObjects, evolvingFractal2((objectTransforms[oI] * samplePoint4D).xyz), objectSmoothings[oI] ); 
-        }
-        else if(objectPrimitives[oI] == 15) // mandelbulbSDF
-        {
-            distObjects = poly_smin( distObjects, mandelbulbSDF((objectTransforms[oI] * samplePoint4D).xyz, objectSizes[oI].x), objectSmoothings[oI] ); 
-        }
-        else if(objectPrimitives[oI] == 16) // julia
-        {
-            distObjects = poly_smin( distObjects, julia((objectTransforms[oI] * samplePoint4D).xyz, objectSizes[oI]), objectSmoothings[oI] ); 
-        } 
-         else if(objectPrimitives[oI] == 17) // snake
-        {
-            distObjects = poly_smin( distObjects, snake((objectTransforms[oI] * samplePoint4D).xyz, objectSizes[oI], objectRoundings[oI]), objectSmoothings[oI] ); 
-        }   
         
         Surface tmpSurface = Surface(objectColors[oI], objectAmbientScales[oI], objectDiffuseScales[oI], objectSpecularScales[oI], objectSpecularPows[oI], objectOcclusionScales[oI], objectOcclusionRanges[oI], objectOcclusionResolutions[oI], objectOcclusionColors[oI], distObjects);
         objectSurface = union_surface(tmpSurface, objectSurface, objectSmoothings[oI]);

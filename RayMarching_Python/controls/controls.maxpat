@@ -3,14 +3,14 @@
 		"fileversion" : 1,
 		"appversion" : 		{
 			"major" : 8,
-			"minor" : 6,
+			"minor" : 5,
 			"revision" : 4,
 			"architecture" : "x64",
 			"modernui" : 1
 		}
 ,
 		"classnamespace" : "box",
-		"rect" : [ -1883.0, 151.0, 1324.0, 1049.0 ],
+		"rect" : [ 181.0, 85.0, 1058.0, 1033.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 1,
 		"default_fontsize" : 12.0,
@@ -39,6 +39,53 @@
 		"subpatcher_template" : "",
 		"assistshowspatchername" : 0,
 		"boxes" : [ 			{
+				"box" : 				{
+					"format" : 6,
+					"id" : "obj-4814",
+					"maxclass" : "flonum",
+					"numinlets" : 1,
+					"numoutlets" : 2,
+					"outlettype" : [ "", "bang" ],
+					"parameter_enable" : 0,
+					"patching_rect" : [ 772.0, 2993.0, 50.0, 22.0 ],
+					"presentation" : 1,
+					"presentation_rect" : [ 937.5, 621.0, 50.0, 22.0 ]
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"format" : 6,
+					"id" : "obj-4812",
+					"maxclass" : "flonum",
+					"numinlets" : 1,
+					"numoutlets" : 2,
+					"outlettype" : [ "", "bang" ],
+					"parameter_enable" : 0,
+					"patching_rect" : [ 264.0, 2615.0, 50.0, 22.0 ],
+					"presentation" : 1,
+					"presentation_rect" : [ 244.0, 1022.903620958328247, 50.0, 22.0 ],
+					"varname" : "edgePrimitive"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"format" : 6,
+					"id" : "obj-4810",
+					"maxclass" : "flonum",
+					"numinlets" : 1,
+					"numoutlets" : 2,
+					"outlettype" : [ "", "bang" ],
+					"parameter_enable" : 0,
+					"patching_rect" : [ 264.0, 1999.0, 50.0, 22.0 ],
+					"presentation" : 1,
+					"presentation_rect" : [ 245.0, 851.903620958328247, 50.0, 22.0 ],
+					"varname" : "jointPrimitive"
+				}
+
+			}
+, 			{
 				"box" : 				{
 					"fontname" : "Arial",
 					"fontsize" : 9.0,
@@ -323,7 +370,6 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 1244.25, 1236.0, 103.0, 22.0 ],
-					"presentation_linecount" : 2,
 					"text" : "/vis/rayrotation $1"
 				}
 
@@ -64044,20 +64090,6 @@
 			}
 , 			{
 				"box" : 				{
-					"id" : "obj-390",
-					"maxclass" : "number",
-					"numinlets" : 1,
-					"numoutlets" : 2,
-					"outlettype" : [ "", "bang" ],
-					"parameter_enable" : 0,
-					"patching_rect" : [ 774.0, 2998.0, 50.0, 22.0 ],
-					"presentation" : 1,
-					"presentation_rect" : [ 936.5, 621.0, 50.0, 22.0 ]
-				}
-
-			}
-, 			{
-				"box" : 				{
 					"id" : "obj-391",
 					"maxclass" : "message",
 					"numinlets" : 2,
@@ -64123,6 +64155,7 @@
 			}
 , 			{
 				"box" : 				{
+					"floatoutput" : 1,
 					"id" : "obj-396",
 					"maxclass" : "slider",
 					"min" : -1.0,
@@ -67937,21 +67970,6 @@
 			}
 , 			{
 				"box" : 				{
-					"id" : "obj-450",
-					"maxclass" : "number",
-					"numinlets" : 1,
-					"numoutlets" : 2,
-					"outlettype" : [ "", "bang" ],
-					"parameter_enable" : 0,
-					"patching_rect" : [ 264.0, 2618.0, 50.0, 22.0 ],
-					"presentation" : 1,
-					"presentation_rect" : [ 244.0, 1022.903620958328247, 50.0, 22.0 ],
-					"varname" : "edgePrimitive"
-				}
-
-			}
-, 			{
-				"box" : 				{
 					"id" : "obj-451",
 					"maxclass" : "message",
 					"numinlets" : 2,
@@ -68017,6 +68035,7 @@
 			}
 , 			{
 				"box" : 				{
+					"floatoutput" : 1,
 					"id" : "obj-456",
 					"maxclass" : "slider",
 					"min" : -1.0,
@@ -68028,7 +68047,7 @@
 					"patching_rect" : [ 425.0, 2618.0, 320.0, 17.0 ],
 					"presentation" : 1,
 					"presentation_rect" : [ 399.0, 1023.903620958328247, 320.0, 20.0 ],
-					"size" : 5.0
+					"size" : 4.0
 				}
 
 			}
@@ -68685,21 +68704,6 @@
 			}
 , 			{
 				"box" : 				{
-					"id" : "obj-307",
-					"maxclass" : "number",
-					"numinlets" : 1,
-					"numoutlets" : 2,
-					"outlettype" : [ "", "bang" ],
-					"parameter_enable" : 0,
-					"patching_rect" : [ 264.0, 1999.0, 50.0, 22.0 ],
-					"presentation" : 1,
-					"presentation_rect" : [ 244.0, 851.903620958328247, 50.0, 22.0 ],
-					"varname" : "jointPrimitive"
-				}
-
-			}
-, 			{
-				"box" : 				{
 					"id" : "obj-308",
 					"maxclass" : "message",
 					"numinlets" : 2,
@@ -68765,6 +68769,7 @@
 			}
 , 			{
 				"box" : 				{
+					"floatoutput" : 1,
 					"id" : "obj-313",
 					"maxclass" : "slider",
 					"min" : -1.0,
@@ -68776,7 +68781,7 @@
 					"patching_rect" : [ 425.0, 2004.0, 320.0, 17.0 ],
 					"presentation" : 1,
 					"presentation_rect" : [ 399.0, 852.903620958328247, 320.0, 20.0 ],
-					"size" : 5.0
+					"size" : 4.0
 				}
 
 			}
@@ -70178,7 +70183,7 @@
 						"client_rect" : [ 425, 64, 1733, 841 ],
 						"parameter_enable" : 0,
 						"parameter_mappable" : 0,
-						"storage_rect" : [ -21326, -21269, -19647, -20209 ]
+						"storage_rect" : [ 8, 65, 1687, 1125 ]
 					}
 ,
 					"text" : "pattrstorage",
@@ -70199,7 +70204,7 @@
 					"patching_rect" : [ 129.0, 200.0, 53.0, 19.0 ],
 					"restore" : 					{
 						"BgColorG" : [ 0.0 ],
-						"BgColorR" : [ 0.0 ],
+						"BgColorR" : [ 0.1581 ],
 						"BgColorS" : [ 0.0 ],
 						"BgColor_interest" : [ 0 ],
 						"BgOcclusionColorB" : [ 0.454838709677419 ],
@@ -70207,30 +70212,30 @@
 						"BgOcclusionColorR" : [ 0.199835526315789 ],
 						"BgOcclusionColor_interest" : [ 0 ],
 						"bg_active" : [ 0 ],
-						"camAngle" : [ 5.0 ],
+						"camAngle" : [ 36.711599999999997 ],
 						"camAngle_interest" : [ 0 ],
 						"camAngle_max" : [ 120.0 ],
 						"camAngle_min" : [ 5.0 ],
-						"camPosX" : [ -0.119587308998302 ],
+						"camPosX" : [ -1.575 ],
 						"camPosX_max" : [ 3.141 ],
 						"camPosX_min" : [ -3.141 ],
-						"camPosY" : [ -2.338018548387097 ],
+						"camPosY" : [ -1.575 ],
 						"camPosY_max" : [ 3.141 ],
 						"camPosY_min" : [ -3.141 ],
-						"camPosZ" : [ -19.588073005093378 ],
+						"camPosZ" : [ -6.5207 ],
 						"camPosZ_max" : [ 10.0 ],
 						"camPosZ_min" : [ -20.0 ],
 						"camPos_interest" : [ 0 ],
 						"diffuseScale_max" : [ 1.0 ],
-						"edgeAmbientScale" : [ 0.729 ],
+						"edgeAmbientScale" : [ 0.01 ],
 						"edgeAmbientScale_interest" : [ 0 ],
 						"edgeAmbientScale_max" : [ 1.0 ],
 						"edgeAmbientScale_min" : [ 0.0 ],
-						"edgeColorB" : [ 0.4209 ],
-						"edgeColorG" : [ 0.6052 ],
-						"edgeColorR" : [ 0.978 ],
+						"edgeColorB" : [ 0.6873 ],
+						"edgeColorG" : [ 0.5571 ],
+						"edgeColorR" : [ 0.6355 ],
 						"edgeColor_interest" : [ 0 ],
-						"edgeDiffuseScale" : [ 0.9355 ],
+						"edgeDiffuseScale" : [ 0.995 ],
 						"edgeDiffuseScale_interest" : [ 0 ],
 						"edgeDiffuseScale_max" : [ 1.0 ],
 						"edgeDiffuseScale_min" : [ 0.0 ],
@@ -70238,38 +70243,38 @@
 						"edgeOcclusionColorG" : [ 0.0 ],
 						"edgeOcclusionColorR" : [ 0.0 ],
 						"edgeOcclusionColor_interest" : [ 0 ],
-						"edgeOcclusionRange" : [ 6.4617 ],
+						"edgeOcclusionRange" : [ 1.11 ],
 						"edgeOcclusionRange_interest" : [ 0 ],
 						"edgeOcclusionRange_max" : [ 10.0 ],
 						"edgeOcclusionRange_min" : [ 0.0 ],
-						"edgeOcclusionResol" : [ 0.3591 ],
+						"edgeOcclusionResol" : [ 0.38 ],
 						"edgeOcclusionResol_interest" : [ 0 ],
 						"edgeOcclusionResol_max" : [ 1.0 ],
 						"edgeOcclusionResol_min" : [ 0.0 ],
-						"edgeOcclusionScale" : [ 0.9742 ],
+						"edgeOcclusionScale" : [ 0.85 ],
 						"edgeOcclusionScale_interest" : [ 0 ],
 						"edgeOcclusionScale_max" : [ 1.0 ],
 						"edgeOcclusionScale_min" : [ 0.0 ],
-						"edgePrimitive" : [ -1 ],
+						"edgePrimitive" : [ -1.0 ],
 						"edgePrimitive_interest" : [ 0 ],
 						"edgeRadius" : [ 0.0 ],
 						"edgeRadius_interest" : [ 0 ],
 						"edgeRadius_max" : [ 1.0 ],
-						"edgeSizeX" : [ 0.02 ],
+						"edgeSizeX" : [ 0.018 ],
 						"edgeSizeX_max" : [ 1.0 ],
-						"edgeSizeY" : [ 0.02 ],
+						"edgeSizeY" : [ 0.9308 ],
 						"edgeSizeY_max" : [ 1.0 ],
-						"edgeSizeZ" : [ 0.25 ],
+						"edgeSizeZ" : [ 4.0 ],
 						"edgeSizeZ_max" : [ 4.0 ],
 						"edgeSize_interest" : [ 0 ],
-						"edgeSmooth" : [ 0.0 ],
+						"edgeSmooth" : [ 0.0613 ],
 						"edgeSmooth_interest" : [ 0 ],
 						"edgeSmooth_max" : [ 1.0 ],
-						"edgeSpecularPow" : [ 17.952999999999999 ],
+						"edgeSpecularPow" : [ 5.16 ],
 						"edgeSpecularPow_interest" : [ 0 ],
 						"edgeSpecularPow_max" : [ 100.0 ],
 						"edgeSpecularPow_min" : [ 0.0 ],
-						"edgeSpecularScale" : [ 0.0 ],
+						"edgeSpecularScale" : [ 1.877 ],
 						"edgeSpecularScale_interest" : [ 0 ],
 						"edgeSpecularScale_max" : [ 2.0 ],
 						"edgeSpecularScale_min" : [ 0.0 ],
@@ -70289,8 +70294,8 @@
 						"fogMinDist_max[1]" : [ 1.0 ],
 						"fogMinDist_min" : [ 0.0 ],
 						"fogMinDist_min[1]" : [ -1.0 ],
-						"groundPosX" : [ 0.488168505942275 ],
-						"groundPosX[1]" : [ 0.491903650254669 ],
+						"groundPosX" : [ 0.5 ],
+						"groundPosX[1]" : [ 0.502125 ],
 						"groundPosX[2]" : [ 0.49685 ],
 						"groundPosX[3]" : [ 0.5 ],
 						"groundPosX[4]" : [ 0.0 ],
@@ -70302,7 +70307,7 @@
 						"groundPosX_max" : [ 20.0 ],
 						"groundPosX_max[1]" : [ 20.0 ],
 						"groundPosX_max[2]" : [ 20.0 ],
-						"groundPosX_max[3]" : [ 0.0 ],
+						"groundPosX_max[3]" : [ 20.0 ],
 						"groundPosX_max[4]" : [ 0.0 ],
 						"groundPosX_max[5]" : [ 0.0 ],
 						"groundPosX_max[6]" : [ 0.0 ],
@@ -70319,9 +70324,9 @@
 						"groundPosX_min[7]" : [ 0.0 ],
 						"groundPosX_min[8]" : [ 0.0 ],
 						"groundPosX_min[9]" : [ 0.0 ],
-						"groundPosY" : [ 0.497845925297114 ],
+						"groundPosY" : [ 0.5 ],
 						"groundPosY[10]" : [ 0.5 ],
-						"groundPosY[1]" : [ 0.469323005093379 ],
+						"groundPosY[1]" : [ 0.49945 ],
 						"groundPosY[2]" : [ 0.5 ],
 						"groundPosY[3]" : [ 0.5 ],
 						"groundPosY[4]" : [ 0.0 ],
@@ -70350,7 +70355,7 @@
 						"groundPosY_min[7]" : [ 0.0 ],
 						"groundPosY_min[8]" : [ 0.0 ],
 						"groundPosY_min[9]" : [ 0.0 ],
-						"groundPosZ" : [ 0.5 ],
+						"groundPosZ" : [ 0.5376375 ],
 						"groundPosZ[10]" : [ 0.0 ],
 						"groundPosZ[11]" : [ 0.0 ],
 						"groundPosZ[12]" : [ 0.0 ],
@@ -70361,12 +70366,12 @@
 						"groundPosZ[17]" : [ 0.0 ],
 						"groundPosZ[18]" : [ 0.0 ],
 						"groundPosZ[19]" : [ 0.0 ],
-						"groundPosZ[1]" : [ 0.5 ],
+						"groundPosZ[1]" : [ 0.507075 ],
 						"groundPosZ[20]" : [ 0.0 ],
 						"groundPosZ[21]" : [ 0.166666666666667 ],
 						"groundPosZ[2]" : [ 0.0 ],
 						"groundPosZ[3]" : [ 0.0 ],
-						"groundPosZ[4]" : [ 0.0 ],
+						"groundPosZ[4]" : [ 0.04143675721562 ],
 						"groundPosZ[5]" : [ 0.5012475 ],
 						"groundPosZ[6]" : [ 0.0 ],
 						"groundPosZ[7]" : [ 0.5 ],
@@ -70402,8 +70407,8 @@
 						"groundPos_interest[7]" : [ 0 ],
 						"groundPos_interest[8]" : [ 0 ],
 						"groundPos_interest[9]" : [ 0 ],
-						"groundPrimitive" : [ 1 ],
-						"groundPrimitive[1]" : [ 2 ],
+						"groundPrimitive" : [ 2.073588709677419 ],
+						"groundPrimitive[1]" : [ 0 ],
 						"groundPrimitive[2]" : [ 0 ],
 						"groundPrimitive[3]" : [ 0 ],
 						"groundPrimitive[4]" : [ 0 ],
@@ -70422,7 +70427,7 @@
 						"groundPrimitive_interest[7]" : [ 0 ],
 						"groundPrimitive_interest[8]" : [ 0 ],
 						"groundPrimitive_interest[9]" : [ 0 ],
-						"groundRotX" : [ 0.5 ],
+						"groundRotX" : [ 0.75 ],
 						"groundRotX[10]" : [ 0.5 ],
 						"groundRotX[1]" : [ 0.5 ],
 						"groundRotX[2]" : [ 0.25 ],
@@ -70555,8 +70560,8 @@
 						"groundRound_max[7]" : [ 0.0 ],
 						"groundRound_max[8]" : [ 0.0 ],
 						"groundRound_max[9]" : [ 0.0 ],
-						"groundSizeX" : [ 0.050668505942275 ],
-						"groundSizeX[1]" : [ 0.344598896434635 ],
+						"groundSizeX" : [ 0.066479202037351 ],
+						"groundSizeX[1]" : [ 0.099533936970809 ],
 						"groundSizeX[2]" : [ 0.044662563667233 ],
 						"groundSizeX[3]" : [ 0.0 ],
 						"groundSizeX[4]" : [ 0.0 ],
@@ -70565,7 +70570,7 @@
 						"groundSizeX[7]" : [ 0.0 ],
 						"groundSizeX[8]" : [ 0.0 ],
 						"groundSizeX[9]" : [ 0.0 ],
-						"groundSizeX_max" : [ 5.0 ],
+						"groundSizeX_max" : [ 10.0 ],
 						"groundSizeX_max[1]" : [ 5.0 ],
 						"groundSizeX_max[2]" : [ 5.0 ],
 						"groundSizeX_max[3]" : [ 0.0 ],
@@ -70575,8 +70580,8 @@
 						"groundSizeX_max[7]" : [ 0.0 ],
 						"groundSizeX_max[8]" : [ 0.0 ],
 						"groundSizeX_max[9]" : [ 0.0 ],
-						"groundSizeY" : [ 0.03125 ],
-						"groundSizeY[1]" : [ 0.228660865874363 ],
+						"groundSizeY" : [ 0.009677419354839 ],
+						"groundSizeY[1]" : [ 0.097319090925473 ],
 						"groundSizeY[2]" : [ 0.031377334465195 ],
 						"groundSizeY[3]" : [ 0.0 ],
 						"groundSizeY[4]" : [ 0.0 ],
@@ -70595,8 +70600,8 @@
 						"groundSizeY_max[7]" : [ 0.0 ],
 						"groundSizeY_max[8]" : [ 0.0 ],
 						"groundSizeY_max[9]" : [ 0.0 ],
-						"groundSizeZ" : [ 0.261491935483871 ],
-						"groundSizeZ[1]" : [ 0.177111629881155 ],
+						"groundSizeZ" : [ 0.036487558366437 ],
+						"groundSizeZ[1]" : [ 0.02258064516129 ],
 						"groundSizeZ[2]" : [ 0.073185483870968 ],
 						"groundSizeZ[3]" : [ 0.0 ],
 						"groundSizeZ[4]" : [ 0.0 ],
@@ -70626,7 +70631,7 @@
 						"groundSize_interest[8]" : [ 0 ],
 						"groundSize_interest[9]" : [ 0 ],
 						"groundSmooth" : [ 0.0 ],
-						"groundSmooth[1]" : [ 0.05325 ],
+						"groundSmooth[1]" : [ 0.580645161290323 ],
 						"groundSmooth[2]" : [ 0.12543505942275 ],
 						"groundSmooth[3]" : [ 0.0 ],
 						"groundSmooth[4]" : [ 0.0 ],
@@ -70645,7 +70650,7 @@
 						"groundSmooth_interest[7]" : [ 0 ],
 						"groundSmooth_interest[8]" : [ 0 ],
 						"groundSmooth_interest[9]" : [ 0 ],
-						"groundSmooth_max" : [ 1.0 ],
+						"groundSmooth_max" : [ 0.001 ],
 						"groundSmooth_max[1]" : [ 2.0 ],
 						"groundSmooth_max[2]" : [ 2.0 ],
 						"groundSmooth_max[3]" : [ 0.0 ],
@@ -70655,19 +70660,19 @@
 						"groundSmooth_max[7]" : [ 0.0 ],
 						"groundSmooth_max[8]" : [ 0.0 ],
 						"groundSmooth_max[9]" : [ 0.0 ],
-						"jointAmbientScale" : [ 0.729 ],
+						"jointAmbientScale" : [ 0.01 ],
 						"jointAmbientScale_interest" : [ 0 ],
 						"jointAmbientScale_max" : [ 1.0 ],
 						"jointAmbientScale_min" : [ 0.0 ],
-						"jointColorB" : [ 0.4209 ],
-						"jointColorG" : [ 0.6052 ],
-						"jointColorR" : [ 0.978 ],
+						"jointColorB" : [ 0.6873 ],
+						"jointColorG" : [ 0.5571 ],
+						"jointColorR" : [ 0.6355 ],
 						"jointColor_interest" : [ 0 ],
-						"jointDiffuseScale" : [ 0.9355 ],
+						"jointDiffuseScale" : [ 0.995 ],
 						"jointDiffuseScale_interest" : [ 0 ],
 						"jointDiffuseScale_min" : [ 0.0 ],
-						"jointEdgeSmooth" : [ 0.03 ],
-						"jointEdgeSmooth[1]" : [ 0.01 ],
+						"jointEdgeSmooth" : [ 0.2161 ],
+						"jointEdgeSmooth[1]" : [ 0.0 ],
 						"jointEdgeSmooth_interest" : [ 0 ],
 						"jointEdgeSmooth_interest[1]" : [ 0 ],
 						"jointEdgeSmooth_max" : [ 1.0 ],
@@ -70676,53 +70681,53 @@
 						"jointOcclusionColorG" : [ 0.0 ],
 						"jointOcclusionColorR" : [ 0.0 ],
 						"jointOcclusionColor_interest" : [ 0 ],
-						"jointOcclusionRange" : [ 6.3617 ],
+						"jointOcclusionRange" : [ 1.11 ],
 						"jointOcclusionRange_interest" : [ 0 ],
 						"jointOcclusionRange_max" : [ 10.0 ],
 						"jointOcclusionRange_min" : [ 0.0 ],
-						"jointOcclusionResol" : [ 0.3591 ],
+						"jointOcclusionResol" : [ 0.38 ],
 						"jointOcclusionResol_interest" : [ 0 ],
 						"jointOcclusionResol_max" : [ 1.0 ],
 						"jointOcclusionResol_min" : [ 0.01 ],
-						"jointOcclusionScale" : [ 0.9742 ],
+						"jointOcclusionScale" : [ 0.85 ],
 						"jointOcclusionScale_interest" : [ 0 ],
 						"jointOcclusionScale_max" : [ 1.0 ],
 						"jointOcclusionScale_min" : [ 0.0 ],
-						"jointPrimitive" : [ -1 ],
+						"jointPrimitive" : [ 3.0 ],
 						"jointPrimitive_interest" : [ 0 ],
 						"jointRound" : [ 0.0 ],
 						"jointRound_interest" : [ 0 ],
 						"jointRound_max" : [ 1.0 ],
-						"jointSizeX" : [ 0.005 ],
+						"jointSizeX" : [ 0.3067 ],
 						"jointSizeX_max" : [ 4.0 ],
-						"jointSizeY" : [ 0.005 ],
+						"jointSizeY" : [ 0.021 ],
 						"jointSizeY_max" : [ 4.0 ],
-						"jointSizeZ" : [ 0.005 ],
+						"jointSizeZ" : [ 1.2349 ],
 						"jointSizeZ_max" : [ 4.0 ],
 						"jointSize_interest" : [ 0 ],
-						"jointSmooth" : [ 0.0 ],
+						"jointSmooth" : [ 0.0452 ],
 						"jointSmooth_interest" : [ 0 ],
 						"jointSmooth_max" : [ 1.0 ],
-						"jointSpecularPow" : [ 17.952999999999999 ],
+						"jointSpecularPow" : [ 5.16 ],
 						"jointSpecularPow_interest" : [ 0 ],
 						"jointSpecularPow_max" : [ 100.0 ],
 						"jointSpecularPow_min" : [ 0.0 ],
-						"jointSpecularScale" : [ 0.0 ],
+						"jointSpecularScale" : [ 1.877 ],
 						"jointSpecularScale_interest" : [ 0 ],
 						"jointSpecularScale_max" : [ 2.0 ],
 						"jointSpecularScale_min" : [ 0.0 ],
-						"lightPosX" : [ -1.742748387096774 ],
+						"lightPosX" : [ -1.7971 ],
 						"lightPosX_max" : [ 3.141 ],
 						"lightPosX_min" : [ -3.141 ],
-						"lightPosY" : [ -1.829005899830221 ],
+						"lightPosY" : [ -1.0 ],
 						"lightPosY_max" : [ 3.141 ],
 						"lightPosY_min" : [ -3.141 ],
-						"lightPosZ" : [ -6.706281833616302 ],
+						"lightPosZ" : [ -50.0 ],
 						"lightPosZ_max" : [ 100.0 ],
 						"lightPosZ_min" : [ -100.0 ],
 						"lightPos_interest" : [ 0 ],
-						"objectAmbientScale" : [ 0.433435908319185 ],
-						"objectAmbientScale[1]" : [ 0.475328947368421 ],
+						"objectAmbientScale" : [ 0.01 ],
+						"objectAmbientScale[1]" : [ 0.041935483870968 ],
 						"objectAmbientScale[2]" : [ 0.378 ],
 						"objectAmbientScale[3]" : [ 0.0 ],
 						"objectAmbientScale[4]" : [ 0.0 ],
@@ -70763,7 +70768,7 @@
 						"objectAmbientScale_min[9]" : [ 0.0 ],
 						"objectAmplitudeX" : [ 0.0 ],
 						"objectAmplitudeX[1]" : [ 0.0 ],
-						"objectAmplitudeX[2]" : [ 0.0 ],
+						"objectAmplitudeX[2]" : [ 0.034921477079796 ],
 						"objectAmplitudeX[3]" : [ 0.0 ],
 						"objectAmplitudeX[4]" : [ 0.0 ],
 						"objectAmplitudeX[5]" : [ 0.0 ],
@@ -70793,7 +70798,7 @@
 						"objectAmplitudeX_min[9]" : [ 0.0 ],
 						"objectAmplitudeY" : [ 0.0 ],
 						"objectAmplitudeY[1]" : [ 0.0 ],
-						"objectAmplitudeY[2]" : [ 0.0 ],
+						"objectAmplitudeY[2]" : [ 0.035048811544992 ],
 						"objectAmplitudeY[3]" : [ 0.0 ],
 						"objectAmplitudeY[4]" : [ 0.0 ],
 						"objectAmplitudeY[5]" : [ 0.0 ],
@@ -70823,7 +70828,7 @@
 						"objectAmplitudeY_min[9]" : [ 0.0 ],
 						"objectAmplitudeZ" : [ 0.0 ],
 						"objectAmplitudeZ[1]" : [ 0.0 ],
-						"objectAmplitudeZ[2]" : [ 0.0 ],
+						"objectAmplitudeZ[2]" : [ 0.04143675721562 ],
 						"objectAmplitudeZ[3]" : [ 0.0 ],
 						"objectAmplitudeZ[4]" : [ 0.0 ],
 						"objectAmplitudeZ[5]" : [ 0.0 ],
@@ -70861,8 +70866,8 @@
 						"objectAmplitude_interest[7]" : [ 0 ],
 						"objectAmplitude_interest[8]" : [ 0 ],
 						"objectAmplitude_interest[9]" : [ 0 ],
-						"objectColorB" : [ 0.265991086587436 ],
-						"objectColorB[1]" : [ 1.0 ],
+						"objectColorB" : [ 0.6873 ],
+						"objectColorB[1]" : [ 0.589717419599839 ],
 						"objectColorB[2]" : [ 0.667200764006791 ],
 						"objectColorB[3]" : [ 0.0 ],
 						"objectColorB[4]" : [ 0.0 ],
@@ -70871,8 +70876,8 @@
 						"objectColorB[7]" : [ 0.0 ],
 						"objectColorB[8]" : [ 0.0 ],
 						"objectColorB[9]" : [ 0.0 ],
-						"objectColorG" : [ 0.498758488964346 ],
-						"objectColorG[1]" : [ 0.6828 ],
+						"objectColorG" : [ 0.5571 ],
+						"objectColorG[1]" : [ 0.696292501075766 ],
 						"objectColorG[2]" : [ 0.425159168081494 ],
 						"objectColorG[3]" : [ 0.0 ],
 						"objectColorG[4]" : [ 0.0 ],
@@ -70881,8 +70886,8 @@
 						"objectColorG[7]" : [ 0.0 ],
 						"objectColorG[8]" : [ 0.0 ],
 						"objectColorG[9]" : [ 0.0 ],
-						"objectColorR" : [ 0.744641341256367 ],
-						"objectColorR[1]" : [ 0.4436 ],
+						"objectColorR" : [ 0.6355 ],
+						"objectColorR[1]" : [ 1.0 ],
 						"objectColorR[2]" : [ 0.263996179966044 ],
 						"objectColorR[3]" : [ 0.0 ],
 						"objectColorR[4]" : [ 0.0 ],
@@ -70901,8 +70906,8 @@
 						"objectColor_interest[7]" : [ 0 ],
 						"objectColor_interest[8]" : [ 0 ],
 						"objectColor_interest[9]" : [ 0 ],
-						"objectDiffuseScale" : [ 1.0 ],
-						"objectDiffuseScale[1]" : [ 1.0 ],
+						"objectDiffuseScale" : [ 0.995 ],
+						"objectDiffuseScale[1]" : [ 0.363214495497264 ],
 						"objectDiffuseScale[2]" : [ 1.0 ],
 						"objectDiffuseScale[3]" : [ 0.0 ],
 						"objectDiffuseScale[4]" : [ 0.0 ],
@@ -70941,8 +70946,8 @@
 						"objectDiffuseScale_min[7]" : [ 0.0 ],
 						"objectDiffuseScale_min[8]" : [ 0.0 ],
 						"objectDiffuseScale_min[9]" : [ 0.0 ],
-						"objectFrequencyX" : [ 39.612903225806448 ],
-						"objectFrequencyX[1]" : [ 7.4194 ],
+						"objectFrequencyX" : [ 0.0 ],
+						"objectFrequencyX[1]" : [ 0.0 ],
 						"objectFrequencyX[2]" : [ 9.84454584040747 ],
 						"objectFrequencyX[3]" : [ 0.0 ],
 						"objectFrequencyX[4]" : [ 0.0 ],
@@ -70971,8 +70976,8 @@
 						"objectFrequencyX_min[7]" : [ 0.0 ],
 						"objectFrequencyX_min[8]" : [ 0.0 ],
 						"objectFrequencyX_min[9]" : [ 0.0 ],
-						"objectFrequencyY" : [ 8.258064516129034 ],
-						"objectFrequencyY[1]" : [ 2.5806 ],
+						"objectFrequencyY" : [ 0.0 ],
+						"objectFrequencyY[1]" : [ 0.0 ],
 						"objectFrequencyY[2]" : [ 6.492253820033955 ],
 						"objectFrequencyY[3]" : [ 0.0 ],
 						"objectFrequencyY[4]" : [ 0.0 ],
@@ -71002,7 +71007,7 @@
 						"objectFrequencyY_min[8]" : [ 0.0 ],
 						"objectFrequencyY_min[9]" : [ 0.0 ],
 						"objectFrequencyZ" : [ 0.0 ],
-						"objectFrequencyZ[1]" : [ 8.394 ],
+						"objectFrequencyZ[1]" : [ 0.0 ],
 						"objectFrequencyZ[2]" : [ 9.470606960950764 ],
 						"objectFrequencyZ[3]" : [ 0.0 ],
 						"objectFrequencyZ[4]" : [ 0.0 ],
@@ -71042,7 +71047,7 @@
 						"objectFrequency_interest[8]" : [ 0 ],
 						"objectFrequency_interest[9]" : [ 0 ],
 						"objectOcclusionColorB" : [ 0.0 ],
-						"objectOcclusionColorB[1]" : [ 0.0 ],
+						"objectOcclusionColorB[1]" : [ 1.0 ],
 						"objectOcclusionColorB[2]" : [ 0.0 ],
 						"objectOcclusionColorB[3]" : [ 0.0 ],
 						"objectOcclusionColorB[4]" : [ 0.0 ],
@@ -71052,7 +71057,7 @@
 						"objectOcclusionColorB[8]" : [ 0.0 ],
 						"objectOcclusionColorB[9]" : [ 0.0 ],
 						"objectOcclusionColorG" : [ 0.0 ],
-						"objectOcclusionColorG[1]" : [ 0.0 ],
+						"objectOcclusionColorG[1]" : [ 1.0 ],
 						"objectOcclusionColorG[2]" : [ 0.0 ],
 						"objectOcclusionColorG[3]" : [ 0.0 ],
 						"objectOcclusionColorG[4]" : [ 0.0 ],
@@ -71062,7 +71067,7 @@
 						"objectOcclusionColorG[8]" : [ 0.0 ],
 						"objectOcclusionColorG[9]" : [ 0.0 ],
 						"objectOcclusionColorR" : [ 0.0 ],
-						"objectOcclusionColorR[1]" : [ 0.0 ],
+						"objectOcclusionColorR[1]" : [ 1.0 ],
 						"objectOcclusionColorR[2]" : [ 0.0 ],
 						"objectOcclusionColorR[3]" : [ 0.0 ],
 						"objectOcclusionColorR[4]" : [ 0.0 ],
@@ -71081,8 +71086,8 @@
 						"objectOcclusionColor_interest[7]" : [ 0 ],
 						"objectOcclusionColor_interest[8]" : [ 0 ],
 						"objectOcclusionColor_interest[9]" : [ 0 ],
-						"objectOcclusionRange" : [ 0.0 ],
-						"objectOcclusionRange[1]" : [ 1.173068760611206 ],
+						"objectOcclusionRange" : [ 1.11 ],
+						"objectOcclusionRange[1]" : [ 9.70967741935484 ],
 						"objectOcclusionRange[2]" : [ 4.1308 ],
 						"objectOcclusionRange[3]" : [ 0.0 ],
 						"objectOcclusionRange[4]" : [ 0.0 ],
@@ -71121,8 +71126,8 @@
 						"objectOcclusionRange_min[7]" : [ 0.0 ],
 						"objectOcclusionRange_min[8]" : [ 0.0 ],
 						"objectOcclusionRange_min[9]" : [ 0.0 ],
-						"objectOcclusionResol" : [ 0.037383276740238 ],
-						"objectOcclusionResol[1]" : [ 0.161449490662139 ],
+						"objectOcclusionResol" : [ 0.38 ],
+						"objectOcclusionResol[1]" : [ 0.421209554966217 ],
 						"objectOcclusionResol[2]" : [ 0.3591 ],
 						"objectOcclusionResol[3]" : [ 0.0 ],
 						"objectOcclusionResol[4]" : [ 0.0 ],
@@ -71161,8 +71166,8 @@
 						"objectOcclusionResol_min[7]" : [ 0.0 ],
 						"objectOcclusionResol_min[8]" : [ 0.0 ],
 						"objectOcclusionResol_min[9]" : [ 0.0 ],
-						"objectOcclusionScale" : [ 0.0 ],
-						"objectOcclusionScale[1]" : [ 0.0 ],
+						"objectOcclusionScale" : [ 0.85 ],
+						"objectOcclusionScale[1]" : [ 1.0 ],
 						"objectOcclusionScale[2]" : [ 0.8235 ],
 						"objectOcclusionScale[3]" : [ 0.0 ],
 						"objectOcclusionScale[4]" : [ 0.0 ],
@@ -71203,7 +71208,7 @@
 						"objectOcclusionScale_min[9]" : [ 0.0 ],
 						"objectPhaseX" : [ 3.141 ],
 						"objectPhaseX[1]" : [ 3.141 ],
-						"objectPhaseX[2]" : [ 3.141 ],
+						"objectPhaseX[2]" : [ 2.167289999999999 ],
 						"objectPhaseX[3]" : [ 0.0 ],
 						"objectPhaseX[4]" : [ 0.0 ],
 						"objectPhaseX[5]" : [ 0.0 ],
@@ -71221,8 +71226,8 @@
 						"objectPhaseX_max[7]" : [ 0.0 ],
 						"objectPhaseX_max[8]" : [ 0.0 ],
 						"objectPhaseX_max[9]" : [ 0.0 ],
-						"objectPhaseX_min" : [ -3.141 ],
-						"objectPhaseX_min[1]" : [ -3.141 ],
+						"objectPhaseX_min" : [ 0.0 ],
+						"objectPhaseX_min[1]" : [ 0.0 ],
 						"objectPhaseX_min[2]" : [ -3.141 ],
 						"objectPhaseX_min[3]" : [ 0.0 ],
 						"objectPhaseX_min[4]" : [ 0.0 ],
@@ -71233,7 +71238,7 @@
 						"objectPhaseX_min[9]" : [ 0.0 ],
 						"objectPhaseY" : [ 3.141 ],
 						"objectPhaseY[1]" : [ 3.141 ],
-						"objectPhaseY[2]" : [ 3.141 ],
+						"objectPhaseY[2]" : [ 2.167289999999999 ],
 						"objectPhaseY[3]" : [ 0.0 ],
 						"objectPhaseY[4]" : [ 0.0 ],
 						"objectPhaseY[5]" : [ 0.0 ],
@@ -71251,8 +71256,8 @@
 						"objectPhaseY_max[7]" : [ 0.0 ],
 						"objectPhaseY_max[8]" : [ 0.0 ],
 						"objectPhaseY_max[9]" : [ 0.0 ],
-						"objectPhaseY_min" : [ -3.141 ],
-						"objectPhaseY_min[1]" : [ -3.141 ],
+						"objectPhaseY_min" : [ 0.0 ],
+						"objectPhaseY_min[1]" : [ 0.0 ],
 						"objectPhaseY_min[2]" : [ -3.141 ],
 						"objectPhaseY_min[3]" : [ 0.0 ],
 						"objectPhaseY_min[4]" : [ 0.0 ],
@@ -71263,7 +71268,7 @@
 						"objectPhaseY_min[9]" : [ 0.0 ],
 						"objectPhaseZ" : [ 3.141 ],
 						"objectPhaseZ[1]" : [ 3.141 ],
-						"objectPhaseZ[2]" : [ 3.141 ],
+						"objectPhaseZ[2]" : [ 2.167289999999999 ],
 						"objectPhaseZ[3]" : [ 0.0 ],
 						"objectPhaseZ[4]" : [ 0.0 ],
 						"objectPhaseZ[5]" : [ 0.0 ],
@@ -71281,8 +71286,8 @@
 						"objectPhaseZ_max[7]" : [ 0.0 ],
 						"objectPhaseZ_max[8]" : [ 0.0 ],
 						"objectPhaseZ_max[9]" : [ 0.0 ],
-						"objectPhaseZ_min" : [ -3.14 ],
-						"objectPhaseZ_min[1]" : [ -3.141 ],
+						"objectPhaseZ_min" : [ 0.0 ],
+						"objectPhaseZ_min[1]" : [ 0.0 ],
 						"objectPhaseZ_min[2]" : [ -3.141 ],
 						"objectPhaseZ_min[3]" : [ 0.0 ],
 						"objectPhaseZ_min[4]" : [ 0.0 ],
@@ -71301,8 +71306,8 @@
 						"objectPhase_interest[7]" : [ 0 ],
 						"objectPhase_interest[8]" : [ 0 ],
 						"objectPhase_interest[9]" : [ 0 ],
-						"objectSpecularPow" : [ 0.0 ],
-						"objectSpecularPow[1]" : [ 0.0 ],
+						"objectSpecularPow" : [ 5.16 ],
+						"objectSpecularPow[1]" : [ 52.580645161290327 ],
 						"objectSpecularPow[2]" : [ 70.745000000000005 ],
 						"objectSpecularPow[3]" : [ 0.0 ],
 						"objectSpecularPow[4]" : [ 0.0 ],
@@ -71341,8 +71346,8 @@
 						"objectSpecularPow_min[7]" : [ 0.0 ],
 						"objectSpecularPow_min[8]" : [ 0.0 ],
 						"objectSpecularPow_min[9]" : [ 0.0 ],
-						"objectSpecularScale" : [ 0.0 ],
-						"objectSpecularScale[1]" : [ 0.0 ],
+						"objectSpecularScale" : [ 1.877 ],
+						"objectSpecularScale[1]" : [ 1.877 ],
 						"objectSpecularScale[2]" : [ 1.0 ],
 						"objectSpecularScale[3]" : [ 0.0 ],
 						"objectSpecularScale[4]" : [ 0.0 ],
@@ -71384,7 +71389,7 @@
 						"object_phaseLoop" : [ 0 ],
 						"object_phaseLoop[10]" : [ 0 ],
 						"object_phaseLoop[1]" : [ 0 ],
-						"object_phaseLoop[2]" : [ 0 ],
+						"object_phaseLoop[2]" : [ 1 ],
 						"object_phaseLoop[3]" : [ 0 ],
 						"object_phaseLoop[4]" : [ 0 ],
 						"object_phaseLoop[5]" : [ 0 ],
@@ -71394,7 +71399,7 @@
 						"object_phaseLoop[9]" : [ 0 ],
 						"object_phaseLoop_duration" : [ 0 ],
 						"object_phaseLoop_duration[10]" : [ 0 ],
-						"object_phaseLoop_duration[1]" : [ 4 ],
+						"object_phaseLoop_duration[1]" : [ 2 ],
 						"object_phaseLoop_duration[2]" : [ 4 ],
 						"object_phaseLoop_duration[3]" : [ 0 ],
 						"object_phaseLoop_duration[4]" : [ 0 ],
@@ -71403,7 +71408,7 @@
 						"object_phaseLoop_duration[7]" : [ 0 ],
 						"object_phaseLoop_duration[8]" : [ 0 ],
 						"object_phaseLoop_duration[9]" : [ 0 ],
-						"posUpdateSmoothing" : [ 0.0 ],
+						"posUpdateSmoothing" : [ 0.98 ],
 						"posUpdateSmoothing_interest" : [ 0 ],
 						"posUpdateSmoothing_max" : [ 1.0 ],
 						"root_zero" : [ 0 ],
@@ -71438,10 +71443,10 @@
 						"skeletonPosX" : [ 0.5 ],
 						"skeletonPosX_max" : [ 20.0 ],
 						"skeletonPosX_min" : [ -20.0 ],
-						"skeletonPosY" : [ 0.5125 ],
+						"skeletonPosY" : [ 0.5 ],
 						"skeletonPosY_max" : [ 20.0 ],
 						"skeletonPosY_min" : [ -20.0 ],
-						"skeletonPosZ" : [ 0.479064091680815 ],
+						"skeletonPosZ" : [ 0.49443 ],
 						"skeletonPosZ_max" : [ 20.0 ],
 						"skeletonPosZ_min" : [ -20.0 ],
 						"skeletonPos_interest" : [ 0 ]
@@ -90783,13 +90788,6 @@
 			}
 , 			{
 				"patchline" : 				{
-					"destination" : [ "obj-920", 0 ],
-					"source" : [ "obj-307", 0 ]
-				}
-
-			}
-, 			{
-				"patchline" : 				{
 					"destination" : [ "obj-3066", 1 ],
 					"order" : 0,
 					"source" : [ "obj-3070", 0 ]
@@ -90857,7 +90855,7 @@
 			}
 , 			{
 				"patchline" : 				{
-					"destination" : [ "obj-307", 0 ],
+					"destination" : [ "obj-4810", 0 ],
 					"source" : [ "obj-308", 0 ]
 				}
 
@@ -98364,22 +98362,6 @@
 			}
 , 			{
 				"patchline" : 				{
-					"destination" : [ "obj-1000", 0 ],
-					"order" : 1,
-					"source" : [ "obj-390", 0 ]
-				}
-
-			}
-, 			{
-				"patchline" : 				{
-					"destination" : [ "obj-4667", 0 ],
-					"order" : 0,
-					"source" : [ "obj-390", 0 ]
-				}
-
-			}
-, 			{
-				"patchline" : 				{
 					"destination" : [ "obj-3253", 0 ],
 					"source" : [ "obj-3900", 0 ]
 				}
@@ -98450,7 +98432,7 @@
 			}
 , 			{
 				"patchline" : 				{
-					"destination" : [ "obj-390", 0 ],
+					"destination" : [ "obj-4814", 0 ],
 					"source" : [ "obj-391", 0 ]
 				}
 
@@ -103047,13 +103029,6 @@
 			}
 , 			{
 				"patchline" : 				{
-					"destination" : [ "obj-921", 0 ],
-					"source" : [ "obj-450", 0 ]
-				}
-
-			}
-, 			{
-				"patchline" : 				{
 					"destination" : [ "obj-1313", 0 ],
 					"source" : [ "obj-4500", 0 ]
 				}
@@ -103124,7 +103099,7 @@
 			}
 , 			{
 				"patchline" : 				{
-					"destination" : [ "obj-450", 0 ],
+					"destination" : [ "obj-4812", 0 ],
 					"source" : [ "obj-451", 0 ]
 				}
 
@@ -105263,6 +105238,36 @@
 				"patchline" : 				{
 					"destination" : [ "obj-477", 0 ],
 					"source" : [ "obj-481", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-920", 0 ],
+					"source" : [ "obj-4810", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-921", 0 ],
+					"source" : [ "obj-4812", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-1000", 0 ],
+					"order" : 1,
+					"source" : [ "obj-4814", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-4667", 0 ],
+					"order" : 0,
+					"source" : [ "obj-4814", 0 ]
 				}
 
 			}
@@ -109971,7 +109976,7 @@
  ],
 		"dependency_cache" : [ 			{
 				"name" : "controls.json",
-				"bootpath" : "C:/Projects/Incubatio_Python_Navarra/Incubatio/RayMarching_Python/controls",
+				"bootpath" : "~/Projects/Incubatio/Software_Backups/RayMarching_Python_morph/controls",
 				"patcherrelativepath" : ".",
 				"type" : "JSON",
 				"implicit" : 1

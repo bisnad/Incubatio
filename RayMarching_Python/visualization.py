@@ -69,7 +69,7 @@ class Visualization():
         self.jointOcclusionResolution = 1.0
         self.jointOcclusionColor = np.array([0.0, 0.0, 0.0])
         
-        self.jointPrimitives = np.zeros((self.jointCount), dtype=np.int32) - 1
+        self.jointPrimitives = np.zeros((self.jointCount), dtype=np.float32) - 1
         self.jointSizes = np.ones((self.jointCount, 3)) * 0.1
         self.jointRoundings = np.ones((self.jointCount)) * 0.01
         self.jointSmoothings = np.ones((self.jointCount)) * 0.01
@@ -85,7 +85,7 @@ class Visualization():
         self.edgeOcclusionResolution = 1.0
         self.edgeOcclusionColor = np.array([0.0, 0.0, 0.0])
         
-        self.edgePrimitives = np.zeros((self.edgeCount), dtype=np.int32) - 1
+        self.edgePrimitives = np.zeros((self.edgeCount), dtype=np.float32) - 1
         self.edgeSizes = np.ones((self.edgeCount, 3))
         self.edgeSizes[:, 0] *= 0.01
         self.edgeSizes[:, 1] *= 0.01
@@ -108,7 +108,7 @@ class Visualization():
         self.objectAmplitudes = np.zeros((self.objectCount, 3))
         self.objectPhases = np.zeros((self.objectCount, 3))
 
-        self.objectPrimitives = np.zeros((self.objectCount), dtype=np.int32) - 1
+        self.objectPrimitives = np.zeros((self.objectCount), dtype=np.float32) - 1
         self.objectSizes = np.ones((self.objectCount, 3)) * 0.01
         self.objectRoundings = np.ones((self.objectCount)) * 0.01
         self.objectSmoothings = np.ones((self.objectCount)) * 0.01
@@ -135,13 +135,13 @@ class Visualization():
         self.edgeCount = skeleton.getEdgeCount()   
         
         # skeleton joint settings
-        self.jointPrimitives = np.zeros((self.jointCount), dtype=np.int32) - 1
+        self.jointPrimitives = np.zeros((self.jointCount), dtype=np.float32) - 1
         self.jointSizes = np.ones((self.jointCount, 3)) * 0.1
         self.jointRoundings = np.ones((self.jointCount)) * 0.01
         self.jointSmoothings = np.ones((self.jointCount)) * 0.01
         
         # skeleton edge settings
-        self.edgePrimitives = np.zeros((self.edgeCount), dtype=np.int32) - 1
+        self.edgePrimitives = np.zeros((self.edgeCount), dtype=np.float32) - 1
         self.edgeSizes = np.ones((self.edgeCount, 3))
         self.edgeSizes[:, 0] *= 0.01
         self.edgeSizes[:, 1] *= 0.01
@@ -291,7 +291,7 @@ class Visualization():
 
             uniformName = "jointPrimitives[" + str(jI) + "]";
             uniformLoc = gl.glGetUniformLocation(self.program, uniformName)
-            gl.glUniform1i(uniformLoc, init_primitive)
+            gl.glUniform1f(uniformLoc, init_primitive)
             
             #print("set joint ", jI, " transform ", init_transform)
         
@@ -303,7 +303,7 @@ class Visualization():
 
             uniformName = "edgePrimitives[" + str(eI) + "]";
             uniformLoc = gl.glGetUniformLocation(self.program, uniformName)
-            gl.glUniform1i(uniformLoc, init_primitive)
+            gl.glUniform1f(uniformLoc, init_primitive)
             
             #print("set edge ", eI, " transform ", init_transform)  
         
@@ -384,14 +384,14 @@ class Visualization():
             jointPrimitive = self.jointPrimitives[jI]
             uniformName = "jointPrimitives[" + str(jI) + "]";
             uniformLoc = gl.glGetUniformLocation(self.program, uniformName)
-            gl.glUniform1i(uniformLoc, jointPrimitive)
+            gl.glUniform1f(uniformLoc, jointPrimitive)
         
         for jI in range(jointCount, self.shader_jointCount):
             
             jointPrimitive = -1
             uniformName = "jointPrimitives[" + str(jI) + "]";
             uniformLoc = gl.glGetUniformLocation(self.program, uniformName)
-            gl.glUniform1i(uniformLoc, jointPrimitive)
+            gl.glUniform1f(uniformLoc, jointPrimitive)
 
 
         # joint sizes
@@ -446,14 +446,14 @@ class Visualization():
             edgePrimitive = self.edgePrimitives[eI]
             uniformName = "edgePrimitives[" + str(eI) + "]";
             uniformLoc = gl.glGetUniformLocation(self.program, uniformName)
-            gl.glUniform1i(uniformLoc, edgePrimitive)
+            gl.glUniform1f(uniformLoc, edgePrimitive)
             
         for eI in range(edgeCount, self.shader_edgeCount):
             
             edgePrimitive = -1
             uniformName = "edgePrimitives[" + str(eI) + "]";
             uniformLoc = gl.glGetUniformLocation(self.program, uniformName)
-            gl.glUniform1i(uniformLoc, edgePrimitive)
+            gl.glUniform1f(uniformLoc, edgePrimitive)
         
         # edge lengths
         edgeLengths = np.copy(self.skeleton.getEdgeLengths())
@@ -600,7 +600,7 @@ class Visualization():
             objectPrimitive = self.objectPrimitives[oI]
             uniformName = "objectPrimitives[" + str(oI) + "]";
             uniformLoc = gl.glGetUniformLocation(self.program, uniformName)
-            gl.glUniform1i(uniformLoc, objectPrimitive)
+            gl.glUniform1f(uniformLoc, objectPrimitive)
         
         # object sizes
         for oI in range(self.objectCount):
@@ -977,7 +977,7 @@ class Visualization():
         
         if index >= self.shader_objectCount:
             return
-        
+
         self.objectPrimitives[index] = primitive    
 
     def setObjectPrimitives(self, primitive):
