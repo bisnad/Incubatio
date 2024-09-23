@@ -31,8 +31,7 @@ from osc_control import OscControl
 Setup Skeleton
 """
 
-"""
-# Avatar Mode
+# Avatar Mode (full body mocap either from MVN + MVN2OSC or from BVH Player)
 joint_settings_file = "avatar_joint_settings.json"
 
 with open(joint_settings_file) as f:
@@ -42,10 +41,10 @@ jointFilter = joint_settings["jointFilter"]
 jointConnectivity = joint_settings["jointConnectivity"]
 skeleton = Skeleton(jointFilter, jointConnectivity)
 skeleton.setSkeletonMode(SkeletonMode.Avatar)
+
+
 """
-
-
-# Hand Mode
+# Hand Mode (from BVH Player)
 joint_settings_file = "hand_joint_settings.json"
 
 with open(joint_settings_file) as f:
@@ -55,7 +54,7 @@ jointFilter = joint_settings["jointFilter"]
 jointConnectivity = joint_settings["jointConnectivity"]
 skeleton = Skeleton(jointFilter, jointConnectivity)
 skeleton.setSkeletonMode(SkeletonMode.Hand)
-
+"""
 
 """
 # Snake Avatar Mode (right body half)

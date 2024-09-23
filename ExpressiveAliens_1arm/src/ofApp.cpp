@@ -154,7 +154,7 @@ ofApp::setupPhysics()
 		for (int jI = 0; jI < jointNames.size(); ++jI) std::cout << "joint : " << jI << " name : " << jointNames[jI] << "\n";
 		// debug end
 
-		// ´basic behaviors
+		// basic behaviors
 
 		std::shared_ptr<dab::physics::RandomForceBehavior> randomTipBehaviour = dab::physics::Simulation::get().addBehavior<dab::physics::RandomForceBehavior>("onshape", "random_tip", { partNames[partNames.size() - 1] }, {}, {});
 		randomTipBehaviour->set("active", false);
