@@ -10,9 +10,9 @@
 		}
 ,
 		"classnamespace" : "box",
-		"rect" : [ 15.0, 207.0, 344.0, 90.0 ],
+		"rect" : [ 42.0, 207.0, 883.0, 283.0 ],
 		"bglocked" : 0,
-		"openinpresentation" : 0,
+		"openinpresentation" : 1,
 		"default_fontsize" : 12.0,
 		"default_fontface" : 0,
 		"default_fontname" : "Arial",
@@ -58,8 +58,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 440.0, 746.0, 122.0, 50.0 ],
-					"presentation_linecount" : 3,
+					"patching_rect" : [ 440.0, 746.0, 123.0, 50.0 ],
 					"text" : "/mocap/initskelconfig hand_joint_settings.json"
 				}
 
@@ -94,7 +93,6 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 898.5, 567.0, 82.0, 22.0 ],
-					"presentation_linecount" : 2,
 					"text" : "/switch arms4"
 				}
 
@@ -416,7 +414,6 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 731.5, 567.0, 76.0, 22.0 ],
-					"presentation_linecount" : 2,
 					"text" : "/switch arm1"
 				}
 
@@ -441,7 +438,6 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 558.5, 567.0, 84.0, 22.0 ],
-					"presentation_linecount" : 2,
 					"text" : "/switch swarm"
 				}
 
@@ -490,7 +486,6 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 237.0, 567.0, 71.0, 22.0 ],
-					"presentation_linecount" : 3,
 					"text" : "/switch mvn"
 				}
 

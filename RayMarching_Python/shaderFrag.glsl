@@ -1966,6 +1966,15 @@ void main()
     // used for lighting calculations
     vec3 surfacePos = eye + dist * worldDir;
     
+    // begin test adding wiggle here
+    if (rayRotation != 0.0){
+        surfacePos.xy *= rot2D(dist *.2 * (rayRotation));
+    }
+    if (rayWiggle != 0.0){
+        surfacePos.y += sin(dist*(rayWiggle)*.5 + vectorTime.y*.4)*.35;
+    }    
+    // end test adding wiggle here
+    
     // surface normal estimation
     vec3 surfaceNormal = estimateNormal(surfacePos);
 
