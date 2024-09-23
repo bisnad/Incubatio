@@ -1333,7 +1333,7 @@ float primitiveMorphSDF(vec3 p, vec3 size, float rounding, float primitive)
 
 }
 
-float primitiveMorphRippleSDF(vec3 p, vec3 size, float rounding, float primitive, vec3 amplitude, vec3 frequency, vec3 phase) 
+float primitiveMorphRippleSDF(vec3 p, vec3 size, float rounding, float primitive, vec3 frequency, vec3 amplitude, vec3 phase) 
 {
     int primitive1Index = int(primitive);
     float primitiveMix = fract(primitive);
