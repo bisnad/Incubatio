@@ -3,6 +3,7 @@
 Heart Preset: 404
 Mercurio Preset: 12
 Mercurio with Brain Preset: 16
+Hand Preset: 15
 Magnetic Water Preset: 100
 Laval Fractal Closeup Preset: 304
 Laval Fractal Small Preset: 312
@@ -10,4 +11,4 @@ Cavern Fractal Closeup Preset: 315
 Cavern Fractal Far Preset: 316
 Drops of Light Falling on Plane Preset: 2 (with swarm preset 2)
 Drops of Light Eye Preset: 3 (with swarm preset 3)
-Drops of Light Circular Blob Preset: 4 or  313 (with swarm preset 4)
+Drops of Light Circular Blob Preset: 4 or  313 or 319 (with swarm preset 4)
