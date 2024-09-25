@@ -142,7 +142,8 @@ visualization = Visualization(skeleton, vertex_code, fragment_code)
 Osc Control
 """
 
-oscControl = OscControl(skeleton, visualization, "127.0.0.1", 10000)
+#oscControl = OscControl(skeleton, visualization, "127.0.0.1", 10000)
+oscControl = OscControl(skeleton, visualization, "0.0.0.0", 10000)
 oscControl.start()
 
 oscControl.fix_root = True

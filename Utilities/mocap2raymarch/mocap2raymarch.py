@@ -19,7 +19,8 @@ import swarmraymarch as swarm
 
 # OSC settings
 
-osc_receive_ip = "127.0.0.1"
+#osc_receive_ip = "127.0.0.1"
+osc_receive_ip = "0.0.0.0"
 osc_receive_port = 9005
 
 osc_send_ip = "127.0.0.1"
