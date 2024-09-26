@@ -333,8 +333,8 @@ light_pan_offset = 0.0
 light_tilt_flip = -1.0
 light_pan_flip = 1.0
 
-#flip_block_active = True
-flip_block_active = False
+flip_block_active = True
+#flip_block_active = False
 
 debug_print = True
 debug_print = False

@@ -333,7 +333,7 @@ else:
         set_intensity_osc(light_nr, 0.1)
         
 
-flock_pos_scale_x = -1.0
+flock_pos_scale_x = 1.0
 flock_pos_scale_y = 1.0
 flock_pos_scale_z = -1.0
 
@@ -346,8 +346,8 @@ light_pan_flip = 1.0
 flip_block_active = True
 flip_block_active = False
 
-debug_print = True
-debug_print = False
+#debug_print = True
+#debug_print = False
 debug_light_index = 7
 
 """

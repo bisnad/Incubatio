@@ -1,0 +1,73 @@
+Incubatio Scenes Notes
+
+1: Fractal or Avatar in Sphere
+
+Possible Avatar Preset 402
+
+2: Gaiska drawing in the back with horizontal laser
+3. Gaiska opens door with laser
+4: Gaiska draws the silouette of Arnaud with laser
+5: Arnaud turns and enters in the middle (intrance of Arnaud)
+6: Gaiska and Arnaud move slowly around table
+7: gaiska and Arnaud split and face each other avross the table
+8: Arnaud lies down on the table
+9: Gaiska creates the temple with the vertical laser
+10: Gaiska enters the table, stands on table, and paints Arnoud silouette with vertical laser
+11: Gaiska does Spatial Recovery (back left, back right, front right, middle left)
+
+12: 1 When Gaiska at front right and extends arm, Arm video appears on transparent screen (for about 20 seconds), arm contorts alongside the arm of Gaiska (maybe tracking) 
+
+Arm1 Preset: 700
+
+13: Gaiska middle back at the table and stretched his head towards the screen, Mercurio Variation 1 stands (this about 2 minutes after the arm appeared), maybe 1 minute mercurio alone, then 10 seconds mercurio with Gaiska visible, then only mercurio 10 seconds, then only Gaiska
+
+Mercurio Preset: 12
+
+14: Gaiska comes to front of table faces screen, holds heands on head: Mercurio with brain appears (50 seconds)
+
+Mercurio with Brain Preset: 16
+This preset is broken
+
+15: Gasika finishes variation and mamipulated Arnaud who lies on table, Arnaud Sonification starts
+16: Gaiska is painting with light on Arnaud (and maybe also Light Forest) 
+
+Swarm Painting with Light + python script 1.Painting_Incubatio
+TODO: increase bounding box of swarm
+
+17: Four Arms appear on large screen, the four arms manipulate Arnaud
+
+Arms4 Preset: 701
+Arms should be pointing down
+
+18: Gaiska makes three motions towards the mouth of Arnaud: trops of light appear underneath the table (the rain version of the lights) (maybe )
+
+Swarm Preset: 2
+Drops of Light Preset: 2
+
+19: Gaiska stands on the table, droplets of light move to the large transparent screen
+
+Drops of Light Circular Blob Preset: 4 or  313 or 319 (with swarm preset 4)
+
+20: Gaiska stops moving and then slowly lowers himself to the belly of Arnaud (drops of light disappear, prepare plane of magnetic water on large screen)
+
+controls_magneticwater_v2.maxpat
+
+20: Arnaud pushes belly out: have magnetic water appear out of the plane (also large screen)
+21: Gaiska moves snakelike and Arnaud staccato: Snake appears under table 
+
+????
+
+22: Gaiska and Arnaud standing on table, Pas de deux, lots of movement: Laser swarm appears, same swarm as in Embodied Machine
+
+Laser Swarm visualised in Touch Designer
+
+23: Gaiska and Arnaud getting slower, Arnaud lies down, Gaiska goes down from table: laser swarm focuses into single line through Arnaud's heart.
+
+24: Gaiska puts cables on his heart, the Heart appears underneath the table, first as line only, then growing into heart (still underneath table)
+
+controls_heart2lava.maxpat
+
+
+25: Arnaud makes heart movements, heart moves to the large screen
+26: Heart morphs into Lava Fractal, Fractal becomes very large
+
