@@ -12,6 +12,7 @@ import OpenGL.GL as gl
 from PyQt5.QtWidgets import QApplication
 from PyQt5.QtGui import QOpenGLWindow
 from PyQt5 import QtCore
+
 import time
 import json
 
@@ -204,9 +205,11 @@ class MinimalGLWidget(QOpenGLWindow):
                 self.showNormal()
                 self.resize(window_size[0], window_size[1])
                 self.fullscreen = False
+                self.setCursor(QtCore.Qt.ArrowCursor)
             else:
                 self.showFullScreen()
                 self.fullscreen = True
+                self.setCursor(QtCore.Qt.BlankCursor)
 
 if __name__ == '__main__':
     app = QApplication([])
