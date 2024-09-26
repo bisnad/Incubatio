@@ -49,6 +49,11 @@ class SwarmRaymarch:
         osc_values = args
         
         osc_address_split = osc_address.split('/')
+
+        #print("osc_address_split 1 ", osc_address_split[1])
+
+        if osc_address_split[1] == "mocap":
+            return
         
         swarm_name = osc_address_split[1]
         agent_index_1 = int(osc_address_split[2])
