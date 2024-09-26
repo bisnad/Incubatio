@@ -12,3 +12,24 @@ Cavern Fractal Far Preset: 316
 Drops of Light Falling on Plane Preset: 2 (with swarm preset 2)
 Drops of Light Eye Preset: 3 (with swarm preset 3)
 Drops of Light Circular Blob Preset: 4 or  313 or 319 (with swarm preset 4)
+
+
+
+Presets for Scenes:
+Scene Magnetic Water: 102
+Scene Heart and Lava: 1401
+
+
+Mandelbulb
+
+primitive:
+8
+size:
+10
+0.806
+2.0323
+
+cam_pos:
+-1.349
+-0.8323
+-19.19

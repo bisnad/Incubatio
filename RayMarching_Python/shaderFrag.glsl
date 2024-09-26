@@ -1748,7 +1748,7 @@ float shortestDistanceToSurface(vec3 eye, vec3 marchingDirection, float start, f
 
         if (rayWiggle != 0.0){
             // p.y += sin(depth*(rayWiggle + 1)*.5)*.35;
-            p.y += sin(depth*(rayWiggle)*.5 + vectorTime.y*.4)*.35 ;
+            p.y += rayWiggle * sin(depth*(rayWiggle)*.5 + vectorTime.y*.4)*.35 ;
         }    
 
         float dist = sceneSDF(p);
@@ -1779,7 +1779,7 @@ Surface shortestDistanceToSurface_surface(vec3 eye, vec3 marchingDirection, floa
         }
 
         if (rayWiggle != 0.0){
-            p.y += sin(depth*(rayWiggle)*.5 + vectorTime.y*.4)*.35;
+            p.y += rayWiggle * sin(depth*(rayWiggle)*.5 + vectorTime.y*.4)*.35;
         }    
         
 
@@ -1971,7 +1971,7 @@ void main()
         surfacePos.xy *= rot2D(dist *.2 * (rayRotation));
     }
     if (rayWiggle != 0.0){
-        surfacePos.y += sin(dist*(rayWiggle)*.5 + vectorTime.y*.4)*.35;
+        surfacePos.y += rayWiggle * sin(dist*(rayWiggle)*.5 + vectorTime.y*.4)*.35;
     }    
     // end test adding wiggle here
     

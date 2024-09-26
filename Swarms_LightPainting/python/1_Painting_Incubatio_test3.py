@@ -323,7 +323,7 @@ else:
         set_intensity_osc(light_nr, 0.1)
         
 
-flock_pos_scale_x = -1.0
+flock_pos_scale_x = 1.0
 flock_pos_scale_y = 1.0
 flock_pos_scale_z = -1.0
 

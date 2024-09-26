@@ -31,7 +31,7 @@ void ofApp::setup()
 		simulation.setUpdateInterval(1.0);
 
 		simulation.com().createOscControl(7400, "127.0.0.1", 7800);
-		simulation.com().createSender("FlockSender", "127.0.0.1", 9004, false);
+		simulation.com().createSender("FlockSender", "127.0.0.1", 9005, false);
 
 		// create agent space
 		simulation.space().addSpace(std::shared_ptr<space::Space>(new space::Space("agent_position", new space::KDTreeAlg(3))));
