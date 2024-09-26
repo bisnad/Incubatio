@@ -1280,7 +1280,7 @@ float primitiveMorphSDF(vec3 p, vec3 size, float rounding, float primitive)
     }        
     else if(primitive1Index == 8) // mandelbulb_v2
     {
-        primitive1dist = mandelbulb_v2(p * 0.2, size) / 0.2; 
+        primitive1dist = mandelbulb_v2(p / size.z, size) * size.z; 
         primitive2dist = primitive1dist;
     }                
     else if(primitive1Index == 9) // merger
@@ -1447,7 +1447,7 @@ float primitiveMorphRippleSDF(vec3 p, vec3 size, float rounding, float primitive
     }        
     else if(primitive1Index == 8) // mandelbulb_v2
     {
-        primitive1dist = mandelbulb_v2(p * 0.2, size) / 0.2; 
+        primitive1dist = mandelbulb_v2(p / size.z, size) * size.z; 
         primitive2dist = primitive1dist;
     }                
     else if(primitive1Index == 9) // merger
