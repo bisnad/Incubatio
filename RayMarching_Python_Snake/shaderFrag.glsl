@@ -3,7 +3,7 @@
 const int MAX_MARCHING_STEPS = 255;
 const float MIN_DIST = 0.0;
 const float MAX_DIST = 100.0;
-const float EPSILON = 0.0001;
+const float EPSILON = 0.00001;
 const float PI = 3.1415926535897932384626433832795; // there is no PI defined in GLSL?
 
 //const int jointCount = 23; // avatar
@@ -19,6 +19,9 @@ vec4 vectorTime = vec4(iGlobalTime / 20.0, iGlobalTime, iGlobalTime * iGlobalTim
 
 in vec2 fragCoord;
 out vec4 fragColor;
+
+in vec2 fTexCoords;
+uniform sampler2D textureObj;
 
 // camera settings
 uniform vec3 camPosition;
@@ -1203,16 +1206,28 @@ float snake_rippling(vec3 pos, vec3 scale, float radius)
 {
     pos.z += vectorTime.y * .4;
 
-    //repetition
+    //repetition position
     pos.xy = (fract(pos.xy) - .5); 
     //pos.z = mod(pos.z, .25) - .125; 
     pos.z = mod(pos.z, .5) - .25; 
+
+    /*
+    // repetition texture
+    vec2 tex = fTexCoords;
+    tex.x = (fract(tex.x) - .5); 
+    tex.y = mod(tex.y, .5) - .25;
+    */
+
+    //vec3 normPos = vec3(clamp(pos.x, -scale.x / 2, scale.x / 2) / scale.x, clamp(pos.y, -scale.y / 2, scale.y / 2) / scale.y, clamp(pos.z, -scale.z / 2, scale.z / 2) / scale.z);
+    vec4 texColor = texture2D(textureObj, (pos.xy + vec2(1.0, 1.0)) / 2.0);
 
     vec3 frequencies = objectFrequencies[0];
     vec3 amplitudes = objectAmplitudes[0];
     vec3 phases = objectPhases[0];
 
-    float box = rippleBoxSDF(pos, vec3(scale.x/100, scale.y/100 , scale.z/100), radius, frequencies, amplitudes, phases);
+    //float box = rippleBoxSDF(pos, vec3(scale.x/100, scale.y/100 , scale.z/100), radius, frequencies, amplitudes, phases);
+
+    float box = rippleBoxSDF(pos, vec3(scale.x/100, scale.y/100 , scale.z/100), radius, frequencies, amplitudes * texColor.xyz, phases);
 
     return box;
 }
