@@ -3,14 +3,14 @@
 		"fileversion" : 1,
 		"appversion" : 		{
 			"major" : 8,
-			"minor" : 1,
-			"revision" : 11,
+			"minor" : 5,
+			"revision" : 5,
 			"architecture" : "x64",
 			"modernui" : 1
 		}
 ,
 		"classnamespace" : "box",
-		"rect" : [ -1729.0, 133.0, 785.0, 929.0 ],
+		"rect" : [ 34.0, 133.0, 785.0, 929.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 1,
 		"default_fontsize" : 12.0,
@@ -7155,33 +7155,6 @@
 				}
 
 			}
-, 			{
-				"box" : 				{
-					"fontname" : "Arial",
-					"fontsize" : 12.0,
-					"id" : "obj-40",
-					"maxclass" : "newobj",
-					"numinlets" : 0,
-					"numoutlets" : 1,
-					"outlettype" : [ "" ],
-					"patching_rect" : [ 800.5, -270.0, 134.0, 22.0 ],
-					"text" : "r ea_physics_osc_send"
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"fontname" : "Arial",
-					"fontsize" : 12.0,
-					"id" : "obj-42",
-					"maxclass" : "newobj",
-					"numinlets" : 1,
-					"numoutlets" : 0,
-					"patching_rect" : [ 800.5, -232.0, 138.0, 22.0 ],
-					"text" : "udpsend 127.0.0.1 9003"
-				}
-
-			}
  ],
 		"lines" : [ 			{
 				"patchline" : 				{
@@ -9685,13 +9658,6 @@
 			}
 , 			{
 				"patchline" : 				{
-					"destination" : [ "obj-42", 0 ],
-					"source" : [ "obj-40", 0 ]
-				}
-
-			}
-, 			{
-				"patchline" : 				{
 					"destination" : [ "obj-418", 0 ],
 					"source" : [ "obj-412", 0 ]
 				}
@@ -11635,7 +11601,7 @@
  ],
 		"dependency_cache" : [ 			{
 				"name" : "physics_control.json",
-				"bootpath" : "~/Projects/E2-Create/Software/ExpressiveAliens/SimulationOnly/EmbodiedMachine_ExpressiveAliens_MultiArm_Choreography_Lights/controls",
+				"bootpath" : "~/Projects/Incubatio/Software_Git/Incubatio/ExpressiveAliens_4arms/controls",
 				"patcherrelativepath" : ".",
 				"type" : "JSON",
 				"implicit" : 1

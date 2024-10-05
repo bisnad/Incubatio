@@ -4,13 +4,13 @@
 		"appversion" : 		{
 			"major" : 8,
 			"minor" : 5,
-			"revision" : 4,
+			"revision" : 5,
 			"architecture" : "x64",
 			"modernui" : 1
 		}
 ,
 		"classnamespace" : "box",
-		"rect" : [ 39.0, 112.0, 1665.0, 945.0 ],
+		"rect" : [ 80.0, 455.0, 1665.0, 945.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 1,
 		"default_fontsize" : 12.0,
@@ -7453,7 +7453,7 @@
 						"boundary_sizeZ_min[1]" : [ 0.0 ],
 						"boundary_size_interest" : [ 0 ],
 						"boundary_size_interest[1]" : [ 0 ],
-						"boundary_wrap_active" : [ 1 ],
+						"boundary_wrap_active" : [ 0 ],
 						"circle_amount" : [ 0.0 ],
 						"circle_amount_interest" : [ 0 ],
 						"circle_amount_max" : [ 1.0 ],
@@ -7584,33 +7584,6 @@
 					"presentation_rect" : [ 12.0, 27.0, 225.0, 50.0 ],
 					"proportion" : 0.39,
 					"rounded" : 0
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"fontname" : "Arial",
-					"fontsize" : 12.0,
-					"id" : "obj-40",
-					"maxclass" : "newobj",
-					"numinlets" : 0,
-					"numoutlets" : 1,
-					"outlettype" : [ "" ],
-					"patching_rect" : [ 781.5, 29.17333984375, 109.0, 22.0 ],
-					"text" : "r swarm_osc_send"
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"fontname" : "Arial",
-					"fontsize" : 12.0,
-					"id" : "obj-42",
-					"maxclass" : "newobj",
-					"numinlets" : 1,
-					"numoutlets" : 0,
-					"patching_rect" : [ 781.5, 67.17333984375, 138.0, 22.0 ],
-					"text" : "udpsend 127.0.0.1 7400"
 				}
 
 			}
@@ -10376,13 +10349,6 @@
 			}
 , 			{
 				"patchline" : 				{
-					"destination" : [ "obj-42", 0 ],
-					"source" : [ "obj-40", 0 ]
-				}
-
-			}
-, 			{
-				"patchline" : 				{
 					"destination" : [ "obj-394", 0 ],
 					"source" : [ "obj-401", 0 ]
 				}
@@ -11661,7 +11627,7 @@
  ],
 		"dependency_cache" : [ 			{
 				"name" : "swarm_control.json",
-				"bootpath" : "~/Projects/Incubatio/Software/Swarms/Swarms/controls",
+				"bootpath" : "~/Projects/Incubatio/Software_Git/Incubatio/Swarms/controls",
 				"patcherrelativepath" : ".",
 				"type" : "JSON",
 				"implicit" : 1

@@ -3,14 +3,14 @@
 		"fileversion" : 1,
 		"appversion" : 		{
 			"major" : 8,
-			"minor" : 1,
-			"revision" : 11,
+			"minor" : 5,
+			"revision" : 5,
 			"architecture" : "x64",
 			"modernui" : 1
 		}
 ,
 		"classnamespace" : "box",
-		"rect" : [ 948.0, 98.0, 1199.0, 1077.0 ],
+		"rect" : [ 495.0, 100.0, 1199.0, 1077.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 1,
 		"default_fontsize" : 12.0,
@@ -204,10 +204,10 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 989.0, 738.0, 156.0, 241.0 ],
+					"patching_rect" : [ 989.0, 738.0, 156.0, 234.0 ],
 					"presentation" : 1,
 					"presentation_linecount" : 10,
-					"presentation_rect" : [ 762.0, 588.0, 385.0, 144.0 ],
+					"presentation_rect" : [ 762.0, 588.0, 385.0, 141.0 ],
 					"text" : "Preset 10: Swarm on exact mocap joint\nPreset 12: Swarm quickly circles in small radius around mocap joint\nPreset 14: Sarm fluctuations around mocap joint\nPreset 18: Swarm slowly circles in large radious around joint\n\nPreset 20: Fluidity\nPreset 30: Thrusting\nPreset 40: Staccato\nPreset 50: Particles\nPreset 60: Levitation"
 				}
 
@@ -8190,33 +8190,6 @@
 				}
 
 			}
-, 			{
-				"box" : 				{
-					"fontname" : "Arial",
-					"fontsize" : 12.0,
-					"id" : "obj-40",
-					"maxclass" : "newobj",
-					"numinlets" : 0,
-					"numoutlets" : 1,
-					"outlettype" : [ "" ],
-					"patching_rect" : [ 781.5, 29.17333984375, 109.0, 22.0 ],
-					"text" : "r swarm_osc_send"
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"fontname" : "Arial",
-					"fontsize" : 12.0,
-					"id" : "obj-42",
-					"maxclass" : "newobj",
-					"numinlets" : 1,
-					"numoutlets" : 0,
-					"patching_rect" : [ 781.5, 67.17333984375, 138.0, 22.0 ],
-					"text" : "udpsend 127.0.0.1 7400"
-				}
-
-			}
  ],
 		"lines" : [ 			{
 				"patchline" : 				{
@@ -10727,13 +10700,6 @@
 			}
 , 			{
 				"patchline" : 				{
-					"destination" : [ "obj-42", 0 ],
-					"source" : [ "obj-40", 0 ]
-				}
-
-			}
-, 			{
-				"patchline" : 				{
 					"destination" : [ "obj-394", 0 ],
 					"source" : [ "obj-401", 0 ]
 				}
@@ -12326,7 +12292,7 @@
  ],
 		"dependency_cache" : [ 			{
 				"name" : "swarm_control.json",
-				"bootpath" : "~/Projects/E2-Create/Software/Swarms/EmbodiedMachine_Swarms_Mocap_Lights_xXense/controls",
+				"bootpath" : "~/Projects/Incubatio/Software_Git/Incubatio/Swarms_LightPainting/controls",
 				"patcherrelativepath" : ".",
 				"type" : "JSON",
 				"implicit" : 1
