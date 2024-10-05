@@ -102,29 +102,138 @@ def osc_switch(addr, *args):
         mocapConverter = swarmConverter      
         print("switch to swarmConverter")
     
-def osc_pos_osc_receive(addr, *args):
+def osc_arm_pos_osc_receive(addr, *args):
     
     if osc_running == False:
+        return
+    if mocapConverter != arm1Converter and mocapConverter != arms4Converter:
+        return
+
+    osc_address = addr
+    osc_values = args
+
+    """
+    print("osc_arm_pos_osc_receive")
+    print("osc_address ", osc_address)
+    if mocapConverter == bvhConverter:
+        print("bvhConverter")
+    if mocapConverter == mvnConverter:
+        print("mvnConverter")
+    if mocapConverter == arm1Converter:
+        print("arm1Converter")
+    if mocapConverter == arms4Converter:
+        print("arms4Converter")
+    if mocapConverter == swarmConverter:
+        print("swarmConverter")
+    """
+
+    mocapConverter.pos_osc_receive(osc_address, osc_values)
+  
+def osc_arm_rot_osc_receive(addr, *args):
+    
+    if osc_running == False:
+        return
+    if mocapConverter != arm1Converter and mocapConverter != arms4Converter:
+        return
+    
+    osc_address = addr
+    osc_values = args
+
+    """
+    print("osc_arm_rot_osc_receive")
+    print("osc_address ", osc_address)
+    if mocapConverter == bvhConverter:
+        print("bvhConverter")
+    if mocapConverter == mvnConverter:
+        print("mvnConverter")
+    if mocapConverter == arm1Converter:
+        print("arm1Converter")
+    if mocapConverter == arms4Converter:
+        print("arms4Converter")
+    if mocapConverter == swarmConverter:
+        print("swarmConverter")
+    """
+    
+    mocapConverter.rot_osc_receive(osc_address, osc_values)
+
+def osc_swarm_pos_osc_receive(addr, *args):
+    
+    if osc_running == False:
+        return
+    if mocapConverter != swarmConverter:
+        return
+
+    osc_address = addr
+    osc_values = args
+
+    """
+    print("osc_swarm_pos_osc_receive")
+    print("osc_address ", osc_address)
+    if mocapConverter == bvhConverter:
+        print("bvhConverter")
+    if mocapConverter == mvnConverter:
+        print("mvnConverter")
+    if mocapConverter == arm1Converter:
+        print("arm1Converter")
+    if mocapConverter == arms4Converter:
+        print("arms4Converter")
+    if mocapConverter == swarmConverter:
+        print("swarmConverter")
+    """
+
+    mocapConverter.pos_osc_receive(osc_address, osc_values)
+
+def osc_mvn_pos_osc_receive(addr, *args):
+    
+    if osc_running == False:
+        return
+    if mocapConverter != bvhConverter and mocapConverter != mvnConverter:
         return
  
     osc_address = addr
     osc_values = args
-    
-    if osc_address == "/mocap/joint/pos_world" and mocapConverter is not mvnConverter:
-        return
-    
+
+    """
+    print("osc_mvn_pos_osc_receive")
+    print("osc_address ", osc_address)
+    if mocapConverter == bvhConverter:
+        print("bvhConverter")
+    if mocapConverter == mvnConverter:
+        print("mvnConverter")
+    if mocapConverter == arm1Converter:
+        print("arm1Converter")
+    if mocapConverter == arms4Converter:
+        print("arms4Converter")
+    if mocapConverter == swarmConverter:
+        print("swarmConverter")
+    """
+
     mocapConverter.pos_osc_receive(osc_address, osc_values)
   
-def osc_rot_osc_receive(addr, *args):
+def osc_mvn_rot_osc_receive(addr, *args):
     
     if osc_running == False:
+        return
+    if mocapConverter != bvhConverter and mocapConverter != mvnConverter:
         return
     
     osc_address = addr
     osc_values = args
-    
-    if osc_address == "/mocap/joint/rot_world" and mocapConverter is not mvnConverter:
-        return
+
+    """
+    print("osc_mvn_rot_osc_receive")
+    print("osc_address ", osc_address)
+    if mocapConverter == bvhConverter:
+        print("bvhConverter")
+    if mocapConverter == mvnConverter:
+        print("mvnConverter")
+    if mocapConverter == arm1Converter:
+        print("arm1Converter")
+    if mocapConverter == arms4Converter:
+        print("arms4Converter")
+    if mocapConverter == swarmConverter:
+        print("swarmConverter")
+    """
     
     mocapConverter.rot_osc_receive(osc_address, osc_values)
 
@@ -136,11 +245,11 @@ osc_dispatcher.map("/start", osc_start)
 osc_dispatcher.map("/stop", osc_stop)
 osc_dispatcher.map("/quit", osc_quit)
 osc_dispatcher.map("/switch", osc_switch)
-osc_dispatcher.map("/physics/joint/pos", osc_pos_osc_receive) # arm1 and arms4 specific
-osc_dispatcher.map("/physics/joint/rot", osc_rot_osc_receive) # arm1 and arms4 specific
-osc_dispatcher.map("/swarm/*", osc_pos_osc_receive) # swarm specific
-osc_dispatcher.map("/mocap/joint/rot_world", osc_rot_osc_receive) # Mocap MVN and BVH specific
-osc_dispatcher.map("/mocap/joint/pos_world", osc_pos_osc_receive) # Mocap BVH specific
+osc_dispatcher.map("/physics/joint/pos", osc_arm_pos_osc_receive) # arm1 and arms4 specific
+osc_dispatcher.map("/physics/joint/rot", osc_arm_rot_osc_receive) # arm1 and arms4 specific
+osc_dispatcher.map("/swarm/*", osc_swarm_pos_osc_receive) # swarm specific
+osc_dispatcher.map("/mocap/joint/pos_world", osc_mvn_pos_osc_receive) # Mocap BVH specific
+osc_dispatcher.map("/mocap/joint/rot_world", osc_mvn_rot_osc_receive) # Mocap MVN and BVH specific
 
 server = osc_server.ThreadingOSCUDPServer((osc_receive_ip, osc_receive_port), osc_dispatcher)
 
