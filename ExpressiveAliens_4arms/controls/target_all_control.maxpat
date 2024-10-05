@@ -4,13 +4,13 @@
 		"appversion" : 		{
 			"major" : 8,
 			"minor" : 5,
-			"revision" : 4,
+			"revision" : 5,
 			"architecture" : "x64",
 			"modernui" : 1
 		}
 ,
 		"classnamespace" : "box",
-		"rect" : [ 2290.0, 119.0, 1489.0, 907.0 ],
+		"rect" : [ 205.0, 119.0, 1489.0, 907.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 1,
 		"default_fontsize" : 12.0,
@@ -218,7 +218,6 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 1820.25, 610.5, 312.0, 22.0 ],
-					"presentation_linecount" : 2,
 					"text" : "/physics/behavior/parameter $2 targetpos_all minAmp $1"
 				}
 
@@ -1570,7 +1569,7 @@
 					"patching_rect" : [ 496.25, 295.0, 120.0, 22.0 ],
 					"presentation" : 1,
 					"presentation_rect" : [ 255.25, 155.0, 120.0, 22.0 ],
-					"text" : "*"
+					"text" : "onshape"
 				}
 
 			}
@@ -1662,7 +1661,7 @@
 					"patching_rect" : [ 15.0, 267.0, 184.0, 20.0 ],
 					"presentation" : 1,
 					"presentation_rect" : [ 14.0, 131.0, 203.0, 20.0 ],
-					"text" : "Particles Behavior"
+					"text" : "TargetPos Behavior"
 				}
 
 			}
@@ -1917,8 +1916,8 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 55.25, 64.0, 149.0, 22.0 ],
-					"text" : "read particles_control.json"
+					"patching_rect" : [ 55.25, 64.0, 153.0, 22.0 ],
+					"text" : "read target_all_control.json"
 				}
 
 			}
@@ -2136,19 +2135,19 @@
 					"patching_rect" : [ 129.0, 200.0, 53.0, 19.0 ],
 					"restore" : 					{
 						"particles_active_interest" : [ 0 ],
-						"particles_appInterval" : [ 0.0 ],
+						"particles_appInterval" : [ 1.0 ],
 						"particles_appInterval_interest" : [ 0 ],
 						"particles_appInterval_max" : [ 5000.0 ],
 						"particles_appInterval_min" : [ 0.0 ],
-						"particles_maxAmp" : [ 2.0 ],
+						"particles_maxAmp" : [ 1.0 ],
 						"particles_maxAmp_interest" : [ 0 ],
-						"particles_maxAmp_max" : [ 2.0 ],
+						"particles_maxAmp_max" : [ 3.0 ],
 						"particles_maxAmp_min" : [ 0.0 ],
-						"particles_minAmp" : [ 2.0 ],
+						"particles_minAmp" : [ 1.0 ],
 						"particles_minAmp[1]" : [ 0.0 ],
 						"particles_minAmp_interest" : [ 0 ],
 						"particles_minAmp_interest[1]" : [ 0 ],
-						"particles_minAmp_max" : [ 2.0 ],
+						"particles_minAmp_max" : [ 3.0 ],
 						"particles_minAmp_max[1]" : [ 0.0 ],
 						"particles_minAmp_min" : [ 0.0 ],
 						"particles_minAmp_min[1]" : [ 0.0 ],
@@ -3427,7 +3426,7 @@
  ],
 		"dependency_cache" : [ 			{
 				"name" : "particles_control.json",
-				"bootpath" : "~/Projects/MeltedMemories/Software/ExpressiveAliens/ExpressiveAliens/controls",
+				"bootpath" : "~/Projects/Incubatio/Software_Git/Incubatio/ExpressiveAliens_4arms/controls",
 				"patcherrelativepath" : ".",
 				"type" : "JSON",
 				"implicit" : 1
