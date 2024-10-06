@@ -4,13 +4,13 @@
 		"appversion" : 		{
 			"major" : 8,
 			"minor" : 5,
-			"revision" : 5,
+			"revision" : 4,
 			"architecture" : "x64",
 			"modernui" : 1
 		}
 ,
 		"classnamespace" : "box",
-		"rect" : [ 827.0, 454.0, 281.0, 138.0 ],
+		"rect" : [ 938.0, 637.0, 638.0, 179.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 12.0,
@@ -57,7 +57,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 26.0, 29.0, 97.0, 22.0 ],
-					"text" : "udpreceive 9005"
+					"text" : "udpreceive 7500"
 				}
 
 			}
