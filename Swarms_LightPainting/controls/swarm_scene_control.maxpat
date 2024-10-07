@@ -3,14 +3,14 @@
 		"fileversion" : 1,
 		"appversion" : 		{
 			"major" : 8,
-			"minor" : 1,
-			"revision" : 11,
+			"minor" : 5,
+			"revision" : 5,
 			"architecture" : "x64",
 			"modernui" : 1
 		}
 ,
 		"classnamespace" : "box",
-		"rect" : [ 1258.0, 101.0, 784.0, 531.0 ],
+		"rect" : [ 728.0, 100.0, 784.0, 531.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 1,
 		"default_fontsize" : 12.0,
@@ -48,7 +48,7 @@
 					"patching_rect" : [ 931.0, 34.0, 151.0, 20.0 ],
 					"presentation" : 1,
 					"presentation_rect" : [ 385.0, 210.0, 166.0, 20.0 ],
-					"text" : "Swarm moves vertically up"
+					"text" : "Swarm moves to center"
 				}
 
 			}
@@ -60,10 +60,10 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 761.0, 29.0, 151.0, 48.0 ],
+					"patching_rect" : [ 761.0, 29.0, 151.0, 47.0 ],
 					"presentation" : 1,
 					"presentation_linecount" : 3,
-					"presentation_rect" : [ 385.0, 158.0, 166.0, 48.0 ],
+					"presentation_rect" : [ 385.0, 158.0, 166.0, 47.0 ],
 					"text" : "Swarm spreads out and follows sequence of joints for give dynamic poses"
 				}
 
@@ -76,10 +76,10 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 596.0, 34.0, 151.0, 48.0 ],
+					"patching_rect" : [ 596.0, 34.0, 151.0, 47.0 ],
 					"presentation" : 1,
 					"presentation_linecount" : 3,
-					"presentation_rect" : [ 385.0, 97.0, 169.0, 48.0 ],
+					"presentation_rect" : [ 385.0, 97.0, 169.0, 47.0 ],
 					"text" : "Swarm concentrated and follows sequence of joints for  five static poses"
 				}
 
@@ -92,7 +92,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 68.0, 97.0, 151.0, 34.0 ],
+					"patching_rect" : [ 68.0, 97.0, 151.0, 33.0 ],
 					"presentation" : 1,
 					"presentation_rect" : [ 179.0, 97.0, 192.0, 20.0 ],
 					"text" : "After All Lights on Right Foot"
@@ -107,10 +107,10 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 432.0, 34.0, 151.0, 62.0 ],
+					"patching_rect" : [ 432.0, 34.0, 151.0, 60.0 ],
 					"presentation" : 1,
 					"presentation_linecount" : 2,
-					"presentation_rect" : [ 179.0, 65.0, 372.0, 34.0 ],
+					"presentation_rect" : [ 179.0, 65.0, 372.0, 33.0 ],
 					"text" : "1.1 One Light one Right Hand & 1.2.Then All lights on Right Hand, then changing Joints"
 				}
 
@@ -122,9 +122,9 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 50.0, 8.0, 173.0, 23.0 ],
+					"patching_rect" : [ 50.0, 8.0, 173.0, 22.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 8.0, 8.0, 173.0, 23.0 ],
+					"presentation_rect" : [ 8.0, 8.0, 173.0, 22.0 ],
 					"text" : "Scene 1 - Painting"
 				}
 
@@ -136,10 +136,11 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 38.0, 495.0, 172.0, 23.0 ],
+					"patching_rect" : [ 38.0, 495.0, 172.0, 22.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 8.0, 208.5, 128.0, 23.0 ],
-					"text" : "1.5. Vertical Up"
+					"presentation_linecount" : 2,
+					"presentation_rect" : [ 8.0, 208.5, 128.0, 38.0 ],
+					"text" : "1.5. Swarm to Center"
 				}
 
 			}
@@ -179,7 +180,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 75.0, 519.0, 29.5, 22.0 ],
-					"text" : "250"
+					"text" : "260"
 				}
 
 			}
@@ -321,9 +322,9 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 38.0, 322.0, 172.0, 23.0 ],
+					"patching_rect" : [ 38.0, 322.0, 172.0, 22.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 8.0, 159.0, 128.0, 23.0 ],
+					"presentation_rect" : [ 8.0, 159.0, 128.0, 22.0 ],
 					"text" : "1.4. Wobbling"
 				}
 
@@ -335,9 +336,9 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 34.0, 146.0, 172.0, 23.0 ],
+					"patching_rect" : [ 34.0, 146.0, 172.0, 22.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 8.0, 99.0, 128.0, 23.0 ],
+					"presentation_rect" : [ 8.0, 99.0, 128.0, 22.0 ],
 					"text" : "1.3. Scanning"
 				}
 
@@ -386,9 +387,9 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 38.0, 222.0, 173.0, 23.0 ],
+					"patching_rect" : [ 38.0, 222.0, 173.0, 22.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 8.0, 124.0, 128.0, 23.0 ],
+					"presentation_rect" : [ 8.0, 124.0, 128.0, 22.0 ],
 					"text" : "1.3. Scanning Slow"
 				}
 
@@ -414,9 +415,9 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 38.0, 67.0, 171.0, 23.0 ],
+					"patching_rect" : [ 38.0, 67.0, 171.0, 22.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 8.0, 67.0, 127.0, 23.0 ],
+					"presentation_rect" : [ 8.0, 67.0, 127.0, 22.0 ],
 					"text" : "1. Painting"
 				}
 
@@ -581,9 +582,9 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 38.0, 7.0, 38.0, 23.0 ],
+					"patching_rect" : [ 38.0, 7.0, 38.0, 22.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 8.0, 37.0, 38.0, 23.0 ],
+					"presentation_rect" : [ 8.0, 37.0, 38.0, 22.0 ],
 					"text" : "init"
 				}
 
