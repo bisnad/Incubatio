@@ -1,38 +1,56 @@
 Incubatio Scenes Notes
 
-1: Fractal or Avatar in Sphere
-
-Possible Avatar Preset 402
+1: Video: Fractal or Avatar in Sphere
+Possible Avatar Preset 402 or Fractal Preset 315
 
 2: Gaiska drawing in the back with horizontal laser
 3. Gaiska opens door with laser
 4: Gaiska draws the silouette of Arnaud with laser
 5: Arnaud turns and enters in the middle (intrance of Arnaud)
 6: Gaiska and Arnaud move slowly around table
-7: gaiska and Arnaud split and face each other avross the table
+7: gaiska and Arnaud split and face each other across the table
 8: Arnaud lies down on the table
 9: Gaiska creates the temple with the vertical laser
+TODO: mocap recording of the temple creation
 10: Gaiska enters the table, stands on table, and paints Arnoud silouette with vertical laser
 11: Gaiska does Spatial Recovery (back left, back right, front right, middle left)
 
 12: 1 When Gaiska at front right and extends arm, Arm video appears on transparent screen (for about 20 seconds), arm contorts alongside the arm of Gaiska (maybe tracking) 
 
-Arm1 Preset: 700
+Video: arm1 simulation
+
+raymarching scene controls arm1
+Raymarching Preset: 1600
+First video on the big screen
+Simulation Physics Preset: 140
+Simulation Fluidity Preset: 1 
+Raymarching  Scene Rotation X from 0.0 to 180.0
+Then video under the table:
+Switch to searching behaviour
+Simulation Physics Preset: 100
+Simulation Particles Preset: 1 
 
 13: Gaiska middle back at the table and stretched his head towards the screen, Mercurio Variation 1 stands (this about 2 minutes after the arm appeared), maybe 1 minute mercurio alone, then 10 seconds mercurio with Gaiska visible, then only mercurio 10 seconds, then only Gaiska
 
-Mercurio Preset: 12
+Video: Mercurio
+
+raymarching scene controls mercurio
+Raymarching Preset: 1500
+Lower part of Mercurio under the table
 
 14: Gaiska comes to front of table faces screen, holds heands on head: Mercurio with brain appears (50 seconds)
 
-Mercurio with Brain Preset: 16
-This preset is broken
+Fully Mercurio on big screen
+transition mercurio to brain
 
-15: Gasika finishes variation and mamipulated Arnaud who lies on table, Arnaud Sonification starts
+15: Gasika finishes variation and manipulated Arnaud who lies on table, Arnaud Sonification starts
 16: Gaiska is painting with light on Arnaud (and maybe also Light Forest) 
 
-Swarm Painting with Light + python script 1.Painting_Incubatio
-TODO: increase bounding box of swarm
+Swarm Painting with Light
+Start only swarm simulation
+The Light is controlled by Pedro and Pablo
+go through same stages as in Embodied Machine: Scanning, Wiggling
+But then detach swarm from mocap joint and have it come to center of table
 
 17: Four Arms appear on large screen, the four arms manipulate Arnaud
 
@@ -41,6 +59,9 @@ Arms should be pointing down
 
 18: Gaiska makes three motions towards the mouth of Arnaud: trops of light appear underneath the table (the rain version of the lights) (maybe )
 
+Video and Swarm: Drops of Light
+use special raymarching max patch: scene drops of light
+
 Swarm Preset: 2
 Drops of Light Preset: 2
 
@@ -48,14 +69,24 @@ Drops of Light Preset: 2
 
 Drops of Light Circular Blob Preset: 4 or  313 or 319 (with swarm preset 4)
 
+impro: joint smoothing, swarm evasion
+
+
 20: Gaiska stops moving and then slowly lowers himself to the belly of Arnaud (drops of light disappear, prepare plane of magnetic water on large screen)
 
+Video:
 controls_magneticwater_v2.maxpat
 
 20: Arnaud pushes belly out: have magnetic water appear out of the plane (also large screen)
+
+magnetic water grows
+then video on big screen
+go through wiggling and distortion
+then magnetic water moves below table and becomes greenish
+
 21: Gaiska moves snakelike and Arnaud staccato: Snake appears under table 
 
-????
+Switch to Snake Raymarching
 
 22: Gaiska and Arnaud standing on table, Pas de deux, lots of movement: Laser swarm appears, same swarm as in Embodied Machine
 
