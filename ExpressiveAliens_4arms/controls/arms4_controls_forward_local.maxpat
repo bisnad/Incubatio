@@ -4,13 +4,13 @@
 		"appversion" : 		{
 			"major" : 8,
 			"minor" : 5,
-			"revision" : 4,
+			"revision" : 5,
 			"architecture" : "x64",
 			"modernui" : 1
 		}
 ,
 		"classnamespace" : "box",
-		"rect" : [ 59.0, 107.0, 640.0, 480.0 ],
+		"rect" : [ 742.0, 173.0, 233.0, 98.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 12.0,
@@ -40,32 +40,36 @@
 		"assistshowspatchername" : 0,
 		"boxes" : [ 			{
 				"box" : 				{
-					"id" : "obj-5",
+					"fontname" : "Arial",
+					"fontsize" : 12.0,
+					"id" : "obj-40",
 					"maxclass" : "newobj",
-					"numinlets" : 1,
-					"numoutlets" : 0,
-					"patching_rect" : [ 28.0, 76.0, 138.0, 22.0 ],
-					"text" : "udpsend 127.0.0.1 9002"
+					"numinlets" : 0,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 31.0, 18.0, 134.0, 22.0 ],
+					"text" : "r ea_physics_osc_send"
 				}
 
 			}
 , 			{
 				"box" : 				{
-					"id" : "obj-4",
+					"fontname" : "Arial",
+					"fontsize" : 12.0,
+					"id" : "obj-42",
 					"maxclass" : "newobj",
 					"numinlets" : 1,
-					"numoutlets" : 1,
-					"outlettype" : [ "" ],
-					"patching_rect" : [ 28.0, 31.0, 97.0, 22.0 ],
-					"text" : "udpreceive 9006"
+					"numoutlets" : 0,
+					"patching_rect" : [ 31.0, 56.0, 138.0, 22.0 ],
+					"text" : "udpsend 127.0.0.1 9003"
 				}
 
 			}
  ],
 		"lines" : [ 			{
 				"patchline" : 				{
-					"destination" : [ "obj-5", 0 ],
-					"source" : [ "obj-4", 0 ]
+					"destination" : [ "obj-42", 0 ],
+					"source" : [ "obj-40", 0 ]
 				}
 
 			}
