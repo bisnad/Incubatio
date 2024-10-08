@@ -10,7 +10,7 @@
 		}
 ,
 		"classnamespace" : "box",
-		"rect" : [ 19.0, 414.0, 1694.0, 983.0 ],
+		"rect" : [ 82.0, 246.0, 1140.0, 655.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 1,
 		"default_fontsize" : 12.0,
@@ -40,11 +40,25 @@
 		"assistshowspatchername" : 0,
 		"boxes" : [ 			{
 				"box" : 				{
+					"id" : "obj-1733",
+					"maxclass" : "button",
+					"numinlets" : 1,
+					"numoutlets" : 1,
+					"outlettype" : [ "bang" ],
+					"parameter_enable" : 0,
+					"patching_rect" : [ 179.0, 282.0, 24.0, 24.0 ],
+					"presentation" : 1,
+					"presentation_rect" : [ 80.0, 153.0, 24.0, 24.0 ]
+				}
+
+			}
+, 			{
+				"box" : 				{
 					"id" : "obj-1732",
 					"maxclass" : "newobj",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 355.0, 282.0, 148.0, 22.0 ],
+					"patching_rect" : [ 462.0, 282.0, 148.0, 22.0 ],
 					"text" : "s raymarch_switch_avatar"
 				}
 
@@ -1346,7 +1360,7 @@
 					"maxclass" : "newobj",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 247.0, 282.0, 95.0, 22.0 ],
+					"patching_rect" : [ 296.0, 282.0, 95.0, 22.0 ],
 					"text" : "s vis_preset_set"
 				}
 
@@ -1358,9 +1372,9 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 187.0, 282.0, 35.0, 22.0 ],
+					"patching_rect" : [ 247.0, 282.0, 35.0, 22.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 98.0, 153.0, 57.0, 22.0 ],
+					"presentation_rect" : [ 105.0, 153.0, 57.0, 22.0 ],
 					"text" : "1400"
 				}
 
@@ -1375,7 +1389,7 @@
 					"parameter_enable" : 0,
 					"patching_rect" : [ 142.0, 282.0, 24.0, 24.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 71.0, 153.0, 24.0, 24.0 ]
+					"presentation_rect" : [ 54.0, 153.0, 24.0, 24.0 ]
 				}
 
 			}
@@ -29724,10 +29738,10 @@
 						"camPosX" : [ 1.575 ],
 						"camPosX_max" : [ 1.575 ],
 						"camPosX_min" : [ -1.349 ],
-						"camPosY" : [ -1.575 ],
+						"camPosY" : [ -0.987 ],
 						"camPosY_max" : [ 0.987 ],
 						"camPosY_min" : [ -1.575 ],
-						"camPosZ" : [ -3.7741 ],
+						"camPosZ" : [ -0.939 ],
 						"camPosZ_max" : [ -0.7 ],
 						"camPosZ_min" : [ -3.7741 ],
 						"camPos_interest" : [ 0 ],
@@ -29760,7 +29774,7 @@
 						"edgeOcclusionScale_interest" : [ 0 ],
 						"edgeOcclusionScale_max" : [ 1.0 ],
 						"edgeOcclusionScale_min" : [ 0.0 ],
-						"edgePrimitive" : [ 3.0 ],
+						"edgePrimitive" : [ -1.0 ],
 						"edgePrimitive_interest" : [ 0 ],
 						"edgeRadius" : [ 0.0 ],
 						"edgeRadius_interest" : [ 0 ],
@@ -29805,7 +29819,7 @@
 						"groundPosX_min[3]" : [ -20.0 ],
 						"groundPosY" : [ 0.5 ],
 						"groundPosY[10]" : [ 0.5 ],
-						"groundPosY[1]" : [ 1.0 ],
+						"groundPosY[1]" : [ 0.0 ],
 						"groundPosY[2]" : [ 0.5 ],
 						"groundPosY[3]" : [ 0.5 ],
 						"groundPosY_max" : [ 20.0 ],
@@ -29837,7 +29851,7 @@
 						"groundPos_interest[1]" : [ 0 ],
 						"groundPos_interest[2]" : [ 0 ],
 						"groundPos_interest[3]" : [ 0 ],
-						"groundPrimitive" : [ 2.0 ],
+						"groundPrimitive" : [ 1.0 ],
 						"groundPrimitive[1]" : [ 9 ],
 						"groundPrimitive[2]" : [ 0 ],
 						"groundPrimitive[3]" : [ 0 ],
@@ -29900,8 +29914,8 @@
 						"groundRound_max[1]" : [ 5.0 ],
 						"groundRound_max[2]" : [ 5.0 ],
 						"groundRound_max[3]" : [ 0.0 ],
-						"groundSizeX" : [ 0.001 ],
-						"groundSizeX[1]" : [ 0.1 ],
+						"groundSizeX" : [ 0.0 ],
+						"groundSizeX[1]" : [ 1.0 ],
 						"groundSizeX[2]" : [ 0.044662563667233 ],
 						"groundSizeX[3]" : [ 0.0 ],
 						"groundSizeX_max" : [ 0.5997 ],
@@ -29909,7 +29923,7 @@
 						"groundSizeX_max[2]" : [ 5.0 ],
 						"groundSizeX_max[3]" : [ 0.0 ],
 						"groundSizeY" : [ 1.0 ],
-						"groundSizeY[1]" : [ 0.1 ],
+						"groundSizeY[1]" : [ 1.0 ],
 						"groundSizeY[2]" : [ 0.031377334465195 ],
 						"groundSizeY[3]" : [ 0.0 ],
 						"groundSizeY_max" : [ 3.35 ],
@@ -29917,7 +29931,7 @@
 						"groundSizeY_max[2]" : [ 5.0 ],
 						"groundSizeY_max[3]" : [ 0.0 ],
 						"groundSizeZ" : [ 0.1 ],
-						"groundSizeZ[1]" : [ 0.000231481481481 ],
+						"groundSizeZ[1]" : [ 1.0 ],
 						"groundSizeZ[2]" : [ 0.073185483870968 ],
 						"groundSizeZ[3]" : [ 0.0 ],
 						"groundSizeZ_max" : [ 5.0 ],
@@ -29973,7 +29987,7 @@
 						"jointOcclusionScale_interest" : [ 0 ],
 						"jointOcclusionScale_max" : [ 1.0 ],
 						"jointOcclusionScale_min" : [ 0.0 ],
-						"jointPrimitive" : [ 3.0 ],
+						"jointPrimitive" : [ -1.0 ],
 						"jointPrimitive_interest" : [ 0 ],
 						"jointRound" : [ 0.0 ],
 						"jointRound_interest" : [ 0 ],
@@ -30313,7 +30327,7 @@
 						"skeletonPosX" : [ 0.5 ],
 						"skeletonPosX_max" : [ 20.0 ],
 						"skeletonPosX_min" : [ -20.0 ],
-						"skeletonPosY" : [ 0.0 ],
+						"skeletonPosY" : [ 1.0 ],
 						"skeletonPosY_max" : [ 0.0 ],
 						"skeletonPosY_min" : [ 1.5 ],
 						"skeletonPosZ" : [ 0.500945 ],
@@ -30928,15 +30942,6 @@
 , 			{
 				"patchline" : 				{
 					"destination" : [ "obj-1058", 0 ],
-					"order" : 0,
-					"source" : [ "obj-1059", 0 ]
-				}
-
-			}
-, 			{
-				"patchline" : 				{
-					"destination" : [ "obj-203", 0 ],
-					"order" : 1,
 					"source" : [ "obj-1059", 0 ]
 				}
 
@@ -30950,16 +30955,7 @@
 			}
 , 			{
 				"patchline" : 				{
-					"destination" : [ "obj-1059", 0 ],
-					"order" : 1,
-					"source" : [ "obj-1060", 0 ]
-				}
-
-			}
-, 			{
-				"patchline" : 				{
 					"destination" : [ "obj-1732", 0 ],
-					"order" : 0,
 					"source" : [ "obj-1060", 0 ]
 				}
 
@@ -37051,6 +37047,13 @@
 				"patchline" : 				{
 					"destination" : [ "obj-196", 0 ],
 					"source" : [ "obj-1731", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-1059", 0 ],
+					"source" : [ "obj-1733", 0 ]
 				}
 
 			}
