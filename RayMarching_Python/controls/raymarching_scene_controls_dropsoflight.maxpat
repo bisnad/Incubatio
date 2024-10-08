@@ -10,7 +10,7 @@
 		}
 ,
 		"classnamespace" : "box",
-		"rect" : [ 0.0, 100.0, 1694.0, 983.0 ],
+		"rect" : [ 0.0, 367.0, 1694.0, 983.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 1,
 		"default_fontsize" : 12.0,
@@ -39,6 +39,17 @@
 		"subpatcher_template" : "",
 		"assistshowspatchername" : 0,
 		"boxes" : [ 			{
+				"box" : 				{
+					"id" : "obj-95",
+					"maxclass" : "newobj",
+					"numinlets" : 1,
+					"numoutlets" : 0,
+					"patching_rect" : [ 784.25, 282.0, 150.0, 22.0 ],
+					"text" : "s raymarch_switch_swarm"
+				}
+
+			}
+, 			{
 				"box" : 				{
 					"id" : "obj-394",
 					"maxclass" : "message",
@@ -6766,11 +6777,11 @@
 						"groundRotZ[10]" : [ 0.5 ],
 						"groundRound" : [ 0.14 ],
 						"groundRound_max" : [ 5.0 ],
-						"groundSizeX" : [ 0.0305 ],
+						"groundSizeX" : [ 1.0 ],
 						"groundSizeX_max" : [ 20.0 ],
-						"groundSizeY" : [ 0.0475 ],
+						"groundSizeY" : [ 1.0 ],
 						"groundSizeY_max" : [ 20.0 ],
-						"groundSizeZ" : [ 1.0 ],
+						"groundSizeZ" : [ 0.017725 ],
 						"groundSizeZ_max" : [ 20.0 ],
 						"jointAmbientScale" : [ 0.25 ],
 						"jointAmbientScale_max" : [ 1.0 ],
@@ -6778,7 +6789,7 @@
 						"jointColorB" : [ 1.0 ],
 						"jointColorG" : [ 0.6344 ],
 						"jointColorR" : [ 0.6466 ],
-						"jointDiffuseScale" : [ 0.471 ],
+						"jointDiffuseScale" : [ 0.0 ],
 						"jointDiffuseScale_min" : [ 0.0 ],
 						"jointEdgeSmooth[1]" : [ 2.1917 ],
 						"jointEdgeSmooth_max[1]" : [ 5.0 ],
@@ -6800,7 +6811,7 @@
 						"jointSpecularScale" : [ 0.4711 ],
 						"jointSpecularScale_max" : [ 2.0 ],
 						"jointSpecularScale_min" : [ 0.0 ],
-						"lightPosX" : [ -1.39 ],
+						"lightPosX" : [ -0.2432 ],
 						"lightPosX_max" : [ 3.141 ],
 						"lightPosX_min" : [ -3.141 ],
 						"lightPosY" : [ 2.127800000000001 ],
@@ -6946,7 +6957,7 @@
 , 			{
 				"patchline" : 				{
 					"destination" : [ "obj-1059", 0 ],
-					"order" : 2,
+					"order" : 3,
 					"source" : [ "obj-1060", 0 ]
 				}
 
@@ -6954,7 +6965,7 @@
 , 			{
 				"patchline" : 				{
 					"destination" : [ "obj-311", 0 ],
-					"order" : 1,
+					"order" : 2,
 					"source" : [ "obj-1060", 0 ]
 				}
 
@@ -6962,6 +6973,14 @@
 , 			{
 				"patchline" : 				{
 					"destination" : [ "obj-314", 0 ],
+					"order" : 1,
+					"source" : [ "obj-1060", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-95", 0 ],
 					"order" : 0,
 					"source" : [ "obj-1060", 0 ]
 				}

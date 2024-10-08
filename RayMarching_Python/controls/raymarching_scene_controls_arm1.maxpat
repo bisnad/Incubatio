@@ -10,7 +10,7 @@
 		}
 ,
 		"classnamespace" : "box",
-		"rect" : [ 220.0, 233.0, 1298.0, 850.0 ],
+		"rect" : [ 79.0, 425.0, 1298.0, 850.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 1,
 		"default_fontsize" : 12.0,
@@ -39,6 +39,17 @@
 		"subpatcher_template" : "",
 		"assistshowspatchername" : 0,
 		"boxes" : [ 			{
+				"box" : 				{
+					"id" : "obj-14",
+					"maxclass" : "newobj",
+					"numinlets" : 1,
+					"numoutlets" : 0,
+					"patching_rect" : [ 142.0, 320.0, 142.0, 22.0 ],
+					"text" : "s raymarch_switch_arm1"
+				}
+
+			}
+, 			{
 				"box" : 				{
 					"id" : "obj-13",
 					"maxclass" : "comment",
@@ -1498,6 +1509,14 @@
 				"patchline" : 				{
 					"destination" : [ "obj-1059", 0 ],
 					"order" : 3,
+					"source" : [ "obj-1060", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-14", 0 ],
+					"order" : 4,
 					"source" : [ "obj-1060", 0 ]
 				}
 

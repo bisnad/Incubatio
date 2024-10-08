@@ -10,7 +10,7 @@
 		}
 ,
 		"classnamespace" : "box",
-		"rect" : [ 106.0, 146.0, 661.0, 234.0 ],
+		"rect" : [ 55.0, 485.0, 649.0, 198.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 1,
 		"default_fontsize" : 12.0,
@@ -39,6 +39,17 @@
 		"subpatcher_template" : "",
 		"assistshowspatchername" : 0,
 		"boxes" : [ 			{
+				"box" : 				{
+					"id" : "obj-9",
+					"maxclass" : "newobj",
+					"numinlets" : 1,
+					"numoutlets" : 0,
+					"patching_rect" : [ 142.0, 325.0, 148.0, 22.0 ],
+					"text" : "s raymarch_switch_arms4"
+				}
+
+			}
+, 			{
 				"box" : 				{
 					"id" : "obj-31",
 					"maxclass" : "newobj",
@@ -748,6 +759,14 @@
 				"patchline" : 				{
 					"destination" : [ "obj-5", 0 ],
 					"order" : 2,
+					"source" : [ "obj-1060", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-9", 0 ],
+					"order" : 4,
 					"source" : [ "obj-1060", 0 ]
 				}
 
