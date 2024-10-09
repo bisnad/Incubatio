@@ -24,24 +24,32 @@ Raymarching Preset: 1600
 First video on the big screen
 Simulation Physics Preset: 140
 Simulation Fluidity Preset: 1 
-Raymarching  Scene Rotation X from 0.0 to 180.0
+
+Raymarching  Scene Rotation X from 0.0 to 180.0: what is the cue for this?
+
+When video moves under the table, Gaiska continues his tour around the table
 Then video under the table:
 Switch to searching behaviour
 Simulation Physics Preset: 100
 Simulation Particles Preset: 1 
 
+When Gaiska is at the center back of the table, the arm disappears.
+
+
+
 13: Gaiska middle back at the table and stretched his head towards the screen, Mercurio Variation 1 stands (this about 2 minutes after the arm appeared), maybe 1 minute mercurio alone, then 10 seconds mercurio with Gaiska visible, then only mercurio 10 seconds, then only Gaiska
 
 Video: Mercurio
 
-raymarching scene controls mercurio
-Raymarching Preset: 1500
-Lower part of Mercurio under the table
+Center section of Mercurio appears under table when Gaiska does Mudra
+When Gaiska silently screams to the screen, Mercurio appears big on screen
 
 14: Gaiska comes to front of table faces screen, holds heands on head: Mercurio with brain appears (50 seconds)
 
-Fully Mercurio on big screen
 transition mercurio to brain
+TODO: have a brain version in which more of the original Mercurio is visible (i.e. Fractal is a bit behind Mercurio)
+after a while (cue unclear), Pedro shrinks Brain down, which is the cue for Gaiska to finish his variation
+somewhen (cue unclear), Pedro fades out the brain
 
 15: Gasika finishes variation and manipulated Arnaud who lies on table, Arnaud Sonification starts
 16: Gaiska is painting with light on Arnaud (and maybe also Light Forest) 
@@ -61,32 +69,36 @@ Arms should be pointing down
 
 Video and Swarm: Drops of Light
 use special raymarching max patch: scene drops of light
+after a while (cue?) transition from raining drops to central elongated shape still under the table
+TODO: have a more sideways view on the drops of light
 
-Swarm Preset: 2
-Drops of Light Preset: 2
+19: Gaiska stands on the table and taps on his body, droplets of light move to the large transparent screen
 
-19: Gaiska stands on the table, droplets of light move to the large transparent screen
+
+move video from under the table to big screen
+later (cue) transition into vertical golden shape with drops circling
 
 Drops of Light Circular Blob Preset: 4 or  313 or 319 (with swarm preset 4)
 
 impro: joint smoothing, swarm evasion
 
+drops of light disappear (cue?)
 
-20: Gaiska stops moving and then slowly lowers himself to the belly of Arnaud (drops of light disappear, prepare plane of magnetic water on large screen)
 
-Video:
-controls_magneticwater_v2.maxpat
+20: Gaiska stops moving and then slowly lowers himself to the belly of Arnaud 
+Arnaud pushes his belly out four times, first three small pushes, then large push
 
-20: Arnaud pushes belly out: have magnetic water appear out of the plane (also large screen)
-
-magnetic water grows
-then video on big screen
-go through wiggling and distortion
-then magnetic water moves below table and becomes greenish
+Afterwards, magnetic water appears below table
+water goes through sequence: from small ripples, to larger ripples, to shape bulging out
+then the video goes to big screen
+the pushed out shape stays for a while
+then the wiggling starts
+since the wiggling progresses very slowy, start rotation before wiggling reaches end
+TODO: make sure there is no jump in the whiggling when rotation starts
 
 21: Gaiska moves snakelike and Arnaud staccato: Snake appears under table 
 
-Switch to Snake Raymarching
+Video: Switch to Snake Raymarching
 
 22: Gaiska and Arnaud standing on table, Pas de deux, lots of movement: Laser swarm appears, same swarm as in Embodied Machine
 
@@ -96,9 +108,14 @@ Laser Swarm visualised in Touch Designer
 
 24: Gaiska puts cables on his heart, the Heart appears underneath the table, first as line only, then growing into heart (still underneath table)
 
+when the line looks like a beanstalk, move to big screen
+then continue transformation into heart
+
+
+
 controls_heart2lava.maxpat
 
 
 25: Arnaud makes heart movements, heart moves to the large screen
-26: Heart morphs into Lava Fractal, Fractal becomes very large
+26: Heart morphs (cue) into Lava Fractal, Fractal becomes very large
 

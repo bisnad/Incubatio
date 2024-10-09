@@ -4,7 +4,7 @@ Mocap Player : mvn2bvh_osc_live
 Receive on port 9006, send on port 10000
 
 EA Arm1 : alien2mocap_osc.py
-Receive on port 9005, send on port 10000
+Receive on port 9005, send on port 10000  n
 
 EA Arm2 : alien2mocap_osc.py
 Receive on port 9005, send on port 10000
@@ -26,7 +26,7 @@ MSI Laptop: 2.0.0.30 (Mocap MVN & Touch Designer & Beyond)
 Razer 16: 2.0.0.33 (Simulations, Max Controllers)
 Razer 17: 2.0.0.32 (Laser Swarm)
 Pablo M2: 2.0.0.31 (Supercollider, DMX to Light) & 169.254.192.11 (Stocos IMUs)
-Pablo Macbook: 169.254.192.12 (Stocos IMU Jerk Calculation) 
+Pablo Intel: 169.254.192.12 (Stocos IMU Jerk Calculation) 
 Big Gui: 2.0.0.34  (Raymarching) 
 
 Planned Distribution to Functions and IP Addresses:
@@ -36,3 +36,4 @@ Razer 16: 2.0.0.33 (Simulations, Max Controllers,Laser Swarm)
 Razer 17: 2.0.0.32 (Mocap MVN)
 Pablo M2: 2.0.0.31 (Supercollider, DMX to Light, Stocos IMU Jerk Calculation )
 Big Gui: 2.0.0.34  (Raymarching) 
+

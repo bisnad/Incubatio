@@ -53,3 +53,5 @@ RayMarching_Python/.DS_Store
 RayMarching_Python/controls/.DS_Store
 Swarms_LightPainting/.DS_Store
 /Utilities/mocap_analysis_v2/.vs
+/Utilities/xsens2osc_v3_offset/.vs
+/Utilities/xsens2osc_v3_offset/obj
