@@ -10,7 +10,7 @@
 		}
 ,
 		"classnamespace" : "box",
-		"rect" : [ 273.0, 319.0, 1307.0, 628.0 ],
+		"rect" : [ 273.0, 426.0, 877.0, 515.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 1,
 		"default_fontsize" : 12.0,
@@ -69,7 +69,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 146.0, 536.0, 150.0, 20.0 ],
+					"patching_rect" : [ 146.0, 701.0, 150.0, 20.0 ],
 					"presentation" : 1,
 					"presentation_rect" : [ 28.0, 296.0, 150.0, 20.0 ],
 					"text" : "Scene Part3 Particles"
@@ -104,7 +104,7 @@
 			}
 , 			{
 				"box" : 				{
-					"addpoints" : [ 0.0, 0.0, 0, 0.164893617021277, 0.053333333333333, 0, 0.840425531914894, 0.946666666666667, 0, 1.0, 1.0, 0 ],
+					"addpoints" : [ 0.0, 0.0, 0, 0.164893617021277, 0.053333333333333, 0, 0.468085106382979, 0.506666666666667, 0, 0.563829787234043, 0.506666666666667, 0, 0.840425531914894, 0.946666666666667, 0, 1.0, 1.0, 0 ],
 					"domain" : 1.0,
 					"id" : "obj-38",
 					"maxclass" : "function",
@@ -169,8 +169,8 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 29.0, 684.6708984375, 87.0, 22.0 ],
-					"text" : "expr $f1 * -180"
+					"patching_rect" : [ 29.0, 849.6708984375, 83.0, 22.0 ],
+					"text" : "expr $f1 * 180"
 				}
 
 			}
@@ -181,7 +181,7 @@
 					"numinlets" : 0,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 29.0, 649.0, 82.0, 22.0 ],
+					"patching_rect" : [ 29.0, 814.0, 82.0, 22.0 ],
 					"text" : "r scene_part2"
 				}
 
@@ -192,7 +192,7 @@
 					"maxclass" : "newobj",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 1080.25, 786.979248046875, 91.0, 22.0 ],
+					"patching_rect" : [ 1080.25, 951.979248046875, 91.0, 22.0 ],
 					"text" : "s vis_osc_send"
 				}
 
@@ -204,7 +204,7 @@
 					"numinlets" : 4,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 1045.0, 794.6708984375, 114.0, 22.0 ],
+					"patching_rect" : [ 1045.0, 959.6708984375, 114.0, 22.0 ],
 					"text" : "pack 0.1 0.1 0.1 0.1"
 				}
 
@@ -216,7 +216,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 4,
 					"outlettype" : [ "float", "float", "float", "float" ],
-					"patching_rect" : [ 1045.25, 751.6708984375, 127.0, 22.0 ],
+					"patching_rect" : [ 1045.25, 916.6708984375, 127.0, 22.0 ],
 					"text" : "unpack 0.1 0.1 0.1 0.1"
 				}
 
@@ -228,7 +228,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "list", "" ],
-					"patching_rect" : [ 1045.25, 717.1708984375, 77.0, 22.0 ],
+					"patching_rect" : [ 1045.25, 882.1708984375, 77.0, 22.0 ],
 					"text" : "jit.euler2quat"
 				}
 
@@ -243,7 +243,7 @@
 					"numinlets" : 3,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 853.25, 747.1708984375, 119.0, 19.0 ],
+					"patching_rect" : [ 853.25, 912.1708984375, 119.0, 19.0 ],
 					"text" : "expr ($f1 - $f2) / ( $f3 - $f2 )"
 				}
 
@@ -255,7 +255,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 987.25, 747.1708984375, 41.0, 22.0 ],
+					"patching_rect" : [ 987.25, 912.1708984375, 41.0, 22.0 ],
 					"text" : "set $1"
 				}
 
@@ -270,7 +270,7 @@
 					"numinlets" : 3,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 725.25, 747.1708984375, 118.0, 19.0 ],
+					"patching_rect" : [ 725.25, 912.1708984375, 118.0, 19.0 ],
 					"text" : "expr $f2 + $f1 * ( $f3 - $f2 )"
 				}
 
@@ -286,7 +286,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "bang" ],
 					"parameter_enable" : 0,
-					"patching_rect" : [ 335.25, 744.6708984375, 46.0, 22.0 ],
+					"patching_rect" : [ 335.25, 909.6708984375, 46.0, 22.0 ],
 					"presentation" : 1,
 					"presentation_rect" : [ 319.0, 439.085444688796997, 50.0, 22.0 ],
 					"varname" : "sceneRotZ_max"
@@ -304,7 +304,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "bang" ],
 					"parameter_enable" : 0,
-					"patching_rect" : [ 283.25, 744.6708984375, 46.0, 22.0 ],
+					"patching_rect" : [ 283.25, 909.6708984375, 46.0, 22.0 ],
 					"presentation" : 1,
 					"presentation_rect" : [ 268.0, 439.085444688796997, 50.0, 22.0 ],
 					"triangle" : 0,
@@ -323,7 +323,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "bang" ],
 					"parameter_enable" : 0,
-					"patching_rect" : [ 232.25, 744.6708984375, 46.0, 22.0 ],
+					"patching_rect" : [ 232.25, 909.6708984375, 46.0, 22.0 ],
 					"presentation" : 1,
 					"presentation_rect" : [ 216.0, 439.085444688796997, 50.0, 22.0 ],
 					"triangle" : 0,
@@ -341,7 +341,7 @@
 					"orientation" : 1,
 					"outlettype" : [ "" ],
 					"parameter_enable" : 0,
-					"patching_rect" : [ 393.25, 747.1708984375, 320.0, 17.0 ],
+					"patching_rect" : [ 393.25, 912.1708984375, 320.0, 17.0 ],
 					"presentation" : 1,
 					"presentation_rect" : [ 371.0, 440.085444688796997, 320.0, 20.0 ],
 					"size" : 1.0,
@@ -359,7 +359,7 @@
 					"numinlets" : 3,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 853.25, 717.1708984375, 119.0, 19.0 ],
+					"patching_rect" : [ 853.25, 882.1708984375, 119.0, 19.0 ],
 					"text" : "expr ($f1 - $f2) / ( $f3 - $f2 )"
 				}
 
@@ -371,7 +371,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 987.25, 717.1708984375, 41.0, 22.0 ],
+					"patching_rect" : [ 987.25, 882.1708984375, 41.0, 22.0 ],
 					"text" : "set $1"
 				}
 
@@ -386,7 +386,7 @@
 					"numinlets" : 3,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 725.25, 717.1708984375, 118.0, 19.0 ],
+					"patching_rect" : [ 725.25, 882.1708984375, 118.0, 19.0 ],
 					"text" : "expr $f2 + $f1 * ( $f3 - $f2 )"
 				}
 
@@ -402,7 +402,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "bang" ],
 					"parameter_enable" : 0,
-					"patching_rect" : [ 335.25, 714.6708984375, 46.0, 22.0 ],
+					"patching_rect" : [ 335.25, 879.6708984375, 46.0, 22.0 ],
 					"presentation" : 1,
 					"presentation_rect" : [ 319.0, 416.085444688796997, 50.0, 22.0 ],
 					"varname" : "sceneRotY_max"
@@ -420,7 +420,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "bang" ],
 					"parameter_enable" : 0,
-					"patching_rect" : [ 283.25, 714.6708984375, 46.0, 22.0 ],
+					"patching_rect" : [ 283.25, 879.6708984375, 46.0, 22.0 ],
 					"presentation" : 1,
 					"presentation_rect" : [ 268.0, 416.085444688796997, 50.0, 22.0 ],
 					"triangle" : 0,
@@ -439,7 +439,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "bang" ],
 					"parameter_enable" : 0,
-					"patching_rect" : [ 232.25, 714.6708984375, 46.0, 22.0 ],
+					"patching_rect" : [ 232.25, 879.6708984375, 46.0, 22.0 ],
 					"presentation" : 1,
 					"presentation_rect" : [ 216.0, 416.085444688796997, 50.0, 22.0 ],
 					"triangle" : 0,
@@ -457,7 +457,7 @@
 					"orientation" : 1,
 					"outlettype" : [ "" ],
 					"parameter_enable" : 0,
-					"patching_rect" : [ 393.25, 717.1708984375, 320.0, 17.0 ],
+					"patching_rect" : [ 393.25, 882.1708984375, 320.0, 17.0 ],
 					"presentation" : 1,
 					"presentation_rect" : [ 371.0, 417.085444688796997, 320.0, 20.0 ],
 					"size" : 1.0,
@@ -475,7 +475,7 @@
 					"numinlets" : 3,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 853.25, 687.1708984375, 119.0, 19.0 ],
+					"patching_rect" : [ 853.25, 852.1708984375, 119.0, 19.0 ],
 					"text" : "expr ($f1 - $f2) / ( $f3 - $f2 )"
 				}
 
@@ -487,7 +487,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 987.25, 687.1708984375, 41.0, 22.0 ],
+					"patching_rect" : [ 987.25, 852.1708984375, 41.0, 22.0 ],
 					"text" : "set $1"
 				}
 
@@ -502,7 +502,7 @@
 					"numinlets" : 3,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 725.25, 687.1708984375, 118.0, 19.0 ],
+					"patching_rect" : [ 725.25, 852.1708984375, 118.0, 19.0 ],
 					"text" : "expr $f2 + $f1 * ( $f3 - $f2 )"
 				}
 
@@ -518,7 +518,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "bang" ],
 					"parameter_enable" : 0,
-					"patching_rect" : [ 335.25, 684.6708984375, 46.0, 22.0 ],
+					"patching_rect" : [ 335.25, 849.6708984375, 46.0, 22.0 ],
 					"presentation" : 1,
 					"presentation_rect" : [ 319.0, 393.085444688796997, 50.0, 22.0 ],
 					"varname" : "sceneRotX_max"
@@ -536,7 +536,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "bang" ],
 					"parameter_enable" : 0,
-					"patching_rect" : [ 283.25, 684.6708984375, 46.0, 22.0 ],
+					"patching_rect" : [ 283.25, 849.6708984375, 46.0, 22.0 ],
 					"presentation" : 1,
 					"presentation_rect" : [ 268.0, 393.085444688796997, 50.0, 22.0 ],
 					"triangle" : 0,
@@ -555,7 +555,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "bang" ],
 					"parameter_enable" : 0,
-					"patching_rect" : [ 232.25, 684.6708984375, 46.0, 22.0 ],
+					"patching_rect" : [ 232.25, 849.6708984375, 46.0, 22.0 ],
 					"presentation" : 1,
 					"presentation_rect" : [ 216.0, 393.085444688796997, 50.0, 22.0 ],
 					"triangle" : 0,
@@ -569,7 +569,7 @@
 					"maxclass" : "newobj",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 1412.25, 682.1708984375, 91.0, 22.0 ],
+					"patching_rect" : [ 1412.25, 847.1708984375, 91.0, 22.0 ],
 					"text" : "s vis_osc_send"
 				}
 
@@ -581,7 +581,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 1212.25, 682.1708984375, 169.0, 22.0 ],
+					"patching_rect" : [ 1212.25, 847.1708984375, 169.0, 22.0 ],
 					"text" : "/vis/scenerotation $1 $2 $3 $4"
 				}
 
@@ -593,7 +593,7 @@
 					"numinlets" : 3,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 1045.25, 687.1708984375, 88.0, 22.0 ],
+					"patching_rect" : [ 1045.25, 852.1708984375, 88.0, 22.0 ],
 					"text" : "pak 0.1 0.1 0.1"
 				}
 
@@ -606,7 +606,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 29.0, 609.6708984375, 178.0, 20.0 ],
+					"patching_rect" : [ 29.0, 774.6708984375, 178.0, 20.0 ],
 					"presentation" : 1,
 					"presentation_rect" : [ 28.0, 393.085444688796997, 178.0, 20.0 ],
 					"text" : "Scene Rotation"
@@ -623,7 +623,7 @@
 					"orientation" : 1,
 					"outlettype" : [ "" ],
 					"parameter_enable" : 0,
-					"patching_rect" : [ 393.25, 687.1708984375, 320.0, 17.0 ],
+					"patching_rect" : [ 393.25, 852.1708984375, 320.0, 17.0 ],
 					"presentation" : 1,
 					"presentation_rect" : [ 371.0, 394.085444688796997, 320.0, 20.0 ],
 					"size" : 1.0,
@@ -638,7 +638,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 340.25, 552.0, 29.5, 22.0 ],
+					"patching_rect" : [ 340.25, 717.0, 29.5, 22.0 ],
 					"text" : "100"
 				}
 
@@ -649,7 +649,7 @@
 					"maxclass" : "newobj",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 403.0, 554.0, 195.0, 22.0 ],
+					"patching_rect" : [ 403.0, 719.0, 195.0, 22.0 ],
 					"text" : "s ea_master_arm1_physics_preset"
 				}
 
@@ -683,7 +683,7 @@
 					"maxclass" : "newobj",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 687.0, 560.0, 198.0, 22.0 ],
+					"patching_rect" : [ 687.0, 725.0, 198.0, 22.0 ],
 					"text" : "s ea_master_arm1_particles_active"
 				}
 
@@ -695,7 +695,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 624.25, 558.0, 29.5, 22.0 ],
+					"patching_rect" : [ 624.25, 723.0, 29.5, 22.0 ],
 					"text" : "1"
 				}
 
@@ -708,7 +708,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "bang" ],
 					"parameter_enable" : 0,
-					"patching_rect" : [ 146.0, 558.0, 24.0, 24.0 ],
+					"patching_rect" : [ 146.0, 723.0, 24.0, 24.0 ],
 					"presentation" : 1,
 					"presentation_rect" : [ 28.0, 321.0, 24.0, 24.0 ]
 				}
@@ -796,7 +796,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 930.0, 426.0, 77.0, 23.0 ],
-					"text" : "0., 1. 20000"
+					"text" : "0., 1. 40000"
 				}
 
 			}
@@ -1453,10 +1453,10 @@
 					"outlettype" : [ "", "", "", "" ],
 					"patching_rect" : [ 129.0, 200.0, 53.0, 19.0 ],
 					"restore" : 					{
-						"groundRotX[10]" : [ 0.0 ],
+						"groundRotX[10]" : [ 1.0 ],
 						"groundRotY[10]" : [ 0.5 ],
 						"groundRotZ[10]" : [ 0.5 ],
-						"sceneRotX" : [ -180.0 ],
+						"sceneRotX" : [ 180.0 ],
 						"sceneRotX_max" : [ 180.0 ],
 						"sceneRotX_min" : [ -180.0 ],
 						"sceneRotY" : [ 0.0 ],

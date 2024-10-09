@@ -10,7 +10,7 @@
 		}
 ,
 		"classnamespace" : "box",
-		"rect" : [ 102.0, 307.0, 1341.0, 671.0 ],
+		"rect" : [ 102.0, 307.0, 844.0, 671.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 1,
 		"default_fontsize" : 12.0,
@@ -39,6 +39,42 @@
 		"subpatcher_template" : "",
 		"assistshowspatchername" : 0,
 		"boxes" : [ 			{
+				"box" : 				{
+					"id" : "obj-560",
+					"maxclass" : "message",
+					"numinlets" : 2,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 1275.0, 476.5, 29.5, 22.0 ],
+					"text" : "1."
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-559",
+					"maxclass" : "message",
+					"numinlets" : 2,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 1230.0, 476.5, 29.5, 22.0 ],
+					"text" : "0."
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-40",
+					"maxclass" : "newobj",
+					"numinlets" : 1,
+					"numoutlets" : 1,
+					"outlettype" : [ "bang" ],
+					"patching_rect" : [ 1162.111092150211334, 476.5, 58.0, 22.0 ],
+					"text" : "loadbang"
+				}
+
+			}
+, 			{
 				"box" : 				{
 					"id" : "obj-558",
 					"maxclass" : "newobj",
@@ -8124,7 +8160,7 @@
 						"client_rect" : [ 425, 64, 1733, 841 ],
 						"parameter_enable" : 0,
 						"parameter_mappable" : 0,
-						"storage_rect" : [ -22, 460, 1657, 1148 ]
+						"storage_rect" : [ 49, 195, 1728, 883 ]
 					}
 ,
 					"text" : "pattrstorage",
@@ -8164,17 +8200,17 @@
 						"boundary_posZ_min" : [ -5.0 ],
 						"boundary_pos_interest" : [ 0 ],
 						"boundary_pos_interest[1]" : [ 0 ],
-						"boundary_sizeX" : [ 6.0 ],
+						"boundary_sizeX" : [ 10.0 ],
 						"boundary_sizeX_max" : [ 10.0 ],
 						"boundary_sizeX_min" : [ 0.0 ],
-						"boundary_sizeY" : [ 6.0 ],
+						"boundary_sizeY" : [ 10.0 ],
 						"boundary_sizeY_max" : [ 10.0 ],
 						"boundary_sizeY_min" : [ 0.0 ],
-						"boundary_sizeZ" : [ 6.0 ],
+						"boundary_sizeZ" : [ 10.0 ],
 						"boundary_sizeZ_max" : [ 10.0 ],
 						"boundary_sizeZ_min" : [ 0.0 ],
 						"boundary_size_interest" : [ 0 ],
-						"boundary_wrap_active" : [ 0 ],
+						"boundary_wrap_active" : [ 1 ],
 						"circle_amount" : [ 0.0 ],
 						"circle_amount_interest" : [ 0 ],
 						"circle_amount_max" : [ 1.0 ],
@@ -8189,11 +8225,11 @@
 						"circle_posZ_max" : [ 5.0 ],
 						"circle_posZ_min" : [ -5.0 ],
 						"circle_position_interest" : [ 0 ],
-						"circle_radius" : [ 0.1 ],
+						"circle_radius" : [ 0.0 ],
 						"circle_radius_interest" : [ 0 ],
 						"circle_radius_max" : [ 20.0 ],
 						"circle_radius_min" : [ 0.0 ],
-						"cohesion_amount" : [ 0.05 ],
+						"cohesion_amount" : [ 0.01 ],
 						"cohesion_amount_interest" : [ 0 ],
 						"cohesion_amount_max" : [ 1.0 ],
 						"cohesion_amount_min" : [ 0.0 ],
@@ -8201,19 +8237,19 @@
 						"cohesion_dist_interest" : [ 0 ],
 						"cohesion_dist_max" : [ 10.0 ],
 						"cohesion_dist_min" : [ 0.001 ],
-						"evasion_amount" : [ 0.1 ],
+						"evasion_amount" : [ 0.0 ],
 						"evasion_amount_interest" : [ 0 ],
 						"evasion_amount_max" : [ 20.0 ],
 						"evasion_amount_min" : [ 0.0 ],
-						"evasion_dist" : [ 10.0 ],
-						"evasion_dist_interest" : [ 0 ],
+						"evasion_dist" : [ 0.5 ],
+						"evasion_dist_interest" : [ 1 ],
 						"evasion_dist_max" : [ 10.0 ],
 						"evasion_dist_min" : [ 0.001 ],
 						"light_position_amount" : [ 0.0 ],
 						"light_position_amount_interest" : [ 0 ],
 						"light_position_amount_max" : [ 1.0 ],
 						"light_position_amount_min" : [ 0.0 ],
-						"mass" : [ 1.0 ],
+						"mass" : [ 10.0 ],
 						"mass_interest" : [ 0 ],
 						"mass_max" : [ 10.0 ],
 						"mass_min" : [ 0.001 ],
@@ -8225,11 +8261,11 @@
 						"mocap_alignment_dist_interest" : [ 0 ],
 						"mocap_alignment_dist_max" : [ 10.0 ],
 						"mocap_alignment_dist_min" : [ 0.001 ],
-						"mocap_cohesion_amount" : [ 0.028757718053657 ],
+						"mocap_cohesion_amount" : [ 0.0 ],
 						"mocap_cohesion_amount_interest" : [ 0 ],
 						"mocap_cohesion_amount_max" : [ 1.0 ],
 						"mocap_cohesion_amount_min" : [ 0.0 ],
-						"mocap_cohesion_dist" : [ 1.0 ],
+						"mocap_cohesion_dist" : [ 10.0 ],
 						"mocap_cohesion_dist_interest" : [ 0 ],
 						"mocap_cohesion_dist_max" : [ 10.0 ],
 						"mocap_cohesion_dist_min" : [ 0.001 ],
@@ -8243,11 +8279,11 @@
 						"mocap_evasion_dist_min" : [ 0.001 ],
 						"random" : [ 0.01 ],
 						"random_interest" : [ 0 ],
-						"random_max" : [ 1.0 ],
+						"random_max" : [ 0.2 ],
 						"random_min" : [ 0.0 ],
 						"ring_amount" : [ 0.0 ],
 						"ring_amount_interest" : [ 0 ],
-						"ring_amount_max" : [ 1.0 ],
+						"ring_amount_max" : [ 0.2 ],
 						"ring_amount_min" : [ 0.0 ],
 						"ring_radius" : [ 0.1 ],
 						"ring_radius_interest" : [ 0 ],
@@ -8257,7 +8293,7 @@
 						"sim_rate_interest" : [ 0 ],
 						"sim_rate_max" : [ 10.0 ],
 						"sim_rate_min" : [ 0.1 ],
-						"step_size" : [ 0.04 ],
+						"step_size" : [ 0.02 ],
 						"step_size_interest" : [ 0 ],
 						"step_size_max" : [ 0.2 ],
 						"step_size_min" : [ 0.0 ],
@@ -8270,7 +8306,7 @@
 						"target_posZ" : [ 0.0 ],
 						"target_posZ_max" : [ 5.0 ],
 						"target_posZ_min" : [ -5.0 ],
-						"target_position_amount" : [ -0.01 ],
+						"target_position_amount" : [ 0.01 ],
 						"target_position_amount_interest" : [ 0 ],
 						"target_position_amount_max" : [ 0.1 ],
 						"target_position_amount_min" : [ -0.1 ],
@@ -8289,17 +8325,17 @@
 						"target_vel_amount_max" : [ 1.0 ],
 						"target_vel_amount_min" : [ 0.0 ],
 						"target_velocity_interest" : [ 0 ],
-						"turning_amount" : [ 0.1 ],
+						"turning_amount" : [ 1.0 ],
 						"turning_amount_interest" : [ 0 ],
 						"turning_amount_max" : [ 1.0 ],
 						"turning_amount_min" : [ 0.0 ],
-						"velocity" : [ 0.01 ],
+						"velocity" : [ 0.0 ],
 						"velocity_damping" : [ 1.0 ],
-						"velocity_damping_interest" : [ 0 ],
+						"velocity_damping_interest" : [ 1 ],
 						"velocity_damping_max" : [ 1.0 ],
 						"velocity_damping_min" : [ 0.0 ],
-						"velocity_interest" : [ 0 ],
-						"velocity_max" : [ 1.0 ],
+						"velocity_interest" : [ 1 ],
+						"velocity_max" : [ 0.1 ],
 						"velocity_min" : [ 0.0 ]
 					}
 ,
@@ -10900,6 +10936,22 @@
 			}
 , 			{
 				"patchline" : 				{
+					"destination" : [ "obj-559", 0 ],
+					"order" : 1,
+					"source" : [ "obj-40", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-560", 0 ],
+					"order" : 0,
+					"source" : [ "obj-40", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
 					"destination" : [ "obj-394", 0 ],
 					"source" : [ "obj-401", 0 ]
 				}
@@ -11655,20 +11707,6 @@
 			}
 , 			{
 				"patchline" : 				{
-					"destination" : [ "obj-135", 0 ],
-					"source" : [ "obj-500", 0 ]
-				}
-
-			}
-, 			{
-				"patchline" : 				{
-					"destination" : [ "obj-133", 0 ],
-					"source" : [ "obj-502", 0 ]
-				}
-
-			}
-, 			{
-				"patchline" : 				{
 					"destination" : [ "obj-501", 0 ],
 					"source" : [ "obj-503", 0 ]
 				}
@@ -12216,8 +12254,22 @@
 			}
 , 			{
 				"patchline" : 				{
+					"destination" : [ "obj-133", 0 ],
+					"source" : [ "obj-559", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
 					"destination" : [ "obj-46", 0 ],
 					"source" : [ "obj-56", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-135", 0 ],
+					"source" : [ "obj-560", 0 ]
 				}
 
 			}
