@@ -15,44 +15,49 @@ TODO: mocap recording of the temple creation
 10: Gaiska enters the table, stands on table, and paints Arnoud silouette with vertical laser
 11: Gaiska does Spatial Recovery (back left, back right, front right, middle left)
 
-12: 1 When Gaiska at front right and extends arm, Arm video appears on transparent screen (for about 20 seconds), arm contorts alongside the arm of Gaiska (maybe tracking) 
+12: Arm1 Scene
 
-Video: arm1 simulation
+Start all arm1 max patches on Mac Daniel, then start arm1 simulation and arm1 forward on Razer 16
 
-raymarching scene controls arm1
-Raymarching Preset: 1600
-First video on the big screen
-Simulation Physics Preset: 140
-Simulation Fluidity Preset: 1 
+Cue from Gaiska: When Gaiska at front right and extends arm, Arm video appears on big screen
 
-Raymarching  Scene Rotation X from 0.0 to 180.0: what is the cue for this?
+12.1. arm1 does Fluidity (right from the beginning)
 
-When video moves under the table, Gaiska continues his tour around the table
-Then video under the table:
-Switch to searching behaviour
-Simulation Physics Preset: 100
-Simulation Particles Preset: 1 
+12.2. arm1 rotates in X from 0.0 to 180.0 with a short pause in the middle: TODO: there will be a cue for this in the music. In the middle of the rotation, arm appears under the table and disappears from large screen
+
+Gaiska continues his tour around the table
+When Gaiska touches the table, switch to particle behaviour
+
+12.3 Switch to particles behaviour
+
 
 When Gaiska is at the center back of the table, the arm disappears.
 
+13: Marcurio Scene
+
+Start: Mercurio Max patch on Mac Daniel
+
+13.1. Cue: Gaiska middle back at the table and bends his head towards the big srceen screaming: Mercurio appears on big screen.
+
+13.2. Gaiska comes to front of table faces screen, holds heands on head: Mercurio with brain appears
+
+After a while, the brain becomes smaller (Pedro)
+
+13.3.
+When Gaiska is at the back and lowers his arms, the small brain goes down and disappears (Pedro)
+
+TODO: have a brain version in which more of the original Mercurio is visible
+Settings for this: 
+skel object smooth: 1.2676
+object position Y: 2.4240
 
 
-13: Gaiska middle back at the table and stretched his head towards the screen, Mercurio Variation 1 stands (this about 2 minutes after the arm appeared), maybe 1 minute mercurio alone, then 10 seconds mercurio with Gaiska visible, then only mercurio 10 seconds, then only Gaiska
+15: Gaiska finishes variation and manipulated Arnaud who lies on table, Arnaud Sonification starts
 
-Video: Mercurio
 
-Center section of Mercurio appears under table when Gaiska does Mudra
-When Gaiska silently screams to the screen, Mercurio appears big on screen
-
-14: Gaiska comes to front of table faces screen, holds heands on head: Mercurio with brain appears (50 seconds)
-
-transition mercurio to brain
-TODO: have a brain version in which more of the original Mercurio is visible (i.e. Fractal is a bit behind Mercurio)
-after a while (cue unclear), Pedro shrinks Brain down, which is the cue for Gaiska to finish his variation
-somewhen (cue unclear), Pedro fades out the brain
-
-15: Gasika finishes variation and manipulated Arnaud who lies on table, Arnaud Sonification starts
 16: Gaiska is painting with light on Arnaud (and maybe also Light Forest) 
+
+Start: swarm painting max patches on Mac Daniel and swarm painting simulation / forward max patch on Razer16
 
 Swarm Painting with Light
 Start only swarm simulation
@@ -62,28 +67,39 @@ But then detach swarm from mocap joint and have it come to center of table
 
 17: Four Arms appear on large screen, the four arms manipulate Arnaud
 
+Cue unclear
+
+Start arms4 max patches on Mac Daniel and arms4 simulation / max patch on Razer 16
+
 Arms4 Preset: 701
 Arms should be pointing down
 
-18: Gaiska makes three motions towards the mouth of Arnaud: trops of light appear underneath the table (the rain version of the lights) (maybe )
+18: Drops of Light
 
-Video and Swarm: Drops of Light
-use special raymarching max patch: scene drops of light
-after a while (cue?) transition from raining drops to central elongated shape still under the table
+change: drops 
+
+Start: swarms and raymarching max patches on Mac Daniel, then swarm simulation and max forward on Razer 16
+
+Cue: Gaiska makes three motions towards the mouth of Arnaud: with first motion, trops of light appear underneath the table (the rain version of the lights) (maybe )
+
+18.1. Drops of light under the table, sideview of drops falling on plane
 TODO: have a more sideways view on the drops of light
 
-19: Gaiska stands on the table and taps on his body, droplets of light move to the large transparent screen
+18.2. Drops of light transform into elongated shape, still under the table. Cue unclear
 
+18.3. elongated shape appears on large screen. cue: Gaiska stands on the table and taps on his body
+TODO: also stays under the table
 
-move video from under the table to big screen
-later (cue) transition into vertical golden shape with drops circling
+18.4. elongated shape transforms into vertical golden shape with drops circling, cue unclear
+TODO: also stays under the table, and golden shape stays horizontal
 
-Drops of Light Circular Blob Preset: 4 or  313 or 319 (with swarm preset 4)
-
-impro: joint smoothing, swarm evasion
+impro: joint smoothing, swarm evasion, swarm cohesion, swarm radius
 
 drops of light disappear (cue?)
 
+
+scene pos: 0.4, 0.5 -1.63
+scene rot: 0, -168.32 92.483
 
 20: Gaiska stops moving and then slowly lowers himself to the belly of Arnaud 
 Arnaud pushes his belly out four times, first three small pushes, then large push
@@ -100,22 +116,56 @@ TODO: make sure there is no jump in the whiggling when rotation starts
 
 Video: Switch to Snake Raymarching
 
-22: Gaiska and Arnaud standing on table, Pas de deux, lots of movement: Laser swarm appears, same swarm as in Embodied Machine
+maybe big magnetc water becomes green to match the color of snakes (Pedro does this in Touchdesigner)
+magnetic water on big screen
+snakes under the table
 
-Laser Swarm visualised in Touch Designer
+22: Laser swarm
 
-23: Gaiska and Arnaud getting slower, Arnaud lies down, Gaiska goes down from table: laser swarm focuses into single line through Arnaud's heart.
+Cue: Gaiska and Arnaud standing on table, face each other
 
-24: Gaiska puts cables on his heart, the Heart appears underneath the table, first as line only, then growing into heart (still underneath table)
+Start: laser swarm max patches on Mac Daniel, and laser swarm simulation and forward on Razer 16, make swarm immediately move out
 
-when the line looks like a beanstalk, move to big screen
-then continue transformation into heart
+22.1. swarm enter stage and moves towards center
+
+22.2. swarm sttart to wiggle
+
+22.2. swarm becomes circle. The circle stays until Gaiska and Aurnaud have made a full circle, no change of swarm radius
+
+22.3. swarm becomes two (or one) walls. Wall stays for 10 seconds
+
+22.4. swarm splits, impro and finally splitting in and out (20 seconds in total)
+
+22.5 swarm slows down when Anraud lies on table
+
+22.6. swarm slowly moves to center and creates on vertical line
+
+TODO: make sure that swarm doesn't wrap
+
+24. Heart 
+
+Cue: starts when laser swarm makes vertical line
+
+Start: start raymarching max patch on Mac Daniel
+
+24.1. line under table
+
+24.2. line transforms into bean stalk (still under the table)
+
+24.3. bean stalk moves to large screen
+
+24.4. bean stalk transforms into heart
+
+25.5. heart stays for a long duration, unclear cue when to start transformation into fractal
+
+25.6. heart fuses with fractal
+
+25.7. heart disappears and only fractal remains
+
+25.8. fractal becomes full mandelbulb and zooms in
+
+25.9. mandelbulb rotates to source where fractal grows from
 
 
-
-controls_heart2lava.maxpat
-
-
-25: Arnaud makes heart movements, heart moves to the large screen
-26: Heart morphs (cue) into Lava Fractal, Fractal becomes very large
+TODO: fix broken fractal start, when fractal is already full mandelbrot instead of reduced mandelbrot
 

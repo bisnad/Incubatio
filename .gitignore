@@ -55,3 +55,6 @@ Swarms_LightPainting/.DS_Store
 /Utilities/mocap_analysis_v2/.vs
 /Utilities/xsens2osc_v3_offset/.vs
 /Utilities/xsens2osc_v3_offset/obj
+/Utilities/xsens2osc/.vs
+/Utilities/xsens2osc/obj
+/Utilities/xsens2osc_offset/obj
