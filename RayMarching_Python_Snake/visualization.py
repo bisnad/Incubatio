@@ -13,7 +13,7 @@ class Visualization():
         self.skeleton = skeleton
         self.vertexCode = vertexCode
         self.fragmentCode = fragmentCode
-        self.resolution = [1280.0, 720.0]
+        self.resolution = [854.0, 480.0]
         
         self.jointCount = skeleton.getJointCount()
         self.edgeCount = skeleton.getEdgeCount()
