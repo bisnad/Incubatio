@@ -10,7 +10,7 @@
 		}
 ,
 		"classnamespace" : "box",
-		"rect" : [ 538.0, 90.0, 789.0, 871.0 ],
+		"rect" : [ 567.0, 153.0, 789.0, 780.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 1,
 		"default_fontsize" : 12.0,
@@ -46,7 +46,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 625.677161931991577, 2710.12687349319458, 124.0, 22.0 ],
-					"text" : "expr $f1 * 0.47 + 0.53"
+					"text" : "expr $f1 * 0.35 + 0.65"
 				}
 
 			}
@@ -69,7 +69,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 96.5, 2132.600623369216919, 107.0, 22.0 ],
+					"patching_rect" : [ 106.5, 2127.600623369216919, 107.0, 22.0 ],
 					"text" : "expr $f1 * 0.9"
 				}
 
@@ -189,8 +189,8 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 767.0, 3764.0, 84.0, 22.0 ],
-					"text" : "expr $f1 *0 +1"
+					"patching_rect" : [ 767.0, 3764.0, 52.0, 22.0 ],
+					"text" : "expr $f1"
 				}
 
 			}
@@ -213,7 +213,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 315.25, 2132.600623369216919, 124.0, 22.0 ],
+					"patching_rect" : [ 350.25, 2132.600623369216919, 124.0, 22.0 ],
 					"text" : "expr ($f1 * -1 +1) *0.5"
 				}
 
@@ -225,7 +225,7 @@
 					"numinlets" : 0,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 193.25, 2132.600623369216919, 82.0, 22.0 ],
+					"patching_rect" : [ 232.802237391471863, 2132.600623369216919, 82.0, 22.0 ],
 					"text" : "r scene_part3"
 				}
 
@@ -749,7 +749,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 625.0, 514.0, 77.0, 23.0 ],
-					"text" : "0., 1. 10000"
+					"text" : "0., 1. 5000"
 				}
 
 			}
@@ -800,8 +800,8 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 625.0, 362.0, 92.0, 23.0 ],
-					"text" : "0.06, 1. 10000"
+					"patching_rect" : [ 625.0, 362.0, 84.0, 23.0 ],
+					"text" : "0.5, 1. 10000"
 				}
 
 			}
@@ -1205,7 +1205,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"parameter_enable" : 0,
-					"patching_rect" : [ 245.0, 514.0, 242.0, 22.0 ],
+					"patching_rect" : [ 233.0, 514.0, 242.0, 22.0 ],
 					"presentation" : 1,
 					"presentation_rect" : [ 77.0, 349.085444688796997, 242.0, 22.0 ],
 					"size" : 1.0
@@ -1382,7 +1382,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 191.0, 362.0, 32.0, 22.0 ],
-					"text" : "0.06"
+					"text" : "0.6"
 				}
 
 			}
@@ -1461,7 +1461,7 @@
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 247.0, 282.0, 35.0, 22.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 105.0, 153.0, 57.0, 22.0 ],
+					"presentation_rect" : [ 105.0, 153.0, 35.0, 22.0 ],
 					"text" : "1500"
 				}
 
@@ -1718,7 +1718,7 @@
 					"orientation" : 1,
 					"outlettype" : [ "" ],
 					"parameter_enable" : 0,
-					"patching_rect" : [ 425.25, 2100.0, 320.0, 17.0 ],
+					"patching_rect" : [ 419.279850959777832, 2099.5, 320.0, 17.0 ],
 					"presentation" : 1,
 					"presentation_rect" : [ 381.857159614562988, 2759.692400932312012, 320.0, 20.0 ],
 					"size" : 1.0
@@ -11474,25 +11474,25 @@
 						"BgOcclusionColorG" : [ 0.506451612903226 ],
 						"BgOcclusionColorR" : [ 0.199835526315789 ],
 						"BgOcclusionColor_interest" : [ 0 ],
-						"camAngle" : [ 13.0 ],
+						"camAngle" : [ 24.185000000000002 ],
 						"camAngle_interest" : [ 0 ],
-						"camAngle_max" : [ 13.0 ],
+						"camAngle_max" : [ 32.0 ],
 						"camAngle_min" : [ 22.0 ],
-						"camPosX" : [ 0.890038879456706 ],
+						"camPosX" : [ 0.991894736842106 ],
 						"camPosX_max" : [ 3.141 ],
 						"camPosX_min" : [ -3.141 ],
-						"camPosY" : [ -1.575 ],
+						"camPosY" : [ 0.01 ],
 						"camPosY_max" : [ 3.141 ],
 						"camPosY_min" : [ -3.141 ],
-						"camPosZ" : [ -3.774000000000001 ],
+						"camPosZ" : [ 2.600000000000001 ],
 						"camPosZ_max" : [ 10.0 ],
 						"camPosZ_min" : [ -20.0 ],
 						"camPos_interest" : [ 0 ],
 						"fogMaxDist" : [ 0.0 ],
 						"fogMaxDist_interest" : [ 0 ],
-						"fogMaxDist_max" : [ 140.0 ],
+						"fogMaxDist_max" : [ 100.0 ],
 						"fogMaxDist_min" : [ 0.0 ],
-						"fogMinDist" : [ 67.48651692307746 ],
+						"fogMinDist" : [ 10.090000000000002 ],
 						"fogMinDist_interest" : [ 0 ],
 						"fogMinDist_max" : [ 100.0 ],
 						"fogMinDist_min" : [ 0.1 ],
@@ -11505,12 +11505,12 @@
 						"groundPosY_min" : [ -20.0 ],
 						"groundPosZ" : [ 0.5 ],
 						"groundPosZ[21]" : [ 0.166666666666667 ],
-						"groundPosZ[3]" : [ 0.006451612903226 ],
+						"groundPosZ[3]" : [ 0.056693378219884 ],
 						"groundPosZ_max" : [ 20.0 ],
 						"groundPosZ_min" : [ -20.0 ],
 						"groundPos_interest" : [ 0 ],
 						"groundPos_interest[3]" : [ 0 ],
-						"groundPrimitive" : [ 2.0 ],
+						"groundPrimitive" : [ 18.0 ],
 						"groundPrimitive_interest" : [ 0 ],
 						"groundPrimitive_interest[3]" : [ 0 ],
 						"groundRotX" : [ 0.5 ],
@@ -11531,11 +11531,11 @@
 						"groundRound_interest" : [ 0 ],
 						"groundRound_interest[3]" : [ 0 ],
 						"groundRound_max" : [ 5.0 ],
-						"groundSizeX" : [ 0.048387096774194 ],
+						"groundSizeX" : [ 0.03258701188455 ],
 						"groundSizeX_max" : [ 50.0 ],
-						"groundSizeY" : [ 0.0864 ],
+						"groundSizeY" : [ 0.067912748438292 ],
 						"groundSizeY_max" : [ 50.0 ],
-						"groundSizeZ" : [ 1.0 ],
+						"groundSizeZ" : [ 0.726475 ],
 						"groundSizeZ_max" : [ 100.0 ],
 						"groundSize_interest" : [ 0 ],
 						"groundSize_interest[3]" : [ 0 ],
@@ -11543,7 +11543,7 @@
 						"groundSmooth_interest" : [ 0 ],
 						"groundSmooth_interest[3]" : [ 0 ],
 						"groundSmooth_max" : [ 1.0 ],
-						"lightPosX" : [ -1.437314134125637 ],
+						"lightPosX" : [ 1.389985823429542 ],
 						"lightPosX_max" : [ 3.141 ],
 						"lightPosX_min" : [ -3.141 ],
 						"lightPosY" : [ -1.580632258064516 ],
@@ -11564,7 +11564,7 @@
 						"objectAmplitudeY" : [ 0.027960526315789 ],
 						"objectAmplitudeY_max" : [ 1.0 ],
 						"objectAmplitudeY_min" : [ 0.0 ],
-						"objectAmplitudeZ" : [ 0.006451612903226 ],
+						"objectAmplitudeZ" : [ 0.056693378219884 ],
 						"objectAmplitudeZ_max" : [ 1.0 ],
 						"objectAmplitudeZ_min" : [ 0.0 ],
 						"objectAmplitude_interest" : [ 0 ],
@@ -11579,13 +11579,13 @@
 						"objectDiffuseScale_interest[3]" : [ 0 ],
 						"objectDiffuseScale_max" : [ 1.0 ],
 						"objectDiffuseScale_min" : [ 0.0 ],
-						"objectFrequencyX" : [ 17.262733446519526 ],
+						"objectFrequencyX" : [ 16.432724631298175 ],
 						"objectFrequencyX_max" : [ 40.0 ],
 						"objectFrequencyX_min" : [ 0.0 ],
-						"objectFrequencyY" : [ 7.612903225806452 ],
+						"objectFrequencyY" : [ 4.419852164888626 ],
 						"objectFrequencyY_max" : [ 40.0 ],
 						"objectFrequencyY_min" : [ 0.0 ],
-						"objectFrequencyZ" : [ 3.354838709677419 ],
+						"objectFrequencyZ" : [ 3.870967741935484 ],
 						"objectFrequencyZ_max" : [ 40.0 ],
 						"objectFrequencyZ_min" : [ 0.0 ],
 						"objectFrequency_interest" : [ 0 ],
@@ -11600,7 +11600,7 @@
 						"objectOcclusionRange_interest[3]" : [ 0 ],
 						"objectOcclusionRange_max" : [ 10.0 ],
 						"objectOcclusionRange_min" : [ 0.0 ],
-						"objectOcclusionResol" : [ 0.535483870967742 ],
+						"objectOcclusionResol" : [ 0.512903225806452 ],
 						"objectOcclusionResol_interest" : [ 0 ],
 						"objectOcclusionResol_interest[3]" : [ 0 ],
 						"objectOcclusionResol_max" : [ 1.0 ],
@@ -11610,9 +11610,9 @@
 						"objectOcclusionScale_interest[3]" : [ 0 ],
 						"objectOcclusionScale_max" : [ 1.0 ],
 						"objectOcclusionScale_min" : [ 0.0 ],
-						"objectPhaseX" : [ 1.0 ],
-						"objectPhaseX_max" : [ 1.0 ],
-						"objectPhaseX_min" : [ 3.141 ],
+						"objectPhaseX" : [ 1.317193548387097 ],
+						"objectPhaseX_max" : [ 3.141 ],
+						"objectPhaseX_min" : [ -3.141 ],
 						"objectPhaseY" : [ 3.141 ],
 						"objectPhaseY_max" : [ 3.141 ],
 						"objectPhaseY_min" : [ -3.141 ],
@@ -11631,11 +11631,11 @@
 						"objectSpecularScale_interest[3]" : [ 0 ],
 						"objectSpecularScale_max" : [ 2.0 ],
 						"objectSpecularScale_min" : [ 0.0 ],
-						"rayRotation" : [ 1.0 ],
+						"rayRotation" : [ 1.7815 ],
 						"rayRotation_interest" : [ 0 ],
 						"rayRotation_max" : [ 2.0 ],
 						"rayRotation_min" : [ 0.0 ],
-						"rayWiggle" : [ 1.8 ],
+						"rayWiggle" : [ 0.3933 ],
 						"rayWiggle_interest" : [ 0 ],
 						"rayWiggle_max" : [ 2.0 ],
 						"rayWiggle_min" : [ 0.0 ],
@@ -11670,10 +11670,10 @@
 						"skeletonPosX" : [ 0.5 ],
 						"skeletonPosX_max" : [ 20.0 ],
 						"skeletonPosX_min" : [ -20.0 ],
-						"skeletonPosY" : [ 0.5 ],
+						"skeletonPosY" : [ 0.458000848896435 ],
 						"skeletonPosY_max" : [ 20.0 ],
 						"skeletonPosY_min" : [ -20.0 ],
-						"skeletonPosZ" : [ 0.49443 ],
+						"skeletonPosZ" : [ 0.5 ],
 						"skeletonPosZ_max" : [ 20.0 ],
 						"skeletonPosZ_min" : [ -20.0 ],
 						"skeletonPos_interest" : [ 0 ]
@@ -15785,13 +15785,6 @@
 					"destination" : [ "obj-67", 0 ],
 					"order" : 1,
 					"source" : [ "obj-70", 0 ]
-				}
-
-			}
-, 			{
-				"patchline" : 				{
-					"destination" : [ "obj-947", 0 ],
-					"source" : [ "obj-71", 0 ]
 				}
 
 			}
