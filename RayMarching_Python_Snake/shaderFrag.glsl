@@ -1191,7 +1191,7 @@ float julia(vec3 pos, vec3 scale)
 
 float snake(vec3 pos, vec3 scale, float radius)
 {
-    pos.z += vectorTime.y * .4;
+    //pos.z += vectorTime.y * .4;
 
     //repetition
     pos.xy = (fract(pos.xy) - .5); 
@@ -1204,7 +1204,8 @@ float snake(vec3 pos, vec3 scale, float radius)
 
 float snake_rippling(vec3 pos, vec3 scale, float radius)
 {
-    pos.z += vectorTime.y * .4;
+    vec3 phases = objectPhases[0];
+    pos.z += vectorTime.y * phases.x;
 
     //repetition position
     pos.xy = (fract(pos.xy) - .5); 
@@ -1223,7 +1224,7 @@ float snake_rippling(vec3 pos, vec3 scale, float radius)
 
     vec3 frequencies = objectFrequencies[0];
     vec3 amplitudes = objectAmplitudes[0];
-    vec3 phases = objectPhases[0];
+    
 
     //float box = rippleBoxSDF(pos, vec3(scale.x/100, scale.y/100 , scale.z/100), radius, frequencies, amplitudes, phases);
 
